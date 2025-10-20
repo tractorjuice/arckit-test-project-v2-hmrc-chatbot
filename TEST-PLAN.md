@@ -6,13 +6,14 @@
 
 ---
 
-## Test Scenario: UK Government AI Chatbot Project
+## Test Scenario: HMRC Tax Advisory AI Chatbot Project
 
-We'll test all ArcKit commands by simulating a realistic UK Government project:
+We'll test all ArcKit commands by simulating a realistic HMRC project:
 
-**Project**: Benefits Eligibility Chatbot for Department for Work and Pensions (DWP)
-**Type**: HIGH-RISK AI system (affects access to benefits)
-**Requirements**: TCoP compliance, AI Playbook compliance, ATRS publication
+**Project**: Self-Assessment Tax Advisory Chatbot for HM Revenue & Customs (HMRC)
+**Type**: HIGH-RISK AI system (provides tax advice affecting financial decisions)
+**Scope**: AI chatbot to help UK taxpayers with self-assessment questions, tax relief claims, and Making Tax Digital (MTD) queries
+**Requirements**: TCoP compliance, AI Playbook compliance, ATRS publication, UK GDPR, Making Tax Digital integration, PCI-DSS for payment data
 
 ---
 
