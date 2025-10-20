@@ -19,18 +19,18 @@
 
 ## 📋 Test Scenario
 
-**Project**: Benefits Eligibility Chatbot for UK Department for Work and Pensions (DWP)
+**Project**: Self-Assessment Tax Advisory Chatbot for HM Revenue & Customs (HMRC)
 
 **Details**:
-- **System**: HIGH-RISK AI chatbot using GPT-4
-- **Purpose**: Answer citizen questions about Universal Credit, JSA, disability benefits
-- **Requirements**: 10K concurrent users, UK GDPR, WCAG 2.2 AA, human-in-the-loop
-- **Compliance**: Technology Code of Practice, AI Playbook, ATRS required
-- **Procurement**: Via G-Cloud Digital Marketplace (£1.5M, 9 months)
+- **System**: HIGH-RISK AI system (provides tax advice affecting financial decisions)
+- **Scope**: AI chatbot to help UK taxpayers with self-assessment, tax relief claims, Making Tax Digital queries
+- **Requirements**: TCoP compliance, AI Playbook, ATRS, UK GDPR, Making Tax Digital integration
+- **Compliance**: PCI-DSS for payment data, UK tax regulations
+- **Procurement**: Via G-Cloud Digital Marketplace
 
 ---
 
-## ✅ Pre-Installed Commands (14 total)
+## ✅ Pre-Installed Commands (16 total)
 
 All commands ready in `.claude/commands/`:
 
@@ -150,7 +150,7 @@ Plus analysis report from `/arckit.analyze` showing governance health score (B g
 ## 📖 More Information
 
 - **ArcKit Repository**: https://github.com/tractorjuice/arc-kit
-- **Latest Release**: v0.3.0 - ServiceNow Service Management Edition
+- **Latest Release**: v0.2.1
 - **Issues**: https://github.com/tractorjuice/arc-kit/issues
 
 ---
