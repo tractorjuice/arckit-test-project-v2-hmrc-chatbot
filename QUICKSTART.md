@@ -8,10 +8,10 @@ This is a **full test project** for ArcKit demonstrating all features with a rea
 
 ## Test Scenario
 
-**Project**: Benefits Eligibility Chatbot for Department for Work and Pensions (DWP)
-- **Type**: HIGH-RISK AI system using GPT-4
-- **Users**: Citizens seeking benefits advice
-- **Compliance**: TCoP, AI Playbook, ATRS required
+**Project**: Self-Assessment Tax Advisory Chatbot for HM Revenue & Customs (HMRC)
+- **Type**: HIGH-RISK AI system (provides tax advice affecting financial decisions)
+- **Scope**: Help UK taxpayers with self-assessment, tax relief, Making Tax Digital queries
+- **Compliance**: TCoP, AI Playbook, ATRS, UK GDPR, Making Tax Digital, PCI-DSS
 - **Procurement**: Via G-Cloud Digital Marketplace
 
 ---
@@ -38,7 +38,7 @@ uv pip install git+https://github.com/tractorjuice/arc-kit.git
 # Check commands installed
 ls -1 .claude/commands/
 
-# Should show 14 commands:
+# Should show 16 commands:
 # - arckit.principles.md
 # - arckit.requirements.md
 # - arckit.wardley.md
@@ -144,7 +144,7 @@ tree projects/
 wc -l projects/001-benefits-chatbot/*.md
 
 # Check command count
-ls -1 .claude/commands/ | wc -l  # Should be 14
+ls -1 .claude/commands/ | wc -l  # Should be 16
 
 # Check template count
 ls -1 .arckit/templates/ | wc -l  # Should be 19
