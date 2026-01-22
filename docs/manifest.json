@@ -1,0 +1,56 @@
+{
+  "generated": "2026-01-22T09:00:00Z",
+  "repository": {
+    "owner": "tractorjuice",
+    "name": "arckit-test-project-v2-hmrc-chatbot",
+    "branch": "main"
+  },
+  "global": [
+    {
+      "path": ".arckit/memory/architecture-principles.md",
+      "title": "Architecture Principles",
+      "category": "Architecture"
+    }
+  ],
+  "projects": [
+    {
+      "id": "001-hmrc-chatbot",
+      "name": "HMRC Chatbot",
+      "documents": [
+        {
+          "path": "projects/001-hmrc-chatbot/requirements.md",
+          "title": "Requirements",
+          "category": "Discovery"
+        },
+        {
+          "path": "projects/001-hmrc-chatbot/sow.md",
+          "title": "Statement of Work",
+          "category": "Procurement"
+        },
+        {
+          "path": "projects/001-hmrc-chatbot/evaluation-criteria.md",
+          "title": "Evaluation Criteria",
+          "category": "Procurement"
+        },
+        {
+          "path": "projects/001-hmrc-chatbot/atrs-record.md",
+          "title": "ATRS Record",
+          "category": "Compliance"
+        },
+        {
+          "path": "projects/001-hmrc-chatbot/traceability-matrix.md",
+          "title": "Traceability Matrix",
+          "category": "Governance"
+        },
+        {
+          "path": "projects/001-hmrc-chatbot/README.md",
+          "title": "Project README",
+          "category": "Overview"
+        }
+      ],
+      "diagrams": [],
+      "decisions": [],
+      "vendors": []
+    }
+  ]
+}
