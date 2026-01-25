@@ -1,14 +1,45 @@
 # Statement of Work (SOW): HMRC Tax Guidance ChatBot
 
-**Document Type**: Procurement - Statement of Work / Request for Proposal (RFP)
-**RFP ID**: HMRC-CHATBOT-2025-001
-**Project ID**: 001-hmrc-chatbot
-**Issue Date**: 2025-10-14
-**Proposal Due Date**: 2025-12-09 (8 weeks from issue)
-**Version**: 1.0
-**Issuing Organization**: HM Revenue & Customs (HMRC) Digital Services
-**Procurement Framework**: G-Cloud 14
-**Point of Contact**: procurement-chatbot@hmrc.gov.uk
+## Document Control
+
+| Field | Value |
+|-------|-------|
+| **Document ID** | ARC-001-SOW-v1.1 |
+| **Document Type** | Procurement - Statement of Work / Request for Proposal (RFP) |
+| **Project** | HMRC ChatBot (Project 001-hmrc-chatbot) |
+| **Classification** | OFFICIAL |
+| **Status** | DRAFT |
+| **Version** | 1.1 |
+| **Created Date** | 2025-10-14 |
+| **Last Modified** | 2026-01-25 |
+| **Review Cycle** | Quarterly |
+| **Next Review Date** | 2026-04-25 |
+| **Owner** | HMRC Digital Services |
+| **Reviewed By** | [PENDING] |
+| **Approved By** | [PENDING] |
+| **Distribution** | HMRC Procurement, Architecture Team, GDS Stakeholders, Vendor Community |
+
+## Revision History
+
+| Version | Date | Author | Changes | Approved By | Approval Date |
+|---------|------|--------|---------|-------------|---------------|
+| 0.1 | 2025-10-07 | HMRC Enterprise Architecture Team | Initial draft | [INTERNAL] | 2025-10-07 |
+| 0.2 | 2025-10-10 | HMRC Procurement + EA Team | Stakeholder review feedback incorporated | [INTERNAL] | 2025-10-10 |
+| 1.0 | 2025-10-14 | HMRC Procurement Lead | Issued to vendors via G-Cloud 14 | [PENDING] | [PENDING] |
+| 1.1 | 2026-01-25 | ArcKit AI | Updated to align with ArcKit template structure | [PENDING] | [PENDING] |
+
+## Document Purpose
+
+This Statement of Work (SOW) serves as the formal Request for Proposal (RFP) document for the procurement of design, development, and deployment services for the HMRC Tax Guidance ChatBot. It defines the complete requirements, deliverables, evaluation criteria, and contract terms for vendor proposals submitted via the G-Cloud 14 framework.
+
+**Intended Audience**: Qualified vendors on G-Cloud 14, HMRC Procurement, Architecture Review Board, Legal, and Finance teams.
+
+**Key Dates**:
+- **RFP ID**: HMRC-CHATBOT-2025-001
+- **Issue Date**: 2025-10-14
+- **Proposal Due Date**: 2025-12-09 (5:00 PM GMT)
+- **Procurement Framework**: G-Cloud 14
+- **Point of Contact**: procurement-chatbot@hmrc.gov.uk
 
 ---
 
@@ -16,13 +47,13 @@
 
 ### 1.1 Purpose of This SOW
 
-This Statement of Work (SOW) defines the requirements, deliverables, and evaluation criteria for the design, development, and deployment of the **HMRC Tax Guidance ChatBot**an AI-powered conversational interface providing 24/7 tax guidance to UK citizens. HMRC is seeking qualified vendors via the G-Cloud 14 framework to deliver a production-ready ChatBot system that meets UK Government technology standards, security requirements, and accessibility mandates.
+This Statement of Work (SOW) defines the requirements, deliverables, and evaluation criteria for the design, development, and deployment of the **HMRC Tax Guidance ChatBot**â€”an AI-powered conversational interface providing 24/7 tax guidance to UK citizens. HMRC is seeking qualified vendors via the G-Cloud 14 framework to deliver a production-ready ChatBot system that meets UK Government technology standards, security requirements, and accessibility mandates.
 
 ### 1.2 Background
 
 **Current State and Business Drivers**:
 
-HMRC receives over **50 million calls per year** to its helplines, with the average call costing **£5-£10** to handle. Many of these calls are for simple tax guidance queries that could be resolved through self-service channels. Citizens face long wait times during peak periods (January Self Assessment deadline season), and HMRC struggles with staffing costs and service quality variability.
+HMRC receives over **50 million calls per year** to its helplines, with the average call costing **Â£5-Â£10** to handle. Many of these calls are for simple tax guidance queries that could be resolved through self-service channels. Citizens face long wait times during peak periods (January Self Assessment deadline season), and HMRC struggles with staffing costs and service quality variability.
 
 The digital-first strategy mandated by the UK Government Technology Code of Practice requires modern, accessible, user-centric public services. Citizens increasingly expect instant, 24/7 access to government services via digital channels. Traditional phone helplines cannot scale cost-effectively to meet this demand.
 
@@ -33,7 +64,7 @@ This initiative aligns with:
 - **AI and Data Strategy**: UK Government AI Playbook, Data Ethics Framework, Algorithmic Transparency Recording Standard (ATRS)
 - **Accessibility Mandate**: Public Sector Bodies Accessibility Regulations 2018 (WCAG 2.2 AA)
 - **Welsh Language Requirement**: Welsh Language Act 1993
-- **Value for Money**: HM Treasury Green Book principles (£75M annual savings target by Year 3)
+- **Value for Money**: HM Treasury Green Book principles (Â£75M annual savings target by Year 3)
 
 ### 1.3 Project Overview
 
@@ -55,7 +86,7 @@ Deliver an AI-powered ChatBot system that provides accurate, explainable tax gui
 
 **Expected Outcomes**:
 
-- **Cost Savings**: £75M annual savings from reduced helpline volume by Year 3 (30% deflection of 50M calls)
+- **Cost Savings**: Â£75M annual savings from reduced helpline volume by Year 3 (30% deflection of 50M calls)
 - **Citizen Satisfaction**: >70% Net Promoter Score (NPS) within 6 months of launch
 - **Service Availability**: 99.9% uptime during business hours (08:00-20:00 GMT Monday-Friday)
 - **AI Accuracy**: >95% of ChatBot responses marked as helpful by citizens
@@ -63,10 +94,10 @@ Deliver an AI-powered ChatBot system that provides accurate, explainable tax gui
 
 **Budget Range**:
 
-- **Capital Expenditure (Capex)**: £4.5M - £5.5M (design, development, deployment over 12 months)
-- **Operational Expenditure (Opex)**: £4.0M - £5.0M per annum (AWS infrastructure, LLM API costs, support and maintenance)
-- **3-Year Total Cost of Ownership (TCO)**: £16.5M - £20.5M
-- **3-Year Net Savings**: £136M - £139M (£75M annual savings × 3 years - TCO)
+- **Capital Expenditure (Capex)**: Â£4.5M - Â£5.5M (design, development, deployment over 12 months)
+- **Operational Expenditure (Opex)**: Â£4.0M - Â£5.0M per annum (AWS infrastructure, LLM API costs, support and maintenance)
+- **3-Year Total Cost of Ownership (TCO)**: Â£16.5M - Â£20.5M
+- **3-Year Net Savings**: Â£136M - Â£139M (Â£75M annual savings Ã— 3 years - TCO)
 
 **Timeline**:
 
@@ -75,7 +106,7 @@ Deliver an AI-powered ChatBot system that provides accurate, explainable tax gui
 - Months 3-8: Development and integration
 - Months 9-10: Testing (performance, security, accessibility)
 - Month 11: Private beta (100 citizens)
-- Month 12: Public beta (10,000 citizens) ’ Production launch
+- Month 12: Public beta (10,000 citizens) â†’ Production launch
 
 ---
 
@@ -118,10 +149,10 @@ The selected vendor will be responsible for:
 
 4. **Core ChatBot Application Development**
    - Conversational AI service with natural language understanding (NLU)
-   - RAG pipeline implementation (query ’ embedding ’ vector search ’ LLM generation ’ validation)
+   - RAG pipeline implementation (query â†’ embedding â†’ vector search â†’ LLM generation â†’ validation)
    - Knowledge base ingestion pipeline from HMRC content management system
    - Source citation and explainability (100% of AI responses must cite source documents)
-   - Confidence scoring and human escalation logic (<70% confidence ’ human agent)
+   - Confidence scoring and human escalation logic (<70% confidence â†’ human agent)
    - Multi-turn dialogue management for complex tax scenarios
    - Welsh language processing and response generation
 
@@ -156,7 +187,7 @@ The selected vendor will be responsible for:
 #### **Phase 3: Testing and Quality Assurance (Months 9-10)**
 
 9. **Comprehensive Testing**
-   - Unit testing (e80% code coverage, 100% coverage for critical paths)
+   - Unit testing (â‰¥80% code coverage, 100% coverage for critical paths)
    - Integration testing (component interactions, HMRC API integration)
    - Contract testing for HMRC backend APIs (Pact or similar)
    - End-to-end testing for critical user journeys (Playwright or Cypress)
@@ -177,7 +208,7 @@ The selected vendor will be responsible for:
     - Bug fixes and iterative improvements based on beta feedback
 
 11. **Production Deployment**
-    - Production launch with canary deployment strategy (10% ’ 50% ’ 100% traffic)
+    - Production launch with canary deployment strategy (10% â†’ 50% â†’ 100% traffic)
     - Hypercare support for first 30 days (24/7 on-call team)
     - Monitoring and incident response
     - Post-launch optimization based on operational metrics
@@ -335,7 +366,7 @@ This project encompasses **7 Business Requirements (BR)**, **11 Functional Requi
 - Every AI response MUST cite source documents (HMRC guidance, legislation section)
 - Clickable links to full source documents on GOV.UK
 - "Why did the ChatBot say this?" explainability feature
-- Lineage tracking from legislation ’ policy ’ guidance ’ AI response
+- Lineage tracking from legislation â†’ policy â†’ guidance â†’ AI response
 - **Aligns with Principle**: #8 Data Quality and Accuracy
 
 **FR-5: Government Gateway Authentication (MUST)**
@@ -406,7 +437,7 @@ This project encompasses **7 Business Requirements (BR)**, **11 Functional Requi
 
 **NFR-A-1: Uptime (MUST)**
 - **Target**: 99.9% uptime during business hours (08:00-20:00 GMT Mon-Fri)
-- **Calculation**: (Total Business Hours - Downtime) / Total Business Hours × 100%
+- **Calculation**: (Total Business Hours - Downtime) / Total Business Hours Ã— 100%
 - **Allowed Downtime**: 8.64 minutes/day, ~4.3 hours/month (business hours only)
 - **Measurement**: AWS CloudWatch uptime monitoring with SLO alerting
 - **Aligns with Principle**: #13 Resilience and Fault Tolerance
@@ -436,7 +467,7 @@ This project encompasses **7 Business Requirements (BR)**, **11 Functional Requi
 
 **NFR-S-2: Data Volume Growth (MUST)**
 - **Conversations**: Support 10 million conversations/year by Year 3
-- **Knowledge Base**: Scale to 200,000+ documents (2× growth over 3 years)
+- **Knowledge Base**: Scale to 200,000+ documents (2Ã— growth over 3 years)
 - **Storage**: S3 for cost-effective storage growth (chat transcripts, audit logs)
 - **Aligns with Principle**: #1 Government Cloud-First Architecture
 
@@ -698,17 +729,17 @@ This project encompasses **7 Business Requirements (BR)**, **11 Functional Requi
 | **Data Protection Impact Assessment (DPIA)** | UK GDPR compliance assessment, data flows, risks, mitigations | PDF (HMG DPIA template) | Week 6 | Approved by HMRC Data Protection Officer. |
 | **Equality Impact Assessment (EqIA)** | Impact on protected characteristics (Equality Act 2010), accessibility strategy | PDF (HMG EqIA template) | Week 6 | Approved by HMRC Equality Lead. |
 | **Algorithmic Transparency Record (ATRS)** | Tier 1 (public summary) + Tier 2 (technical details), AI model, data sources, bias testing plan | Markdown (GOV.UK format) | Week 8 | Approved by HMRC Data Ethics Committee. Ready for GOV.UK publication. |
-| **Test Strategy** | Unit, integration, E2E, accessibility, AI accuracy, bias, performance, security testing approach | PDF/Markdown | Week 8 | Approved by HMRC QA Lead. Coverage targets defined (e80% unit, 100% critical paths). |
+| **Test Strategy** | Unit, integration, E2E, accessibility, AI accuracy, bias, performance, security testing approach | PDF/Markdown | Week 8 | Approved by HMRC QA Lead. Coverage targets defined (â‰¥80% unit, 100% critical paths). |
 
 ### 4.2 Development Phase Deliverables (Months 3-8, Ongoing)
 
 | Deliverable | Description | Format | Due Date | Acceptance Criteria |
 |-------------|-------------|--------|----------|---------------------|
-| **Source Code** | All application code (backend, frontend, AI pipeline) | Git repository (GitHub or AWS CodeCommit) | Ongoing | Code review approved (2 reviewers). Passes CI/CD quality gates. e80% unit test coverage. |
+| **Source Code** | All application code (backend, frontend, AI pipeline) | Git repository (GitHub or AWS CodeCommit) | Ongoing | Code review approved (2 reviewers). Passes CI/CD quality gates. â‰¥80% unit test coverage. |
 | **Infrastructure as Code (IaC)** | Terraform modules for all AWS resources | Git repository (Terraform HCL) | Ongoing | Deployable to all environments (dev, staging, prod). Passes `terraform plan`, `terraform validate`, `tfsec` security scans. |
 | **Database Schemas** | DDL scripts, migration scripts (Flyway or Liquibase), seed data | SQL scripts in Git repo | Week 12 | Schema review approved. Migrations tested in staging. |
 | **API Documentation** | Interactive API documentation for all endpoints | OpenAPI 3.0+ spec + Swagger UI | Ongoing | All endpoints documented. Request/response examples provided. |
-| **Unit Tests** | Automated unit tests for all components | Code (pytest, Jest, Go test) | Ongoing | e80% code coverage. 100% coverage for critical paths (auth, AI generation, HMRC integration). |
+| **Unit Tests** | Automated unit tests for all components | Code (pytest, Jest, Go test) | Ongoing | â‰¥80% code coverage. 100% coverage for critical paths (auth, AI generation, HMRC integration). |
 | **Integration Tests** | Automated integration tests for component interactions | Code (Testcontainers, mocks for HMRC APIs) | Ongoing | Critical integration paths covered (Government Gateway, HMRC APIs, LLM). |
 | **AI Accuracy Tests** | Ground truth dataset (1000+ queries) with automated accuracy evaluation | Code + dataset (JSON/CSV) | Week 20 | >95% accuracy on ground truth dataset. |
 
@@ -779,7 +810,7 @@ This project encompasses **7 Business Requirements (BR)**, **11 Functional Requi
 |-----------|-------------|------------------|---------------|-------------------|
 | **M0: Project Kickoff** | Week 1 | Project plan, resource assignments, kickoff presentation | Kickoff meeting held, teams introduced, AWS access granted | 10% (upon contract signing) |
 | **M1: Design Approval** | Week 8 | HLD, DLD, Security Design, DPIA, EqIA, ATRS, Test Strategy | Architecture Review Board approval. DPIA/EqIA approved by DPO/Equality Lead. ATRS approved by Data Ethics Committee. | 15% (upon design approval) |
-| **M2: Development Milestone (50% Complete)** | Week 20 | Core ChatBot, RAG pipeline, HMRC integrations working in dev environment | Demo to stakeholders. Unit tests e80% coverage. Integration tests passing. | 20% (upon Sprint 4 completion) |
+| **M2: Development Milestone (50% Complete)** | Week 20 | Core ChatBot, RAG pipeline, HMRC integrations working in dev environment | Demo to stakeholders. Unit tests â‰¥80% coverage. Integration tests passing. | 20% (upon Sprint 4 completion) |
 | **M3: Testing Complete** | Week 40 | All testing complete (performance, security, accessibility, bias, UAT prep) | Performance targets met. Security PASS (zero critical/high vulnerabilities). Accessibility PASS (WCAG 2.2 AA). Bias testing <5% disparity. | 20% (upon testing completion) |
 | **M4: Private Beta Launch** | Week 44 | 100 citizens onboarded, feedback collected | Private beta live. >70% NPS from beta users. <10% escalation rate. | 10% (upon Private Beta launch) |
 | **M5: Production Launch** | Week 52 | Production deployment, GDS Live Assessment PASS, knowledge transfer complete | Production live. GDS Service Standard PASS. ATRS published on GOV.UK. 99.9% uptime achieved. Staff training complete. | 20% (upon production go-live) |
@@ -837,9 +868,9 @@ Vendors MUST meet the following minimum qualifications to be considered. Failure
 
 **MQ-5: Financial Stability (MUST)**
 - Company must provide **2 years of audited financial statements** demonstrating financial stability
-- Minimum annual revenue: **£5M** for past 2 years
-- Professional liability insurance: **£5M** minimum coverage
-- Cyber liability insurance: **£2M** minimum coverage
+- Minimum annual revenue: **Â£5M** for past 2 years
+- Professional liability insurance: **Â£5M** minimum coverage
+- Cyber liability insurance: **Â£2M** minimum coverage
 
 **MQ-6: UK Presence (MUST)**
 - Vendor must have a **UK office or registered UK subsidiary**
@@ -946,20 +977,20 @@ Vendors may propose alternative technologies if they demonstrate:
 
 | Role | Minimum Experience | Allocation | Mandatory? |
 |------|-------------------|------------|------------|
-| **Solution Architect** | 10+ years, AWS Certified Solutions Architect Professional, UK Gov experience | e50% dedicated | YES |
-| **Security Architect** | 8+ years, CISSP or equivalent, NCSC Cloud Security Principles expertise | e25% dedicated | YES |
-| **AI/ML Lead** | 8+ years, AWS Certified ML Specialty, RAG architecture experience | e75% dedicated | YES |
-| **Technical Lead / Engineering Manager** | 8+ years, team leadership experience | e75% dedicated | YES |
+| **Solution Architect** | 10+ years, AWS Certified Solutions Architect Professional, UK Gov experience | â‰¥50% dedicated | YES |
+| **Security Architect** | 8+ years, CISSP or equivalent, NCSC Cloud Security Principles expertise | â‰¥25% dedicated | YES |
+| **AI/ML Lead** | 8+ years, AWS Certified ML Specialty, RAG architecture experience | â‰¥75% dedicated | YES |
+| **Technical Lead / Engineering Manager** | 8+ years, team leadership experience | â‰¥75% dedicated | YES |
 | **Senior Backend Engineers (Python)** | 5+ years Python, AI/ML pipeline experience | 3 FTE | YES |
 | **Senior Backend Engineers (Node.js/Go)** | 5+ years Node.js or Go, API development | 2 FTE | YES |
 | **Senior Frontend Engineer (React/TypeScript)** | 5+ years React, GOV.UK Design System experience | 2 FTE | YES |
 | **DevOps Engineer** | 5+ years AWS, Terraform, CI/CD | 2 FTE | YES |
-| **QA Lead** | 5+ years, test automation, accessibility testing | e50% dedicated | YES |
+| **QA Lead** | 5+ years, test automation, accessibility testing | â‰¥50% dedicated | YES |
 | **QA Engineers** | 3+ years, test automation (Python/JavaScript) | 2 FTE | YES |
-| **Accessibility Specialist** | WCAG 2.2 AA certified, assistive technology testing | e25% dedicated | YES |
-| **Content Designer** | Plain English writing, GOV.UK style guide experience | e25% dedicated | YES |
-| **Technical Writer** | API documentation, technical writing for developers | e50% dedicated | YES |
-| **Scrum Master / Delivery Manager** | Agile delivery, stakeholder management | e50% dedicated | PREFERRED |
+| **Accessibility Specialist** | WCAG 2.2 AA certified, assistive technology testing | â‰¥25% dedicated | YES |
+| **Content Designer** | Plain English writing, GOV.UK style guide experience | â‰¥25% dedicated | YES |
+| **Technical Writer** | API documentation, technical writing for developers | â‰¥50% dedicated | YES |
+| **Scrum Master / Delivery Manager** | Agile delivery, stakeholder management | â‰¥50% dedicated | PREFERRED |
 
 **Total Team Size**: Approximately **20-25 FTE** over 12-month delivery period
 
@@ -995,14 +1026,14 @@ Proposals must follow this structure. **Page limits are strict** and will be enf
 - **Evidence of mandatory qualifications (MQ-1 through MQ-7)** - failure to provide evidence will result in disqualification
 
 #### **Section 3: Understanding of Requirements** (Max 10 pages)
-- Demonstrate deep understanding of HMRC's business drivers (£75M savings, 30% helpline deflection)
+- Demonstrate deep understanding of HMRC's business drivers (Â£75M savings, 30% helpline deflection)
 - Interpretation of key requirements (RAG architecture, WCAG 2.2 AA, ATRS, UK GDPR)
 - Identification of risks, assumptions, and dependencies
 - Questions or ambiguities requiring clarification
 
 #### **Section 4: Technical Solution** (Max 40 pages)
 - **High-Level Architecture** (C4 Context and Container diagrams)
-  - RAG pipeline design (query ’ embedding ’ vector search ’ LLM generation ’ validation ’ source citation)
+  - RAG pipeline design (query â†’ embedding â†’ vector search â†’ LLM generation â†’ validation â†’ source citation)
   - Microservices architecture (Citizen Identity, Conversational AI, Knowledge Management, HMRC Integration, Audit & Compliance)
   - Integration approach (Government Gateway, HMRC backend APIs, AWS Bedrock, ServiceNow)
 
@@ -1086,7 +1117,7 @@ Proposals must follow this structure. **Page limits are strict** and will be enf
   - **Technologies Used**: Cloud platform, AI/ML frameworks, databases, frontend
   - **Team Size and Duration**: Number of FTEs, project timeline
   - **Challenges Overcome**: Technical, organizational, or regulatory challenges
-  - **Outcomes Achieved**: Quantitative metrics (e.g., 99.9% uptime, <2s latency, £XM cost savings)
+  - **Outcomes Achieved**: Quantitative metrics (e.g., 99.9% uptime, <2s latency, Â£XM cost savings)
 
 - **Industry-Specific Experience**
   - UK Government / public sector projects (HMRC, GDS, NHS, MOD, DVLA, DWP)
@@ -1119,78 +1150,78 @@ Cost proposal must include:
 
 #### **7.2.1 Fixed Price Breakdown** (Preferred)
 
-**Total Fixed Price**: £[X.XX]M for all deliverables (design, development, deployment, 90-day warranty)
+**Total Fixed Price**: Â£[X.XX]M for all deliverables (design, development, deployment, 90-day warranty)
 
 **Payment Milestone Breakdown**:
-| Milestone | Deliverables | Payment (£) | Payment (%) |
+| Milestone | Deliverables | Payment (Â£) | Payment (%) |
 |-----------|--------------|-------------|-------------|
-| M0: Contract Signing | Contract signed, kickoff complete | £[X] | 10% |
-| M1: Design Approval (Week 8) | HLD, DLD, DPIA, EqIA, ATRS approved | £[X] | 15% |
-| M2: Development Milestone (Week 20) | Core ChatBot, RAG, integrations working in dev | £[X] | 20% |
-| M3: Testing Complete (Week 40) | All tests passed, UAT ready | £[X] | 20% |
-| M4: Private Beta Launch (Week 44) | 100 citizens onboarded, feedback collected | £[X] | 10% |
-| M5: Production Launch (Week 52) | Production live, GDS PASS, training complete | £[X] | 20% |
-| M6: Warranty End (Week 64) | 90-day warranty complete, final sign-off | £[X] | 5% |
-| **TOTAL** | | **£[X.XX]M** | **100%** |
+| M0: Contract Signing | Contract signed, kickoff complete | Â£[X] | 10% |
+| M1: Design Approval (Week 8) | HLD, DLD, DPIA, EqIA, ATRS approved | Â£[X] | 15% |
+| M2: Development Milestone (Week 20) | Core ChatBot, RAG, integrations working in dev | Â£[X] | 20% |
+| M3: Testing Complete (Week 40) | All tests passed, UAT ready | Â£[X] | 20% |
+| M4: Private Beta Launch (Week 44) | 100 citizens onboarded, feedback collected | Â£[X] | 10% |
+| M5: Production Launch (Week 52) | Production live, GDS PASS, training complete | Â£[X] | 20% |
+| M6: Warranty End (Week 64) | 90-day warranty complete, final sign-off | Â£[X] | 5% |
+| **TOTAL** | | **Â£[X.XX]M** | **100%** |
 
 **Cost Breakdown by Phase**:
-- Initiation (Weeks 1-2): £[X]
-- Design (Weeks 3-8): £[X]
-- Development (Weeks 9-32): £[X]
-- Testing (Weeks 33-40): £[X]
-- Beta Deployments (Weeks 41-48): £[X]
-- Production Launch (Weeks 49-52): £[X]
-- Warranty (Weeks 53-64): £[X]
+- Initiation (Weeks 1-2): Â£[X]
+- Design (Weeks 3-8): Â£[X]
+- Development (Weeks 9-32): Â£[X]
+- Testing (Weeks 33-40): Â£[X]
+- Beta Deployments (Weeks 41-48): Â£[X]
+- Production Launch (Weeks 49-52): Â£[X]
+- Warranty (Weeks 53-64): Â£[X]
 
 #### **7.2.2 Time and Materials Breakdown** (If Fixed Price Not Possible)
 
 **Hourly/Daily Rates by Role**:
-| Role | Hourly Rate (£) | Daily Rate (£) | Estimated Hours/Days |
+| Role | Hourly Rate (Â£) | Daily Rate (Â£) | Estimated Hours/Days |
 |------|-----------------|----------------|----------------------|
-| Solution Architect | £[X] | £[X] | [X] hours |
-| AI/ML Lead | £[X] | £[X] | [X] hours |
-| Technical Lead | £[X] | £[X] | [X] hours |
-| Senior Engineer | £[X] | £[X] | [X] hours |
-| Engineer | £[X] | £[X] | [X] hours |
-| QA Lead | £[X] | £[X] | [X] hours |
-| QA Engineer | £[X] | £[X] | [X] hours |
-| DevOps Engineer | £[X] | £[X] | [X] hours |
-| Accessibility Specialist | £[X] | £[X] | [X] hours |
-| Content Designer | £[X] | £[X] | [X] hours |
-| Technical Writer | £[X] | £[X] | [X] hours |
+| Solution Architect | Â£[X] | Â£[X] | [X] hours |
+| AI/ML Lead | Â£[X] | Â£[X] | [X] hours |
+| Technical Lead | Â£[X] | Â£[X] | [X] hours |
+| Senior Engineer | Â£[X] | Â£[X] | [X] hours |
+| Engineer | Â£[X] | Â£[X] | [X] hours |
+| QA Lead | Â£[X] | Â£[X] | [X] hours |
+| QA Engineer | Â£[X] | Â£[X] | [X] hours |
+| DevOps Engineer | Â£[X] | Â£[X] | [X] hours |
+| Accessibility Specialist | Â£[X] | Â£[X] | [X] hours |
+| Content Designer | Â£[X] | Â£[X] | [X] hours |
+| Technical Writer | Â£[X] | Â£[X] | [X] hours |
 
-**Total Estimated Cost**: £[X.XX]M (labor only)
+**Total Estimated Cost**: Â£[X.XX]M (labor only)
 
-**Not-to-Exceed Cap**: £[X.XX]M (labor cap to manage HMRC budget risk)
+**Not-to-Exceed Cap**: Â£[X.XX]M (labor cap to manage HMRC budget risk)
 
 #### **7.2.3 Infrastructure and Third-Party Costs**
 
 **AWS Infrastructure Costs** (estimated annual opex):
-- ECS Fargate compute: £[X]/month × 12 months = £[X]
-- RDS PostgreSQL: £[X]/month × 12 months = £[X]
-- OpenSearch: £[X]/month × 12 months = £[X]
-- S3 storage: £[X]/month × 12 months = £[X]
-- CloudFront CDN: £[X]/month × 12 months = £[X]
-- Data transfer: £[X]/month × 12 months = £[X]
-- **Subtotal AWS (Year 1)**: £[X]/year
+- ECS Fargate compute: Â£[X]/month Ã— 12 months = Â£[X]
+- RDS PostgreSQL: Â£[X]/month Ã— 12 months = Â£[X]
+- OpenSearch: Â£[X]/month Ã— 12 months = Â£[X]
+- S3 storage: Â£[X]/month Ã— 12 months = Â£[X]
+- CloudFront CDN: Â£[X]/month Ã— 12 months = Â£[X]
+- Data transfer: Â£[X]/month Ã— 12 months = Â£[X]
+- **Subtotal AWS (Year 1)**: Â£[X]/year
 
 **LLM API Costs** (estimated annual opex):
-- AWS Bedrock Claude 3.5 Sonnet: £[X] per million tokens
+- AWS Bedrock Claude 3.5 Sonnet: Â£[X] per million tokens
 - Estimated tokens/month: [X] million tokens
-- **Subtotal LLM (Year 1)**: £[X]/year
+- **Subtotal LLM (Year 1)**: Â£[X]/year
 
 **Third-Party Services**:
-- Monitoring (Grafana Cloud, DataDog, etc.): £[X]/year
-- Security tools (Snyk, Semgrep): £[X]/year
-- Other SaaS tools: £[X]/year
-- **Subtotal Third-Party (Year 1)**: £[X]/year
+- Monitoring (Grafana Cloud, DataDog, etc.): Â£[X]/year
+- Security tools (Snyk, Semgrep): Â£[X]/year
+- Other SaaS tools: Â£[X]/year
+- **Subtotal Third-Party (Year 1)**: Â£[X]/year
 
-**Total Infrastructure Costs (Year 1)**: £[X]/year
-**Total Infrastructure Costs (3-Year TCO)**: £[X] (Years 1-3 with estimated growth)
+**Total Infrastructure Costs (Year 1)**: Â£[X]/year
+**Total Infrastructure Costs (3-Year TCO)**: Â£[X] (Years 1-3 with estimated growth)
 
 #### **7.2.4 Ongoing Support and Maintenance** (Post-Warranty)
 
-**Annual Support and Maintenance Cost**: £[X]/year (starting Month 16, after 90-day warranty)
+**Annual Support and Maintenance Cost**: Â£[X]/year (starting Month 16, after 90-day warranty)
 
 **Included Services**:
 - Bug fixes and patches
@@ -1217,23 +1248,23 @@ Cost proposal must include:
 
 | Cost Category | Year 1 (Capex) | Year 2 (Opex) | Year 3 (Opex) | 3-Year Total |
 |---------------|----------------|---------------|---------------|--------------|
-| **Design and Development** (Fixed Price or T&M) | £[X.XX]M | - | - | £[X.XX]M |
-| **AWS Infrastructure** | £[X]/year | £[X]/year | £[X]/year | £[X]M |
-| **LLM API Costs** (AWS Bedrock) | £[X]/year | £[X]/year | £[X]/year | £[X]M |
-| **Third-Party Services** | £[X]/year | £[X]/year | £[X]/year | £[X]K |
-| **Annual Support and Maintenance** (Post-Warranty) | - | £[X]/year | £[X]/year | £[X]M |
-| **TOTAL 3-Year TCO** | £[X.XX]M | £[X.XX]M | £[X.XX]M | **£[X.XX]M** |
+| **Design and Development** (Fixed Price or T&M) | Â£[X.XX]M | - | - | Â£[X.XX]M |
+| **AWS Infrastructure** | Â£[X]/year | Â£[X]/year | Â£[X]/year | Â£[X]M |
+| **LLM API Costs** (AWS Bedrock) | Â£[X]/year | Â£[X]/year | Â£[X]/year | Â£[X]M |
+| **Third-Party Services** | Â£[X]/year | Â£[X]/year | Â£[X]/year | Â£[X]K |
+| **Annual Support and Maintenance** (Post-Warranty) | - | Â£[X]/year | Â£[X]/year | Â£[X]M |
+| **TOTAL 3-Year TCO** | Â£[X.XX]M | Â£[X.XX]M | Â£[X.XX]M | **Â£[X.XX]M** |
 
 **3-Year Net Savings** (Business Case):
-- Savings from helpline deflection: £75M/year × 3 years = £225M
-- Less: 3-Year TCO: £[X.XX]M
-- **Net Savings**: £[X]M
+- Savings from helpline deflection: Â£75M/year Ã— 3 years = Â£225M
+- Less: 3-Year TCO: Â£[X.XX]M
+- **Net Savings**: Â£[X]M
 
 #### **7.2.6 Pricing Terms and Assumptions**
 
 **Payment Terms**: Net 30 days from invoice date (invoices issued upon milestone completion and acceptance)
 
-**Currency**: British Pounds Sterling (GBP £)
+**Currency**: British Pounds Sterling (GBP Â£)
 
 **Validity Period**: Pricing valid for **90 days** from RFP issue date (2025-10-14 to 2026-01-12)
 
@@ -1373,7 +1404,7 @@ Technical proposals will be scored on a **100-point scale** across 5 criteria:
   - 0-4: Weak CVs with insufficient experience or certifications.
 
 - **Team Composition and Depth (8 points)**
-  - 7-8: Well-structured team meeting all role requirements. Good onshore/offshore mix (e50% onshore). Depth in AI/ML, security, accessibility.
+  - 7-8: Well-structured team meeting all role requirements. Good onshore/offshore mix (â‰¥50% onshore). Depth in AI/ML, security, accessibility.
   - 5-6: Good team composition meeting requirements.
   - 3-4: Adequate team but missing some roles or weak in key areas.
   - 0-2: Insufficient team or poor composition.
@@ -1401,7 +1432,7 @@ Technical proposals will be scored on a **100-point scale** across 5 criteria:
 **Criterion 5: Understanding of Requirements and Problem Domain (5 points)**
 
 - **Demonstrated Understanding (5 points)**
-  - 5: Exceptional understanding of HMRC challenges (£75M savings, 30% helpline deflection, citizen satisfaction). Insightful questions about tax domain, HMRC integrations, regulatory compliance. Proactive identification of risks/ambiguities.
+  - 5: Exceptional understanding of HMRC challenges (Â£75M savings, 30% helpline deflection, citizen satisfaction). Insightful questions about tax domain, HMRC integrations, regulatory compliance. Proactive identification of risks/ambiguities.
   - 3-4: Good understanding with some insightful questions.
   - 1-2: Adequate understanding but superficial or generic.
   - 0: Poor understanding or no evidence of domain knowledge.
@@ -1413,17 +1444,17 @@ Cost will be evaluated using **Best Value approach** (not lowest price):
 **Cost Scoring Method**:
 - **Technical Score**: 70% weight (from Phase 1 technical evaluation)
 - **Cost Score**: 30% weight (calculated below)
-- **Final Score** = (Technical Score × 0.7) + (Cost Score × 0.3)
+- **Final Score** = (Technical Score Ã— 0.7) + (Cost Score Ã— 0.3)
 
 **Cost Score Calculation** (30 points max):
 - Vendor with **lowest 3-year TCO** receives **30 points**
 - Other vendors scored proportionally:
-  - **Cost Score** = (Lowest 3-Year TCO / Vendor's 3-Year TCO) × 30 points
+  - **Cost Score** = (Lowest 3-Year TCO / Vendor's 3-Year TCO) Ã— 30 points
 
 **Example**:
-- Vendor A: 3-Year TCO = £18M ’ Cost Score = (£16M / £18M) × 30 = 26.67 points
-- Vendor B: 3-Year TCO = £16M ’ Cost Score = (£16M / £16M) × 30 = 30.00 points (lowest)
-- Vendor C: 3-Year TCO = £20M ’ Cost Score = (£16M / £20M) × 30 = 24.00 points
+- Vendor A: 3-Year TCO = Â£18M â†’ Cost Score = (Â£16M / Â£18M) Ã— 30 = 26.67 points
+- Vendor B: 3-Year TCO = Â£16M â†’ Cost Score = (Â£16M / Â£16M) Ã— 30 = 30.00 points (lowest)
+- Vendor C: 3-Year TCO = Â£20M â†’ Cost Score = (Â£16M / Â£20M) Ã— 30 = 24.00 points
 
 **Cost Evaluation Factors**:
 - **3-Year TCO** (capex + opex): Design/development, AWS infrastructure, LLM API costs, support/maintenance
@@ -1497,21 +1528,21 @@ Fixed price for all deliverables with milestone-based payments (see Section 7.2.
 
 **Alternative: Time and Materials with Not-to-Exceed Cap**
 
-If Fixed Price not feasible, T&M contract with not-to-exceed cap (maximum £[X]M) to protect HMRC budget. Vendor invoices monthly based on actual hours worked at agreed rates. HMRC reserves right to terminate if cap approached without sufficient progress.
+If Fixed Price not feasible, T&M contract with not-to-exceed cap (maximum Â£[X]M) to protect HMRC budget. Vendor invoices monthly based on actual hours worked at agreed rates. HMRC reserves right to terminate if cap approached without sufficient progress.
 
 ### 9.2 Payment Terms
 
 **Payment Schedule** (for Fixed Price contract):
 
-| Milestone | Payment (%) | Payment (£) | Trigger |
+| Milestone | Payment (%) | Payment (Â£) | Trigger |
 |-----------|-------------|-------------|---------|
-| M0: Contract Signing | 10% | £[X] | Contract executed, kickoff complete |
-| M1: Design Approval (Week 8) | 15% | £[X] | HLD, DLD, DPIA, EqIA, ATRS approved by Architecture Review Board, DPO, Data Ethics Committee |
-| M2: Development Milestone (Week 20) | 20% | £[X] | Core ChatBot, RAG pipeline, HMRC integrations demonstrated in dev environment. Unit tests e80% coverage. |
-| M3: Testing Complete (Week 40) | 20% | £[X] | All tests passed (performance, security, accessibility, bias). Penetration test PASS. UAT ready. |
-| M4: Private Beta Launch (Week 44) | 10% | £[X] | 100 citizens onboarded. Private beta operational. Feedback collected. |
-| M5: Production Launch (Week 52) | 20% | £[X] | Production live. GDS Service Standard PASS. ATRS published. 99.9% uptime achieved. Knowledge transfer complete. |
-| M6: Warranty End (Week 64) | 5% | £[X] | 90-day warranty complete. No outstanding critical/high bugs. Final sign-off by HMRC SRO. |
+| M0: Contract Signing | 10% | Â£[X] | Contract executed, kickoff complete |
+| M1: Design Approval (Week 8) | 15% | Â£[X] | HLD, DLD, DPIA, EqIA, ATRS approved by Architecture Review Board, DPO, Data Ethics Committee |
+| M2: Development Milestone (Week 20) | 20% | Â£[X] | Core ChatBot, RAG pipeline, HMRC integrations demonstrated in dev environment. Unit tests â‰¥80% coverage. |
+| M3: Testing Complete (Week 40) | 20% | Â£[X] | All tests passed (performance, security, accessibility, bias). Penetration test PASS. UAT ready. |
+| M4: Private Beta Launch (Week 44) | 10% | Â£[X] | 100 citizens onboarded. Private beta operational. Feedback collected. |
+| M5: Production Launch (Week 52) | 20% | Â£[X] | Production live. GDS Service Standard PASS. ATRS published. 99.9% uptime achieved. Knowledge transfer complete. |
+| M6: Warranty End (Week 64) | 5% | Â£[X] | 90-day warranty complete. No outstanding critical/high bugs. Final sign-off by HMRC SRO. |
 
 **Payment Terms**: Net 30 days from invoice date
 
@@ -1535,7 +1566,7 @@ Each deliverable must meet defined acceptance criteria (see Section 4).
 
 **Acceptance Criteria Examples**:
 - **HLD Acceptance**: All 17 architecture principles addressed. C4 diagrams clear and complete. Technology choices justified. Approved by Architecture Review Board (majority vote).
-- **Code Acceptance**: Passes code review (2 reviewers). Passes CI/CD quality gates (unit tests e80% coverage, SAST/dependency scans pass). Deployable to staging environment.
+- **Code Acceptance**: Passes code review (2 reviewers). Passes CI/CD quality gates (unit tests â‰¥80% coverage, SAST/dependency scans pass). Deployable to staging environment.
 - **Performance Test Acceptance**: p95 latency <2s. 99.9% success rate under 10,000 concurrent users. No memory leaks or resource exhaustion.
 - **Accessibility Test Acceptance**: WCAG 2.2 AA automated tests pass (axe-core, Pa11y). Manual testing with JAWS, NVDA, VoiceOver successful. Zero critical/high issues.
 
@@ -1567,7 +1598,7 @@ If vendor disagrees with rejection, escalate to HMRC SRO and vendor Project Dire
 
 ### 9.5 Ongoing Support and Maintenance (Optional)
 
-**Annual Support and Maintenance Contract**: £[X]/year (starting Month 16, after 90-day warranty)
+**Annual Support and Maintenance Contract**: Â£[X]/year (starting Month 16, after 90-day warranty)
 
 **Included Services**:
 - **Bug Fixes**: Address defects reported by HMRC or citizens
@@ -1648,7 +1679,7 @@ All deliverables, source code, documentation, designs, and other work product cr
 
 ### 9.9 Liability and Indemnification
 
-**Liability Cap**: **£10M** (2× contract value, or as negotiated)
+**Liability Cap**: **Â£10M** (2Ã— contract value, or as negotiated)
 
 **Exceptions to Liability Cap** (unlimited liability):
 - IP infringement claims
@@ -1662,9 +1693,9 @@ All deliverables, source code, documentation, designs, and other work product cr
 - **Violations of Law**: Claims arising from vendor's violation of laws or regulations
 
 **Insurance**: Vendor must maintain:
-- **Professional Liability Insurance**: £5M minimum
-- **Cyber Liability Insurance**: £2M minimum (covering data breaches, ransomware, cyber incidents)
-- **General Liability Insurance**: £2M minimum
+- **Professional Liability Insurance**: Â£5M minimum
+- **Cyber Liability Insurance**: Â£2M minimum (covering data breaches, ransomware, cyber incidents)
+- **General Liability Insurance**: Â£2M minimum
 
 Vendor must provide certificates of insurance upon contract signing and annually thereafter.
 
@@ -1709,7 +1740,7 @@ Upon contract termination (for any reason), vendor must provide **90 days of tra
 **Change Request Process**:
 1. **Either Party Submits Written Change Request**: Email with description of change, rationale, urgency
 2. **Vendor Provides Impact Analysis** (within 10 business days):
-   - Impact on cost (£ increase/decrease)
+   - Impact on cost (Â£ increase/decrease)
    - Impact on schedule (weeks delay/acceleration)
    - Impact on scope (what's added/removed)
    - Impact on quality or risk
@@ -1721,9 +1752,9 @@ Upon contract termination (for any reason), vendor must provide **90 days of tra
 5. **Implementation**: Vendor proceeds with approved change
 
 **Approval Thresholds**:
-- **Changes <£50K or <2 weeks delay**: HMRC Technical Lead approval
-- **Changes £50K-£250K or 2-8 weeks delay**: HMRC Project Manager + Architecture Review Board approval
-- **Changes >£250K or >8 weeks delay**: HMRC SRO approval
+- **Changes <Â£50K or <2 weeks delay**: HMRC Technical Lead approval
+- **Changes Â£50K-Â£250K or 2-8 weeks delay**: HMRC Project Manager + Architecture Review Board approval
+- **Changes >Â£250K or >8 weeks delay**: HMRC SRO approval
 
 **Emergency Changes**:
 - Critical security vulnerabilities or production incidents may require immediate changes without full impact analysis
@@ -1903,14 +1934,6 @@ United Kingdom
 
 ---
 
-## Document Control
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | 2025-10-07 | HMRC Enterprise Architecture Team | Initial draft |
-| 0.2 | 2025-10-10 | HMRC Procurement + EA Team | Stakeholder review feedback incorporated |
-| 1.0 | 2025-10-14 | HMRC Procurement Lead | **Issued to vendors via G-Cloud 14** |
-
 ## Approvals
 
 | Role | Name | Signature | Date |
@@ -1953,3 +1976,12 @@ United Kingdom
 11. **Proposal Deadline**: 2025-12-09, 5:00 PM GMT. Late proposals will NOT be accepted.
 
 **Good luck with your proposal!**
+
+---
+
+*Generated by: ArcKit `/arckit.sow` command*
+*Generated on: 2026-01-25 GMT*
+*ArcKit Version: 0.11.0*
+*Project: HMRC ChatBot (Project 001-hmrc-chatbot)*
+*AI Model: claude-opus-4-5-20251101*
+*Generation Context: Updated from existing SOW v1.0 to align with ArcKit template structure*
