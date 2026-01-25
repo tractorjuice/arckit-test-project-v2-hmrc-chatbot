@@ -1,12 +1,30 @@
 # HMRC ChatBot Enterprise Architecture Principles
 
-**Document Type**: Architectural Governance
-**Version**: 1.0
-**Effective Date**: 2025-10-14
-**Last Updated**: 2025-10-14
-**Owner**: Enterprise Architecture Team
-**Status**: DRAFT
-**Project**: HMRC ChatBot System
+## Document Control
+
+| Field | Value |
+|-------|-------|
+| **Document ID** | ARC-001-PRIN-v1.1 |
+| **Document Type** | Enterprise Architecture Principles |
+| **Project** | HMRC ChatBot System (Project 001-hmrc-chatbot) |
+| **Classification** | OFFICIAL |
+| **Status** | DRAFT |
+| **Version** | 1.1 |
+| **Created Date** | 2025-10-14 |
+| **Last Modified** | 2026-01-25 |
+| **Review Cycle** | Quarterly |
+| **Next Review Date** | 2026-04-25 |
+| **Owner** | Enterprise Architecture Team |
+| **Reviewed By** | PENDING |
+| **Approved By** | PENDING |
+| **Distribution** | HMRC Architecture Review Board, GDS Stakeholders |
+
+## Revision History
+
+| Version | Date | Author | Changes | Approved By | Approval Date |
+|---------|------|--------|---------|-------------|---------------|
+| 1.0 | 2025-10-14 | Enterprise Architecture Team | Initial draft for HMRC ChatBot project | PENDING | PENDING |
+| 1.1 | 2026-01-25 | ArcKit AI | Updated to align with ArcKit template structure | PENDING | PENDING |
 
 ---
 
@@ -18,6 +36,8 @@ This document establishes the immutable principles governing all technology arch
 **Authority**: Government Digital Service (GDS) and HMRC Architecture Review Board
 **Compliance**: Mandatory unless exception approved by HMRC Chief Technology Officer
 **Regulatory Context**: UK GDPR, Technology Code of Practice, Service Standard, AI Playbook, WCAG 2.2 AA, Algorithmic Transparency Standard
+
+**Philosophy**: These principles define WHAT qualities the architecture must have, guiding technology selection during research and design phases. While this document includes technology guidance specific to HMRC's approved stack, the core principles remain technology-agnostic.
 
 ---
 
@@ -336,6 +356,9 @@ The ChatBot must maintain 99.9% uptime during business hours (08:00-20:00 GMT). 
 **Principle Statement**:
 All citizen data MUST remain in UK sovereign territory and comply with UK GDPR, Data Protection Act 2018, and HMG Information Assurance standards. Data classification, residency, retention, and access controls are NON-NEGOTIABLE requirements.
 
+**Rationale**:
+Business demand is unpredictable and variable. Citizen data is sensitive and subject to strict regulatory controls. Systems must handle data appropriately without manual intervention or compliance gaps.
+
 **Data Classification** (Government Security Classifications):
 1. **OFFICIAL-SENSITIVE**: Tax records, National Insurance numbers, Government Gateway credentials, financial data
 2. **OFFICIAL**: Chat transcripts (with PII), system logs (with identifiable data), training data (before anonymization)
@@ -395,6 +418,9 @@ All citizen data MUST remain in UK sovereign territory and comply with UK GDPR, 
 **Principle Statement**:
 The ChatBot's knowledge base MUST reflect current, accurate HMRC guidance and UK tax legislation. Data pipelines MUST maintain data quality standards and provide end-to-end lineage for auditability. Inaccurate tax advice exposes citizens to penalties and damages HMRC credibility.
 
+**Rationale**:
+Tax guidance directly impacts citizen financial obligations. Errors can result in penalties, appeals, or loss of public trust. Quality is non-negotiable.
+
 **Quality Standards**:
 - **Accuracy**: All guidance MUST match official HMRC publications and legislation (100% accuracy requirement)
 - **Completeness**: Cover all common tax scenarios (Self Assessment, PAYE, VAT, Capital Gains, Inheritance Tax)
@@ -433,191 +459,126 @@ The ChatBot's knowledge base MUST reflect current, accurate HMRC guidance and UK
 
 ---
 
-## III. Technology Standards
-
-### 9. Approved Technology Stack (Government Aligned)
+### 9. Single Source of Truth
 
 **Principle Statement**:
-Technology choices MUST align with GDS technology standards, HMRC approved technologies, and HMG security requirements. This ensures supportability, security, talent availability, and value for money.
+Every data domain MUST have a single authoritative source. Derived copies must be clearly labeled and synchronized.
 
-**Programming Languages** (in order of preference):
-1. **Backend/AI**: Python 3.11+ (AI/ML libraries: LangChain, Hugging Face, OpenAI SDK)
-2. **API Services**: Node.js/TypeScript 20+, Go 1.21+ (for high-performance services)
-3. **Frontend**: TypeScript/React 18+, GOV.UK Design System components
-4. **Infrastructure**: Terraform (HCL), Python (AWS CDK/Boto3)
+**Rationale**:
+Multiple authoritative sources create inconsistency, reconciliation overhead, and data integrity issues. For tax guidance, conflicting information is unacceptable.
 
-**AI/ML Frameworks**:
-- **LLM Orchestration**: LangChain, LlamaIndex (for RAG architecture)
-- **Model Serving**: AWS Bedrock (Claude 3.5 Sonnet), Azure OpenAI Service (GPT-4)
-- **Embedding Models**: AWS Titan Embeddings, OpenAI text-embedding-3
-- **Vector Database**: AWS OpenSearch with vector search, Pinecone (if approved)
-- **Guardrails**: AWS Bedrock Guardrails, custom content filters
-
-**Databases**:
-- **Relational**: Amazon RDS PostgreSQL 15+ (citizen profiles, audit logs)
-- **Vector Store**: Amazon OpenSearch with k-NN plugin (knowledge base embeddings)
-- **Cache**: Amazon ElastiCache (Redis 7+) for session management
-- **Document Store**: Amazon S3 (chat transcripts, encrypted at rest)
-
-**Messaging/Streaming**:
-- **Event Bus**: Amazon EventBridge (for HMRC backend integration events)
-- **Queuing**: Amazon SQS (for async processing, human escalation queue)
-- **Streaming**: Amazon Kinesis (for real-time analytics, audit logs)
-
-**API and Integration**:
-- **API Gateway**: AWS API Gateway (REST and WebSocket for real-time chat)
-- **Authentication**: AWS Cognito (Government Gateway integration)
-- **Service Mesh**: AWS App Mesh (for microservices communication)
-
-**Frontend**:
-- **Framework**: React 18+ with TypeScript
-- **Design System**: GOV.UK Design System (mandatory for consistency with GOV.UK)
-- **Accessibility**: gov.uk-frontend components (WCAG 2.2 AA compliant)
-- **Hosting**: AWS Amplify or CloudFront + S3
-
-**Infrastructure**:
-- **Container Orchestration**: Amazon ECS Fargate (serverless containers)
-- **Serverless**: AWS Lambda (for event-driven tasks, API endpoints)
-- **IaC**: Terraform (preferred), AWS CDK (TypeScript/Python)
-
-**Security Tools**:
-- **Secrets Management**: AWS Secrets Manager
-- **WAF**: AWS WAF with OWASP Top 10 rules
-- **DDoS Protection**: AWS Shield Advanced
-- **SIEM**: Integration with HMRC Splunk instance
-- **Vulnerability Scanning**: AWS Inspector, Snyk (for dependencies)
-
-**Exceptions**:
-- Proof-of-concept systems (time-boxed, max 3 months, no citizen data)
-- Specialized use cases requiring HMRC CISO approval
-- Legacy system integration (documented in integration patterns)
+**Implications**:
+- HMRC CMS is the system of record for tax guidance
+- Derived/cached copies in vector database are read-only and labeled as derived
+- Synchronization strategy defined for all derived copies
+- Avoid bidirectional synchronization (creates split-brain scenarios)
 
 **Validation Gates**:
-- [ ] Technology choices from approved list OR exception documented
-- [ ] Rationale for choices linked to requirements
-- [ ] AWS UK region usage confirmed
-- [ ] GOV.UK Design System components used
-- [ ] Support and maintenance plan defined
+- [ ] System of record identified for each data entity
+- [ ] Derived copies documented with sync frequency
+- [ ] No bidirectional sync without conflict resolution strategy
+- [ ] Master data management strategy for shared reference data
 
 ---
 
-### 10. Infrastructure as Code and GitOps (MANDATORY)
+## III. Integration Principles
+
+### 10. Loose Coupling
 
 **Principle Statement**:
-ALL infrastructure MUST be defined as code, version-controlled in Git, and deployed via CI/CD pipelines. Manual infrastructure changes are prohibited in production. This ensures repeatability, auditability, and compliance with HMG change management requirements.
+Systems MUST be loosely coupled through published interfaces, avoiding shared databases, file systems, or tight runtime dependencies.
 
-**IaC Standards**:
-- **Primary Tool**: Terraform (HCL) with remote state in AWS S3 + DynamoDB locking
-- **Version Control**: Git (GitHub with HMRC organization, or AWS CodeCommit for OFFICIAL-SENSITIVE)
-- **State Management**: Remote state with encryption at rest, state locking enabled
-- **Secrets**: Never committed to code; use AWS Secrets Manager with dynamic references
+**Rationale**:
+Loose coupling enables independent deployment, technology diversity, team autonomy, and system evolution without breaking dependencies.
 
-**Deployment Requirements**:
-- Automated deployment via AWS CodePipeline or GitHub Actions (approved for HMG use)
-- Environment parity (dev, staging, prod) with identical IaC
-- Immutable infrastructure (replace, don't modify)
-- Rollback capability within 5 minutes (blue/green or canary deployments)
-
-**Change Management**:
-- All production changes via pull request with Architecture Review Board approval
-- Peer review required (minimum 2 approvers for production changes)
-- Automated testing of IaC (terraform plan, terraform validate, tfsec for security scanning)
-- Change records logged in HMRC ServiceNow for audit compliance
-
-**Exceptions**:
-- Emergency hotfixes (with post-incident IaC update required within 24 hours and PIR)
+**Implications**:
+- Communicate through published APIs or asynchronous events
+- No direct database access across system boundaries
+- Each system manages its own data lifecycle
+- Shared libraries kept minimal (favor duplication over coupling)
+- Avoid distributed transactions across systems
 
 **Validation Gates**:
-- [ ] Infrastructure defined in Terraform with modules
-- [ ] CI/CD pipeline configured with approval gates for production
-- [ ] Secrets managed via AWS Secrets Manager (no hardcoded secrets)
-- [ ] State file encrypted and access-controlled
-- [ ] Rollback procedure tested in staging
-- [ ] Change management integration with ServiceNow
+- [ ] Systems communicate via APIs or events, not database
+- [ ] No shared mutable state
+- [ ] Each system has independent data store
+- [ ] Deployment of one system doesn't require deployment of another
+- [ ] Interface changes versioned with backward compatibility
 
 ---
 
-## IV. Architecture Patterns
-
-### 11. Microservices with Domain-Driven Design
+### 11. Asynchronous Communication
 
 **Principle Statement**:
-The ChatBot solution SHOULD decompose along business domain boundaries using microservices patterns. Domains include: Citizen Identity, Conversational AI, Knowledge Management, HMRC Integration, Audit & Compliance.
+Systems SHOULD use asynchronous communication for non-real-time interactions to improve resilience and decoupling.
 
-**Bounded Contexts** (DDD):
-1. **Citizen Identity Context**: Government Gateway authentication, profile management
-2. **Conversational AI Context**: NLU, dialogue management, LLM orchestration
-3. **Knowledge Management Context**: Content ingestion, vector search, source citation
-4. **HMRC Integration Context**: Backend API integration (tax records, National Insurance)
-5. **Audit & Compliance Context**: Logging, monitoring, ATRS reporting
+**Rationale**:
+Asynchronous patterns reduce temporal coupling, improve fault tolerance, and enable better scalability.
 
-**Design Guidelines**:
-- One service per bounded context
-- Database per service (no shared databases)
-- Async communication via EventBridge/SQS (preferred over sync REST calls)
-- API Gateway as single entry point for frontend
-- Saga pattern for distributed transactions (e.g., multi-step tax guidance workflows)
+**When to Use Async**:
+- HMRC backend API integration (tax records retrieval)
+- Audit logging and compliance reporting
+- Non-real-time business processes
+- Event notification and pub/sub patterns
 
-**Service Communication**:
-- **Synchronous**: REST APIs for user-facing operations (chat messages)
-- **Asynchronous**: Events for backend integration (e.g., HMRC data retrieval), audit logging
+**When Synchronous is Acceptable**:
+- Real-time chat interactions requiring immediate feedback
+- Query operations (read-only, idempotent)
+- Authentication flows
 
 **Validation Gates**:
-- [ ] Bounded contexts identified and documented in C4 diagrams
-- [ ] Service boundaries align with domain model
-- [ ] Inter-service communication patterns defined (sync vs async)
-- [ ] Data consistency strategy documented (eventual consistency for non-critical data)
+- [ ] Async patterns used for non-real-time flows
+- [ ] Message durability and delivery guarantees defined
+- [ ] Event schemas versioned and published
+- [ ] Dead letter queues and error handling configured
 
 ---
 
-### 12. Retrieval-Augmented Generation (RAG) for AI Accuracy
+## IV. Quality Attributes
+
+### 12. Performance and Efficiency
 
 **Principle Statement**:
-The ChatBot MUST use Retrieval-Augmented Generation (RAG) architecture to ground AI responses in authoritative HMRC guidance and legislation. LLMs MUST NOT generate tax advice from parametric memory alone—all responses grounded in retrieved documents.
+All systems MUST meet defined performance targets under expected load with efficient use of computational resources.
 
-**RAG Architecture**:
-1. **Knowledge Base**: HMRC guidance documents, tax legislation, FAQs (stored as embeddings in vector database)
-2. **Retrieval**: Semantic search to retrieve top-k relevant documents for citizen query
-3. **Augmentation**: Pass retrieved documents as context to LLM
-4. **Generation**: LLM generates response grounded in retrieved documents with source citations
-5. **Validation**: Post-processing to verify factual accuracy and flag low-confidence responses
+**Rationale**:
+Citizens expect responsive service. Poor performance damages trust and increases support costs.
 
-**Implementation**:
-- **Embedding Model**: AWS Titan Embeddings or OpenAI text-embedding-3-large
-- **Vector Database**: Amazon OpenSearch with k-NN plugin (UK region)
-- **LLM**: AWS Bedrock Claude 3.5 Sonnet (via AWS UK region with data residency guarantees)
-- **Orchestration**: LangChain or LlamaIndex for RAG pipeline
-- **Source Citation**: Extract document references from retrieved context and surface to citizen
+**Performance Targets**:
+- **Response Time**: p95 <2 seconds for chat messages
+- **Throughput**: 10,000 concurrent users during peak
+- **Concurrency**: Handle tax deadline surge (January, April)
+- **Resource Efficiency**: Optimize LLM token usage
 
-**Quality Assurance**:
-- Evaluate retrieval quality (precision@k, recall@k) monthly
-- Evaluate generation quality (factual consistency, helpfulness) via citizen feedback
-- Human-in-the-loop review for complex queries (escalation threshold: confidence <70%)
-
-**Exceptions**:
-- NONE. RAG is mandatory for grounding AI responses in authoritative sources.
+**Implications**:
+- Performance requirements defined before implementation
+- Load testing performed before production deployment
+- Performance monitoring continuous, not just point-in-time
+- Caching strategies for expensive operations (knowledge retrieval)
 
 **Validation Gates**:
-- [ ] RAG architecture implemented with retrieval + generation pipeline
-- [ ] Knowledge base populated with HMRC authoritative content
-- [ ] Source citation implemented for 100% of responses
-- [ ] Retrieval quality metrics tracked (precision, recall)
-- [ ] Human escalation threshold configured
+- [ ] Performance requirements defined with measurable targets
+- [ ] Load testing performed at expected capacity (10,000 concurrent users)
+- [ ] Performance metrics monitored in production
+- [ ] Capacity planning model defined
 
 ---
 
-### 13. Resilience and Fault Tolerance (High Availability)
+### 13. Availability and Resilience
 
 **Principle Statement**:
 The ChatBot MUST be designed to gracefully handle failures. Assume dependencies (Government Gateway, HMRC APIs, LLM providers) will fail; plan accordingly. Citizens must receive service even during partial outages.
+
+**Rationale**:
+Failures are inevitable in distributed systems. The architecture must assume failures will occur and design for resilience rather than perfect reliability.
 
 **Resilience Patterns** (MANDATORY):
 - **Circuit Breaker**: Prevent cascade failures when HMRC backend APIs fail
 - **Retry with Exponential Backoff**: Transient fault handling (3 retries max)
 - **Timeout**: Every network call must have timeout (5 seconds for API calls, 30 seconds for LLM generation)
-- **Bulkhead**: Isolate resources to limit blast radius (separate thread pools for critical paths)
+- **Bulkhead**: Isolate resources to limit blast radius
 - **Graceful Degradation**: Fallback to cached guidance if HMRC APIs unavailable
-- **Rate Limiting**: Protect from overload (500 requests/hour per citizen, 10,000 requests/hour system-wide)
+- **Rate Limiting**: Protect from overload (500 requests/hour per citizen)
 
 **Availability Targets**:
 - **Critical Systems (Chat API, Auth)**: 99.9% during business hours (08:00-20:00 GMT Mon-Fri)
@@ -631,454 +592,285 @@ The ChatBot MUST be designed to gracefully handle failures. Assume dependencies 
 - **Multi-AZ deployment**: Services deployed across multiple AWS Availability Zones in eu-west-2
 - **Failover testing**: Quarterly disaster recovery drills
 
-**Chaos Engineering**:
-- Quarterly chaos experiments (simulate AZ failure, API outage, LLM degradation)
-- GameDays to test incident response and recovery procedures
+**Validation Gates**:
+- [ ] Failure modes identified and mitigated
+- [ ] Chaos engineering or fault injection testing performed
+- [ ] RTO and RPO defined and tested
+- [ ] Automated failover tested
+- [ ] Degraded mode behavior documented
+
+---
+
+### 14. Maintainability and Evolvability
+
+**Principle Statement**:
+All systems MUST be designed for change, with clear separation of concerns, modular architecture, and comprehensive documentation.
+
+**Rationale**:
+Software spends most of its lifetime in maintenance. Design decisions should optimize for understandability and modifiability.
+
+**Implications**:
+- Modular architecture with clear boundaries (bounded contexts)
+- Separation of concerns (business logic, data access, presentation)
+- Code is self-documenting with meaningful names
+- Architecture Decision Records (ADRs) for significant choices
+- Automated testing to enable confident refactoring
 
 **Validation Gates**:
-- [ ] Failure modes analyzed (FMEA)
-- [ ] Resilience patterns implemented (circuit breaker, retries, timeouts)
-- [ ] RPO/RTO defined and tested
-- [ ] Multi-AZ deployment verified
-- [ ] Chaos engineering experiments scheduled
-- [ ] Disaster recovery runbook documented
+- [ ] Architecture documentation exists and is current
+- [ ] Module boundaries clear with defined responsibilities
+- [ ] Automated test coverage enables safe refactoring
+- [ ] Architecture Decision Records document key choices
 
 ---
 
 ## V. Development Practices
 
-### 14. Continuous Integration / Continuous Deployment (CI/CD)
+### 15. Infrastructure as Code
+
+**Principle Statement**:
+ALL infrastructure MUST be defined as code, version-controlled in Git, and deployed via CI/CD pipelines. Manual infrastructure changes are prohibited in production. This ensures repeatability, auditability, and compliance with HMG change management requirements.
+
+**Rationale**:
+Manual infrastructure changes create drift, inconsistency, and undocumented state. Infrastructure as Code (IaC) enables repeatability, auditability, and disaster recovery.
+
+**IaC Standards**:
+- **Primary Tool**: Terraform (HCL) with remote state in AWS S3 + DynamoDB locking
+- **Version Control**: Git (GitHub with HMRC organization)
+- **State Management**: Remote state with encryption at rest, state locking enabled
+- **Secrets**: Never committed to code; use AWS Secrets Manager with dynamic references
+
+**Deployment Requirements**:
+- Automated deployment via AWS CodePipeline or GitHub Actions
+- Environment parity (dev, staging, prod) with identical IaC
+- Immutable infrastructure (replace, don't modify)
+- Rollback capability within 5 minutes (blue/green or canary deployments)
+
+**Exceptions**:
+- Emergency hotfixes (with post-incident IaC update required within 24 hours and PIR)
+
+**Validation Gates**:
+- [ ] Infrastructure defined as code
+- [ ] Infrastructure code version-controlled
+- [ ] Automated deployment pipeline for infrastructure
+- [ ] No manual infrastructure changes in production
+
+---
+
+### 16. Automated Testing
+
+**Principle Statement**:
+All code changes MUST be validated through automated testing before deployment to production.
+
+**Rationale**:
+Testing is NOT optional. The ChatBot must meet rigorous quality standards before serving UK citizens.
+
+**Test Pyramid**:
+- **Unit Tests** (70%): Fast, isolated, high coverage (80%+ coverage)
+- **Integration Tests** (20%): Test component interactions
+- **End-to-End Tests** (10%): Critical user journeys
+
+**AI-Specific Testing**:
+- **Accuracy Testing**: 1000+ ground truth queries (>95% accuracy required)
+- **Bias Testing**: Evaluate fairness across demographics
+- **Adversarial Testing**: Prompt injection, jailbreak attempts
+- **Hallucination Detection**: Validate AI outputs against ground truth
+
+**Required Test Types**:
+- Functional tests (does it work?)
+- Performance tests (is it fast enough?)
+- Security tests (is it secure?)
+- Resilience tests (does it handle failures?)
+- Accessibility tests (WCAG 2.2 AA compliance)
+
+**Validation Gates**:
+- [ ] Automated tests exist and pass before merge
+- [ ] Test coverage meets defined thresholds (≥80%)
+- [ ] Critical paths have end-to-end tests
+- [ ] AI accuracy tests passing (>95%)
+
+---
+
+### 17. Continuous Integration and Deployment
 
 **Principle Statement**:
 All code changes MUST flow through automated CI/CD pipelines with quality gates before reaching production. This ensures security, quality, and compliance with HMG change management.
 
 **Pipeline Stages** (MANDATORY):
-1. **Build**: Compile, dependency resolution (Python, Node.js, Terraform)
-2. **Test**: Unit, integration, contract tests (minimum 80% coverage)
-3. **Security Scan**:
-   - SAST (Semgrep, SonarQube)
-   - Dependency vulnerability checks (Snyk, AWS Inspector)
-   - IaC security (tfsec, Checkov)
-   - Secrets detection (git-secrets, TruffleHog)
-4. **Artifact**: Immutable artifact creation (Docker image, Lambda ZIP, Terraform plan)
-5. **Deploy to Dev**: Automated deployment to development environment
-6. **Deploy to Staging**: Automated deployment to staging environment
-7. **Smoke Tests**: Basic health checks, API contract tests, accessibility tests
-8. **Approval Gate**: Manual approval by Architecture Review Board for production
-9. **Deploy to Production**: Blue/green deployment with canary testing (10% traffic → 100%)
-10. **Monitoring**: Automated rollback on SLO violation (error rate >0.5%, latency >3s)
+1. **Build**: Compile, dependency resolution
+2. **Test**: Unit, integration, contract tests
+3. **Security Scan**: SAST, dependency vulnerability checks, secrets detection
+4. **Deploy to Dev/Staging**: Automated deployment
+5. **Approval Gate**: Manual approval by Architecture Review Board for production
+6. **Deploy to Production**: Blue/green deployment with canary testing
+7. **Monitoring**: Automated rollback on SLO violation
 
 **Quality Gates**:
-- Code coverage ≥80% (unit tests)
-- No critical/high security vulnerabilities (block deployment)
-- Static analysis passing (pylint, eslint, tfsec)
-- Accessibility tests passing (WCAG 2.2 AA, zero critical issues)
-- AI accuracy tests passing (>95% accuracy on ground truth dataset)
-
-**Approval Requirements**:
-- Development → Staging: Automated (post successful tests)
-- Staging → Production: Manual approval by 2 reviewers (Architecture Review Board + HMRC CISO delegate)
-
-**Rollback**:
-- Automated rollback if SLO violated within 15 minutes of deployment
-- Manual rollback capability within 5 minutes
+- Code coverage ≥80%
+- No critical/high security vulnerabilities
+- Code review approval required
+- Accessibility tests passing
 
 **Validation Gates**:
-- [ ] CI/CD pipeline configured end-to-end (build → test → deploy)
-- [ ] Quality gates enforced at each stage
-- [ ] Security scanning integrated (SAST, dependency checks)
-- [ ] Approval gates configured for production
-- [ ] Rollback procedure automated and tested
-- [ ] Deployment metrics tracked (lead time, deployment frequency, MTTR)
+- [ ] Automated CI/CD pipeline exists
+- [ ] Pipeline includes security scanning
+- [ ] Deployment is automated and repeatable
+- [ ] Rollback capability tested
 
 ---
 
-### 15. Testing Strategy (Comprehensive)
+## VI. Exception Process
 
-**Principle Statement**:
-Testing is NOT optional. Test automation MUST be comprehensive across unit, integration, contract, accessibility, and AI quality levels. The ChatBot must meet rigorous quality standards before serving UK citizens.
-
-**Test Pyramid**:
-1. **Unit Tests** (70%): Fast, isolated, deterministic (Jest, pytest)
-2. **Integration Tests** (20%): Component interactions, real dependencies (Testcontainers, mocks for HMRC APIs)
-3. **Contract Tests** (5%): API contract compliance with HMRC backend APIs (Pact)
-4. **End-to-End Tests** (5%): Critical user journeys (Playwright, Cypress)
-
-**AI-Specific Testing**:
-- **Accuracy Testing**: 1000+ ground truth queries with expected answers (>95% accuracy required)
-- **Bias Testing**: Evaluate fairness across demographics (age, gender, ethnicity, disability)
-- **Adversarial Testing**: Prompt injection, jailbreak attempts, toxic input handling
-- **Hallucination Detection**: Validate AI outputs against HMRC ground truth data
-
-**Non-Functional Testing**:
-- **Performance**: Load testing for peak demand (10,000 concurrent users, k6 or Locust)
-- **Security**: SAST/DAST, penetration testing by CHECK-approved supplier (annual)
-- **Accessibility**: Automated (axe-core, Pa11y) + manual (assistive technology testing)
-- **Chaos Engineering**: Failure injection to validate resilience (quarterly)
-
-**Coverage Requirements**:
-- Unit test coverage: ≥80%
-- Critical paths (authentication, AI generation, HMRC integration): 100% coverage
-- Contract tests: All HMRC backend APIs
-- Accessibility: WCAG 2.2 AA automated + manual tests
-
-**User Acceptance Testing**:
-- Private beta with 100 citizens (diverse demographics)
-- Public beta with 10,000 citizens before full launch
-- Citizen feedback loop (in-app surveys, helpfulness ratings)
-
-**Validation Gates**:
-- [ ] Test strategy documented per test level
-- [ ] Coverage thresholds met (≥80% unit, 100% critical paths)
-- [ ] AI accuracy tests passing (>95% on ground truth dataset)
-- [ ] Bias testing completed with report published
-- [ ] Accessibility tests passing (WCAG 2.2 AA)
-- [ ] Performance baselines established (10,000 concurrent users)
-- [ ] Security testing integrated in CI/CD (SAST, dependency scans)
-
----
-
-## VI. Cost and Financial Governance
-
-### 16. FinOps and Value for Money (HM Treasury Standards)
-
-**Principle Statement**:
-Every architectural decision has cost implications and must demonstrate value for money per HM Treasury Green Book principles. Solutions MUST be designed with cost efficiency in mind, and spending MUST be observable and attributable to budget holders.
-
-**Cost Tagging Requirements** (MANDATORY):
-- `project`: HMRC-ChatBot
-- `environment`: dev | staging | prod
-- `owner`: Team identifier (e.g., AI-Services-Team)
-- `cost-center`: HMRC finance code
-- `data-classification`: OFFICIAL | OFFICIAL-SENSITIVE
-- `service`: Citizen-Identity | AI-Engine | Knowledge-Base | HMRC-Integration | Audit
-
-**Cost Optimization Strategies**:
-- Right-size resources (no over-provisioning; use AWS Compute Optimizer recommendations)
-- Use AWS Savings Plans for predictable workloads (ECS Fargate, Lambda)
-- Auto-scaling to match demand (scale down during off-hours, scale up during tax deadlines)
-- Data lifecycle policies (hot → warm → cold → Glacier → deletion per retention policy)
-- Monitor LLM API costs (token usage optimization, caching frequent queries)
-
-**Budget Management**:
-- Monthly cost reviews per service (target: <£50,000/month for full production service)
-- Budget alerts at 80%, 100%, 120% thresholds via AWS Budgets
-- Idle resource detection and remediation (weekly automated scans)
-- Showback to HMRC business units (cost per conversation, cost per citizen served)
-
-**Value for Money Assessment**:
-- Compare cost vs. alternative channels (phone helpline cost: ~£5-10/call, ChatBot target: <£0.50/conversation)
-- Measure cost savings from reduced helpline volume
-- Track cost per successful tax guidance interaction
-
-**Validation Gates**:
-- [ ] All resources tagged per HM Treasury policy
-- [ ] Cost estimates documented in design (monthly operational cost, 5-year TCO)
-- [ ] Auto-scaling configured for elastic workloads
-- [ ] Budget alerts configured in AWS Budgets
-- [ ] Value for money analysis documented (cost vs. helpline alternative)
-
----
-
-## VII. Compliance and Audit
-
-### 17. Audit Logging and Traceability (HMG Records Management)
-
-**Principle Statement**:
-All access to citizen data and all privileged operations MUST be logged immutably for compliance, forensic analysis, and HMG records management requirements. The ChatBot handles sensitive tax data and requires comprehensive audit trails.
-
-**Audit Log Requirements** (W5H1):
-- **Who**: User or service identity (Government Gateway ID, AWS IAM role)
-- **What**: Action performed (CRUD operation, data access, configuration change)
-- **When**: Timestamp (UTC, millisecond precision)
-- **Where**: System/service component (API Gateway, Lambda, RDS)
-- **Why**: Context (API request ID, conversation ID, session ID)
-- **Result**: Success or failure with error details
-
-**Audit Events** (MANDATORY):
-- Citizen authentication (Government Gateway login/logout)
-- Chat conversation start/end with conversation ID
-- HMRC backend API calls (tax record retrieval, National Insurance lookup)
-- PII data access (citizen profile, tax records)
-- Administrative actions (configuration changes, user management)
-- Security events (authentication failures, rate limit violations, prompt injection attempts)
-- AI model inference (query, response, confidence score, source citations)
-
-**Log Retention** (HMG Records Management):
-- **Audit logs (citizen interactions)**: 7 years (tax records retention requirement)
-- **Security logs**: 7 years (HMG standard)
-- **Application logs**: 90 days
-- **Chat transcripts**: 7 years (with citizen consent, encrypted, PII redaction options)
-
-**Immutable Storage**:
-- Write-once-read-many (WORM) storage for compliance (S3 Object Lock with Governance mode)
-- Tamper-evident logging (cryptographic hashing, AWS CloudTrail log file validation)
-
-**SIEM Integration**:
-- Real-time streaming to HMRC Splunk instance
-- Alerts for security anomalies (authentication failures, unusual access patterns)
-- Integration with HMRC Security Operations Centre (SOC)
-
-**Validation Gates**:
-- [ ] Audit logging implemented for all sensitive operations
-- [ ] Log integrity ensured (S3 Object Lock, CloudTrail validation)
-- [ ] Retention policies configured (7 years for audit logs)
-- [ ] SIEM integration tested (real-time streaming to HMRC Splunk)
-- [ ] Audit log queries tested (demonstrate ability to answer "Who accessed what data when?")
-
----
-
-## VIII. Exception Process
-
-### Exception Request Procedure
+### Requesting Architecture Exceptions
 
 Exceptions to these principles require documented justification and formal approval per HMG governance standards.
 
+**Valid Exception Reasons**:
+- Technical constraints that prevent compliance
+- Regulatory or legal requirements
+- Transitional state during migration
+- Pilot/proof-of-concept with defined end date
+
 **Exception Request Must Include**:
 1. **Principle Being Violated**: Specific principle and rationale
-2. **Business Justification**: Why exception is necessary (e.g., legacy system constraint, unavailable technology in UK region)
+2. **Business Justification**: Why exception is necessary
 3. **Risk Assessment**: Security, operational, compliance, and reputational risks
-4. **Compensating Controls**: How risks will be mitigated (e.g., additional monitoring, manual reviews)
+4. **Compensating Controls**: How risks will be mitigated
 5. **Time Limit**: Exception expiration date (max 12 months)
 6. **Remediation Plan**: Path to compliance with milestones
 
 **Approval Authority**:
-- **Low Risk** (e.g., technology choice for non-critical component): HMRC Enterprise Architect
-- **Medium Risk** (e.g., temporary relaxation of testing requirements): Architecture Review Board + HMRC CISO delegate
-- **High Risk** (e.g., data residency exception, security control deviation): HMRC Chief Technology Officer + HMRC CISO
+- **Low Risk**: HMRC Enterprise Architect
+- **Medium Risk**: Architecture Review Board + HMRC CISO delegate
+- **High Risk**: HMRC Chief Technology Officer + HMRC CISO
 
 **Exception Registry**:
 - All approved exceptions tracked in HMRC Exception Registry (ServiceNow)
 - Quarterly reviews by Architecture Review Board
 - Automatic expiration and re-approval process
 
-**Examples of Exceptions**:
-- Legacy HMRC API integration requiring temporary relaxation of API-first principles (24-month remediation plan required)
-- Prototype system using non-approved AI framework (time-boxed to 3 months, no citizen data)
-
 ---
 
-## IX. Governance and Enforcement
+## VII. Governance and Compliance
 
-### Architecture Review Process
+### Architecture Review Gates
 
 All projects MUST undergo architecture review at these gates per GDS Service Standard:
 
-**Gate 0: Discovery Complete**
-- Review: Problem definition, user needs, alignment with HMRC strategy
-- Reviewers: HMRC Senior Responsible Officer (SRO), Enterprise Architect
+**Discovery/Alpha**:
+- [ ] Architecture principles understood
+- [ ] High-level approach aligns with principles
+- [ ] ATRS record drafted
 
-**Gate 1: Requirements Complete (Alpha)**
-- Review: Architecture principles applied to requirements, ATRS record drafted
-- Reviewers: Domain Architect, Enterprise Architect, HMRC Data Protection Officer
+**Beta/Design**:
+- [ ] Detailed architecture documented
+- [ ] Compliance with each principle validated
+- [ ] Exceptions requested and approved
+- [ ] Security and data principles validated
 
-**Gate 2: High-Level Design (HLD) (Alpha)**
-- Review: Technology choices, integration patterns, security controls, accessibility strategy
-- Reviewers: Enterprise Architect, Security Architect (NCSC-aligned), Domain Architect
-- Deliverables: HLD document, threat model, DPIA, ATRS record
+**Pre-Production**:
+- [ ] Implementation matches approved architecture
+- [ ] All validation gates passed
+- [ ] Operational readiness verified
 
-**Gate 3: Detailed Design (DLD) (Beta)**
-- Review: Component design, API contracts, data models, AI model selection
-- Reviewers: Domain Architect, Technical Leads, Content Designers (for Plain English)
+**Live Assessment (GDS Service Standard)**:
+- [ ] Service meets all 18 GDS Service Standard criteria
+- [ ] Cyber Essentials Plus certification obtained
+- [ ] WCAG 2.2 AA accessibility audit passed
+- [ ] DPIA approved
 
-**Gate 4: Pre-Production (Beta)**
-- Review: Infrastructure, CI/CD, observability, runbooks, accessibility audit results
-- Reviewers: SRE, Security Operations, Accessibility Specialist
+### Enforcement
 
-**Gate 5: Live Assessment (GDS Service Standard)**
-- Review: Demonstrate service meets GDS Service Standard (18 criteria)
-- Reviewers: GDS Service Assessors, HMRC Senior Responsible Officer
-- Outcome: Service approved to go live on GOV.UK
-
-### Review Outcomes
-
-- **APPROVED**: Proceed to next phase
-- **APPROVED WITH CONDITIONS**: Minor issues, must address before deployment
-- **REJECTED**: Major concerns, revise and resubmit
-
-### Compliance Monitoring
-
-- Automated compliance scans (AWS Config Rules, Terraform Sentinel policies)
-- Quarterly architecture audits by HMRC Internal Audit
-- Annual principle review and update cycle by Architecture Review Board
-- Monthly security posture reviews with HMRC SOC
+- Architecture reviews are **mandatory** for all projects
+- Principle violations must be remediated before production deployment
+- Approved exceptions are time-bound and reviewed quarterly
+- Retrospective reviews for compliance on live systems
 
 ---
 
-## X. Amendment Process
+## VIII. Appendix
 
-### Modifying Principles
+### Principle Summary Checklist
 
-These principles are living documents but changes require rigor and alignment with GDS standards:
+| Principle | Category | Criticality | Validation |
+|-----------|----------|-------------|------------|
+| Government Cloud-First | Strategic | HIGH | UK region deployment |
+| API-First Integration | Strategic | HIGH | OpenAPI specs, Gateway integration |
+| Security by Design | Strategic | CRITICAL | Threat model, pen testing, Cyber Essentials Plus |
+| Accessibility-First | Strategic | CRITICAL | WCAG 2.2 AA audit |
+| Responsible AI | Strategic | CRITICAL | ATRS record, bias testing |
+| Observability | Strategic | HIGH | Metrics, logs, traces, SLOs |
+| Data Sovereignty | Data | CRITICAL | UK GDPR compliance, DPIA |
+| Data Quality | Data | CRITICAL | 100% accuracy, source citation |
+| Single Source of Truth | Data | HIGH | Data lineage documented |
+| Loose Coupling | Integration | HIGH | API-based communication |
+| Asynchronous Communication | Integration | MEDIUM | Async patterns for non-real-time |
+| Performance | Quality | HIGH | Load testing (10,000 users) |
+| Availability | Quality | CRITICAL | 99.9% SLA, RTO/RPO |
+| Maintainability | Quality | MEDIUM | Documentation, ADRs |
+| Infrastructure as Code | DevOps | HIGH | Terraform, automated deployment |
+| Automated Testing | DevOps | HIGH | 80%+ coverage, AI accuracy tests |
+| CI/CD | DevOps | HIGH | Pipeline with security gates |
 
-**Amendment Proposal Requirements**:
-1. **Problem statement**: Why change is needed (e.g., new legislation, GDS guidance update)
-2. **Impact analysis**: Affected systems and projects
-3. **Industry benchmark**: How other government departments handle this (GDS, DVLA, DWP)
-4. **Migration plan**: For existing systems (timelines, cost, risk)
-
-**Approval Process**:
-1. Proposal to HMRC Enterprise Architecture Team
-2. Review by Architecture Review Board
-3. Stakeholder feedback period (2 weeks, including GDS if relevant)
-4. HMRC Chief Technology Officer final approval
-5. Communication to all engineering teams
-6. Grace period for compliance (90 days)
-
-**Annual Review**:
-- Principles reviewed annually to align with updated GDS guidance, UK GDPR changes, AI regulation
-- Incorporation of lessons learned from ChatBot operation
-
----
-
-## XI. GOV.UK Service Standard Alignment
+### GOV.UK Service Standard Alignment
 
 The ChatBot MUST meet the 18 criteria of the GDS Service Standard before going live:
 
-1. **Understand users and their needs**: User research with diverse citizen groups
-2. **Solve a whole problem for users**: End-to-end tax guidance, not just FAQs
-3. **Provide a joined up experience**: Integrate with GOV.UK account, Government Gateway, HMRC online services
-4. **Make the service simple to use**: Plain English, intuitive interface, minimal cognitive load
-5. **Make sure everyone can use the service**: WCAG 2.2 AA accessibility
-6. **Have a multidisciplinary team**: Content designers, user researchers, developers, data scientists, security engineers
-7. **Use agile ways of working**: Sprints, retrospectives, continuous delivery
-8. **Iterate and improve frequently**: Monthly releases, continuous improvement based on citizen feedback
-9. **Create a secure service**: Zero Trust, Cyber Essentials Plus, NCSC Cloud Security Principles
-10. **Define what success looks like**: SLOs, citizen satisfaction metrics, helpline volume reduction
-11. **Choose the right tools and technology**: GDS-approved technologies (see Technology Standards section)
-12. **Make new source code open**: Publish non-sensitive code on GitHub under Open Government Licence (security-sensitive components excluded)
-13. **Use and contribute to open standards**: OpenAPI, WCAG, OAuth 2.0, OpenTelemetry
-14. **Operate a reliable service**: 99.9% availability, disaster recovery tested
-15. **Support a sustainable service**: Documentation, runbooks, knowledge transfer, long-term support plan
-16. **Identify and address performance issues**: Load testing, performance monitoring, optimization
-17. **Test the end-to-end service**: E2E testing, user acceptance testing, private beta
-18. **Make the service accessible**: WCAG 2.2 AA, assistive technology testing, accessibility statement
+1. Understand users and their needs
+2. Solve a whole problem for users
+3. Provide a joined up experience
+4. Make the service simple to use
+5. Make sure everyone can use the service (WCAG 2.2 AA)
+6. Have a multidisciplinary team
+7. Use agile ways of working
+8. Iterate and improve frequently
+9. Create a secure service (Zero Trust, Cyber Essentials Plus)
+10. Define what success looks like
+11. Choose the right tools and technology
+12. Make new source code open
+13. Use and contribute to open standards
+14. Operate a reliable service (99.9% availability)
+15. Support a sustainable service
+16. Identify and address performance issues
+17. Test the end-to-end service
+18. Make the service accessible
 
-**Live Assessment**:
-- Service MUST pass GDS Live Assessment before public launch
-- Assessment by independent GDS assessors
-- Evidence required for all 18 criteria
+### Glossary
 
----
-
-## Appendices
-
-### Appendix A: Glossary
-
-- **ATRS**: Algorithmic Transparency Recording Standard (HMG requirement for AI systems)
+- **ATRS**: Algorithmic Transparency Recording Standard
 - **Bounded Context**: Domain-driven design concept for service boundaries
 - **CHECK**: NCSC scheme for approved penetration testing suppliers
-- **DLD**: Detailed Level Design
-- **DPIA**: Data Protection Impact Assessment (UK GDPR requirement)
+- **DPIA**: Data Protection Impact Assessment
 - **FinOps**: Financial operations for cloud cost management
 - **GDS**: Government Digital Service
 - **Government Gateway**: HMRC authentication system for citizens
-- **HLD**: High-Level Design
-- **HMG**: Her Majesty's Government
+- **HMG**: His Majesty's Government
 - **NCSC**: National Cyber Security Centre
 - **PII**: Personally Identifiable Information
-- **RAG**: Retrieval-Augmented Generation (AI architecture pattern)
-- **RPO/RTO**: Recovery point/time objectives for disaster recovery
+- **RAG**: Retrieval-Augmented Generation
+- **RPO/RTO**: Recovery point/time objectives
 - **SAST/DAST**: Static/dynamic application security testing
 - **SLI/SLO/SLA**: Service level indicator/objective/agreement
-- **SPF**: Security Policy Framework (HMG)
 - **WCAG**: Web Content Accessibility Guidelines
 - **Zero Trust**: Security model assuming breach, no implicit trust
 
-### Appendix B: Reference Architecture Diagrams
+### Related Documents
 
-**High-Level Architecture**:
-```
-[Citizen] → [CloudFront + WAF] → [API Gateway] → [ECS Fargate Services]
-                                                    ├─ Citizen Identity Service (Government Gateway)
-                                                    ├─ Conversational AI Service (RAG + LLM)
-                                                    ├─ Knowledge Management Service (Vector DB)
-                                                    └─ HMRC Integration Service (Backend APIs)
-
-[Data Stores]:
-- RDS PostgreSQL (Citizen profiles, audit logs)
-- OpenSearch (Vector embeddings for RAG)
-- ElastiCache Redis (Session management)
-- S3 (Chat transcripts, encrypted)
-
-[External Integrations]:
-- AWS Bedrock (Claude 3.5 Sonnet LLM)
-- Government Gateway (Authentication)
-- HMRC Backend APIs (Tax records, National Insurance)
-```
-
-**Security Architecture**:
-```
-[Defense in Depth]:
-1. AWS WAF (OWASP Top 10 rules, rate limiting)
-2. API Gateway (authentication, authorization)
-3. VPC with private subnets (no public internet access for ECS tasks)
-4. Security Groups (least privilege network access)
-5. IAM Roles (least privilege AWS access)
-6. Encryption at rest (RDS, S3, OpenSearch)
-7. Encryption in transit (TLS 1.3)
-8. Secrets Manager (no hardcoded credentials)
-9. CloudTrail + CloudWatch (audit logging)
-10. AWS GuardDuty (threat detection)
-```
-
-**AI/RAG Architecture**:
-```
-[Citizen Query] → [Input Validation] → [Embedding Model] → [Vector Search (OpenSearch)]
-                                                            ↓
-[Retrieved Documents] → [Prompt Construction] → [LLM (AWS Bedrock Claude)] → [Response Generation]
-                                                                            ↓
-                                              [Post-Processing: Validation, Source Citation] → [Response to Citizen]
-                                                                            ↓
-                                              [Audit Log: Query, Response, Sources, Confidence]
-```
-
-### Appendix C: Related Documents
-
-- **GDS Service Manual**: https://www.gov.uk/service-manual
-- **Technology Code of Practice**: https://www.gov.uk/guidance/the-technology-code-of-practice
-- **Service Standard**: https://www.gov.uk/service-manual/service-standard
-- **UK Government AI Playbook**: https://www.gov.uk/government/publications/ai-playbook
-- **Algorithmic Transparency Recording Standard**: https://www.gov.uk/government/collections/algorithmic-transparency-recording-standard-hub
-- **Data Ethics Framework**: https://www.gov.uk/government/publications/data-ethics-framework
-- **NCSC Cloud Security Principles**: https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles
-- **GOV.UK Design System**: https://design-system.service.gov.uk/
-- **WCAG 2.2 Guidelines**: https://www.w3.org/WAI/WCAG22/quickref/
-- **UK GDPR Guidance**: https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/
-- **HMG Security Policy Framework**: https://www.gov.uk/government/publications/security-policy-framework
-
-### Appendix D: Compliance Checklist
-
-**Pre-Launch Compliance**:
-- [ ] GDS Service Standard assessment passed (18 criteria)
-- [ ] WCAG 2.2 AA accessibility audit passed
-- [ ] Cyber Essentials Plus certification obtained
-- [ ] DPIA approved by HMRC Data Protection Officer
-- [ ] ATRS record published on GOV.UK
-- [ ] Penetration test by CHECK-approved supplier (no critical/high findings)
-- [ ] NCSC Cloud Security Principles addressed (14 principles)
-- [ ] Privacy notice published on GOV.UK
-- [ ] Welsh language support implemented
-- [ ] Accessibility statement published
-- [ ] Live service agreement signed
-- [ ] Disaster recovery tested (RPO/RTO validated)
-- [ ] Incident response procedures documented and trained
-- [ ] On-call rota established with runbooks
+- GDS Service Manual: https://www.gov.uk/service-manual
+- Technology Code of Practice: https://www.gov.uk/guidance/the-technology-code-of-practice
+- Service Standard: https://www.gov.uk/service-manual/service-standard
+- UK Government AI Playbook: https://www.gov.uk/government/publications/ai-playbook
+- Algorithmic Transparency Recording Standard: https://www.gov.uk/government/collections/algorithmic-transparency-recording-standard-hub
+- Data Ethics Framework: https://www.gov.uk/government/publications/data-ethics-framework
+- NCSC Cloud Security Principles: https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles
+- GOV.UK Design System: https://design-system.service.gov.uk/
+- WCAG 2.2 Guidelines: https://www.w3.org/WAI/WCAG22/quickref/
+- UK GDPR Guidance: https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/
 
 ---
 
-**Document Control**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | 2025-10-14 | Enterprise Architecture Team | Initial draft for HMRC ChatBot project |
-
-**Approvals** (Pending)
-
-| Role | Name | Signature | Date |
-|------|------|-----------|------|
-| HMRC Chief Technology Officer | [PENDING] | _________ | [PENDING] |
-| HMRC Chief Information Security Officer | [PENDING] | _________ | [PENDING] |
-| HMRC Enterprise Architect | [PENDING] | _________ | [PENDING] |
-| HMRC Data Protection Officer | [PENDING] | _________ | [PENDING] |
-| GDS Senior Responsible Officer | [PENDING] | _________ | [PENDING] |
+**Generated by**: ArcKit `/arckit.principles` command
+**Generated on**: 2026-01-25
+**ArcKit Version**: 0.11.0
+**Project**: HMRC ChatBot (001-hmrc-chatbot)
+**Model**: Claude Opus 4.5
