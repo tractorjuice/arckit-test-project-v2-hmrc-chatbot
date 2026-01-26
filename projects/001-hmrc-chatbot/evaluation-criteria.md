@@ -1,10 +1,41 @@
 # Vendor Evaluation Criteria: HMRC Tax Guidance ChatBot
 
-**Document Type**: Vendor Evaluation Framework
+> **Template Status**: Live | **Version**: 0.11.2 | **Command**: `/arckit.evaluate`
+
+## Document Control
+
+| Field | Value |
+|-------|-------|
+| **Document ID** | ARC-001-EVAL-v1.2 |
+| **Document Type** | Vendor Evaluation Framework |
+| **Project** | HMRC ChatBot (Project 001-hmrc-chatbot) |
+| **Classification** | OFFICIAL |
+| **Status** | DRAFT |
+| **Version** | 1.2 |
+| **Created Date** | 2025-10-14 |
+| **Last Modified** | 2026-01-26 |
+| **Review Cycle** | Quarterly |
+| **Next Review Date** | 2026-04-26 |
+| **Owner** | HMRC Procurement |
+| **Reviewed By** | [PENDING] |
+| **Approved By** | [PENDING] |
+| **Distribution** | HMRC Procurement, Architecture Team, Finance, Legal, Evaluation Committee |
+
+## Revision History
+
+| Version | Date | Author | Changes | Approved By | Approval Date |
+|---------|------|--------|---------|-------------|---------------|
+| 1.0 | 2025-10-14 | ArcKit AI | Initial creation from `/arckit.evaluate` command | [PENDING] | [PENDING] |
+| 1.1 | 2026-01-25 | ArcKit AI | Updated to align with ArcKit template structure | [PENDING] | [PENDING] |
+| 1.2 | 2026-01-26 | ArcKit AI | Updated to align with ArcKit template v0.11.2 | [PENDING] | [PENDING] |
+
+## Document Purpose
+
+This document defines the criteria, scoring methodology, and process for evaluating vendor proposals for the HMRC Tax Guidance ChatBot project. It implements the scoring criteria defined in the Statement of Work (SOW) Section 8 and ensures compliance with G-Cloud 14 procurement rules, HM Treasury value for money principles, and HMRC governance standards.
+
+---
+
 **RFP ID**: HMRC-CHATBOT-2025-001
-**Project ID**: 001-hmrc-chatbot
-**Version**: 1.0
-**Date**: 2025-10-14
 **Evaluation Lead**: [HMRC Procurement Lead - TBD]
 **Evaluation Committee**: [To be assigned before proposal deadline]
 
@@ -38,7 +69,7 @@ This evaluation framework implements the scoring criteria defined in the Stateme
 | [TBD] | **Technical Evaluator - Accessibility** | HMRC Accessibility Specialist | WCAG 2.2 AA compliance, assistive technology testing, GOV.UK Design System, Welsh language | Yes |
 | [TBD] | **Business Evaluator - Product** | HMRC Digital Services (Product Owner) | Requirements understanding, user needs, citizen satisfaction, helpline deflection goals | Yes |
 | [TBD] | **Business Evaluator - Tax Policy** | HMRC Tax Policy | Tax domain accuracy, knowledge base quality, HMRC integration, escalation strategy | Yes |
-| [TBD] | **Business Evaluator - Finance** | HMRC Finance | Cost evaluation, budget alignment, value for money, 3-year TCO, £75M savings realization | Yes |
+| [TBD] | **Business Evaluator - Finance** | HMRC Finance | Cost evaluation, budget alignment, value for money, 3-year TCO, ï¿½75M savings realization | Yes |
 | [TBD] | **Observer (Non-Voting)** | HMRC Legal | Contract terms review, IP rights, liability, termination clauses | No |
 | [TBD] | **Observer (Non-Voting)** | HMRC Data Protection Officer | UK GDPR compliance, DPIA review, citizen consent, data subject rights | No |
 | [TBD] | **Observer (Non-Voting)** | GDS Assessor | GDS Service Standard alignment (18 criteria), readiness for Live Assessment | No |
@@ -57,10 +88,10 @@ All evaluators must disclose any conflicts of interest with vendors before evalu
 
 **Conflict of Interest Declaration** (mandatory for all evaluators):
 - [ ] Personal relationships with vendor employees (family, close friends)
-- [ ] Financial interests in vendor companies (stock ownership, consulting fees, gifts >£50)
+- [ ] Financial interests in vendor companies (stock ownership, consulting fees, gifts >ï¿½50)
 - [ ] Prior employment with vendor within past 2 years
 - [ ] Concurrent consulting arrangements or side employment with vendor
-- [ ] Participation in vendor-sponsored events or training (>£250 value)
+- [ ] Participation in vendor-sponsored events or training (>ï¿½250 value)
 - [ ] Other conflicts (describe): _______________
 
 **Recusal Process**:
@@ -81,31 +112,31 @@ All evaluators must disclose any conflicts of interest with vendors before evalu
 
 ```
 1. Proposals Received (Due Date: 2025-12-09, 5:00 PM GMT)
-   “
+   ï¿½
 2. Mandatory Qualifications Check (Pass/Fail) - 2 days
-   “ (Qualified vendors only proceed)
+   ï¿½ (Qualified vendors only proceed)
 3. Individual Technical Scoring (Blind to Cost) - 1 week
-   “
+   ï¿½
 4. Consensus Technical Scoring Meeting - 1 day
-   “
+   ï¿½
 5. Shortlist Top 3-5 Vendors (Technical Score e70/100) - 1 day
-   “
+   ï¿½
 6. Cost Proposals Opened (Shortlisted Vendors Only) - Same day
-   “
+   ï¿½
 7. Cost Scoring (Best Value Method) - 2 days
-   “
+   ï¿½
 8. Combined Technical + Cost Scoring (70% + 30%) - 1 day
-   “
+   ï¿½
 9. Vendor Presentations & Q&A (2 hours per vendor) - 1 week
-   “
+   ï¿½
 10. Reference Checks (3 references per vendor) - 1 week
-   “
+   ï¿½
 11. Final Scoring & Selection Decision - 2 days
-   “
+   ï¿½
 12. Selection Approval (HMRC SRO + CTO) - 1 day
-   “
+   ï¿½
 13. Vendor Notification (Selected + Non-Selected) - 1 day
-   “
+   ï¿½
 14. Contract Negotiation (Selected Vendor Only) - 2 weeks
 ```
 
@@ -147,7 +178,7 @@ Before scoring, vendors MUST meet ALL mandatory qualifications. **Failure on any
 | **MQ-3** | **Reference Projects**: Minimum 3 reference projects in past 3 years demonstrating AI/ML, cloud (AWS/Azure), UK Gov authentication integration. | Reference project descriptions with client name, contact, scope, technologies, outcomes. | [ ] Pass<br>[ ] Fail | Product + EA | At least 1 reference must be UK Gov/public sector. |
 | **MQ-4** | **Certifications - Company**: Cyber Essentials Plus (current, not expired). G-Cloud 14 listing or eligibility. | Certificate copies with expiration dates. G-Cloud 14 supplier ID or application proof. | [ ] Pass<br>[ ] Fail | CISO + Procurement | Cyber Essentials Plus is NON-NEGOTIABLE for HMG contracts. |
 | **MQ-5** | **Certifications - Key Personnel**: AWS Certified Solutions Architect Professional (or equivalent), CISSP/CEH (Security Architect), AWS ML Specialty (AI/ML Lead), WCAG 2.2 AA certification (Accessibility Specialist). | Certificate copies for named key personnel in proposal. | [ ] Pass<br>[ ] Fail | EA + CISO | Must match CVs of key personnel provided. |
-| **MQ-6** | **Financial Stability**: Minimum £5M annual revenue (past 2 years). Professional liability insurance £5M, cyber liability £2M. | 2 years audited financial statements. Insurance certificates (current, not expired). | [ ] Pass<br>[ ] Fail | Finance + Procurement | Vendor must be financially stable to deliver 12-month project. |
+| **MQ-6** | **Financial Stability**: Minimum ï¿½5M annual revenue (past 2 years). Professional liability insurance ï¿½5M, cyber liability ï¿½2M. | 2 years audited financial statements. Insurance certificates (current, not expired). | [ ] Pass<br>[ ] Fail | Finance + Procurement | Vendor must be financially stable to deliver 12-month project. |
 | **MQ-7** | **UK Presence**: UK office or registered UK subsidiary. Minimum 50% onshore team allocation. | UK company registration (Companies House number). Team allocation plan showing e50% UK-based staff. | [ ] Pass<br>[ ] Fail | Procurement + EA | On-site presence in London required for design workshops and GDS assessments. |
 | **MQ-8** | **Accessibility Expertise**: At least 1 dedicated accessibility specialist with WCAG 2.2 AA certification and experience delivering compliant public sector services. | Accessibility specialist CV with IAAP CPACC or WAS certification. Reference projects with WCAG 2.2 AA audits. | [ ] Pass<br>[ ] Fail | Accessibility Specialist | WCAG 2.2 AA is legal requirement (Public Sector Bodies Accessibility Regulations 2018). |
 | **MQ-9** | **Proposal Compliance - Timeliness**: Proposal submitted by 2025-12-09 at 5:00 PM GMT. | Email timestamp. | [ ] Pass<br>[ ] Fail | Procurement | Late proposals NOT accepted (no exceptions). |
@@ -204,7 +235,7 @@ Technical evaluation aligned with SOW Section 8.2. Total: **100 points** across 
 
 | Subcriterion | Points | Key Evaluation Questions |
 |--------------|--------|-------------------------|
-| **1.1 RAG Architecture Quality** | 10 | " Is RAG pipeline well-designed (embedding ’ vector search ’ LLM generation ’ validation ’ source citation)?<br>" Are embedding model and vector database choices appropriate (AWS Titan Embeddings, OpenSearch k-NN)?<br>" Is knowledge base ingestion pipeline automated and scalable (100,000+ HMRC documents)?<br>" Is 100% source citation implemented with links to GOV.UK?<br>" Is confidence scoring implemented with human escalation threshold (<70%)?<br>**Aligns with Principle #12 (RAG for AI Accuracy), FR-2, FR-3, FR-4** |
+| **1.1 RAG Architecture Quality** | 10 | " Is RAG pipeline well-designed (embedding ï¿½ vector search ï¿½ LLM generation ï¿½ validation ï¿½ source citation)?<br>" Are embedding model and vector database choices appropriate (AWS Titan Embeddings, OpenSearch k-NN)?<br>" Is knowledge base ingestion pipeline automated and scalable (100,000+ HMRC documents)?<br>" Is 100% source citation implemented with links to GOV.UK?<br>" Is confidence scoring implemented with human escalation threshold (<70%)?<br>**Aligns with Principle #12 (RAG for AI Accuracy), FR-2, FR-3, FR-4** |
 | **1.2 AI Safety and Responsible AI** | 8 | " Is bias mitigation strategy comprehensive (quarterly testing across 9 protected characteristics)?<br>" Are guardrails robust (hallucination detection, prompt injection defense, toxic content filtering)?<br>" Is ATRS creation plan clear (Tier 1 + Tier 2, publication on GOV.UK)?<br>" Is explainability strategy sound (100% source citation, "Why did ChatBot say this?" feature)?<br>" Is human-in-the-loop implemented (escalation for complex queries, appeals, disputes)?<br>**Aligns with Principle #5 (Responsible AI and ATRS), NFR-SEC-6, BR-6** |
 | **1.3 Security and Compliance Architecture** | 7 | " Is Zero Trust security model implemented (no network-based trust, continuous verification)?<br>" Are all 14 NCSC Cloud Security Principles addressed with specific controls?<br>" Is UK GDPR compliance strategy clear (DPIA, data minimization, citizen consent, data subject rights)?<br>" Is encryption comprehensive (TLS 1.3 in transit, AES-256 at rest)?<br>" Is secrets management via AWS Secrets Manager (no hardcoded credentials)?<br>" Is Cyber Essentials Plus compliance approach documented?<br>**Aligns with Principle #3 (Security by Design - Zero Trust), #7 (Data Sovereignty), NFR-SEC-1 to NFR-SEC-5** |
 | **1.4 Architecture Quality and Scalability** | 6 | " Is high-level architecture clear (C4 Context, Container, Component diagrams)?<br>" Are microservices boundaries well-defined (Citizen Identity, Conversational AI, Knowledge Management, HMRC Integration, Audit & Compliance)?<br>" Is technology stack aligned with approved stack or well-justified alternatives (Python, Node.js, React, AWS Bedrock, PostgreSQL, OpenSearch)?<br>" Is scalability strategy credible (ECS Fargate auto-scaling, RDS read replicas, ElastiCache)?<br>" Does solution meet performance targets (<2s p95 latency, 500 req/s throughput)?<br>**Aligns with Principle #1 (Cloud-First), #9 (Approved Tech Stack), #11 (Microservices), NFR-P-1, NFR-P-2, NFR-S-1** |
@@ -303,7 +334,7 @@ Technical evaluation aligned with SOW Section 8.2. Total: **100 points** across 
 |--------------|--------|-------------------------|
 | **4.1 Reference Project Relevance** | 9 | " Are 3+ reference projects similar in scope and complexity (AI chatbot, RAG, UK Gov/public sector)?<br>" Do references demonstrate required capabilities (LLM, Government Gateway integration, WCAG 2.2 AA, Welsh language)?<br>" Were projects successful (on time, on budget, quality)?<br>" Are client names, contacts, and detailed outcomes provided?<br>" **Reference Check Results** (conducted in Phase 10): Do reference clients give positive feedback?<br>**Aligns with SOW Section 7.1 (Proposal Format - Section 7: Experience and References), MQ-3** |
 | **4.2 UK Government and GDS Experience** | 4 | " Has vendor delivered services that passed GDS Service Standard Live Assessment (18 criteria)?<br>" Do they have experience with GDS phases (Discovery, Alpha, Beta, Live)?<br>" Are they familiar with GDS Design System and GOV.UK style guide?<br>" Have they navigated UK Gov governance (Architecture Review Boards, DPIAs, security assessments)?<br>**Aligns with SOW Section 6.2 (PQ-2), BR-4** |
-| **4.3 Financial and Organizational Stability** | 2 | " Are financial statements sound (£5M+ revenue, profitable or path to profitability)?<br>" Is company stable (years in business, client retention, no recent layoffs/restructuring)?<br>" Are insurance requirements met (£5M professional liability, £2M cyber liability)?<br>**Aligns with MQ-6** |
+| **4.3 Financial and Organizational Stability** | 2 | " Are financial statements sound (ï¿½5M+ revenue, profitable or path to profitability)?<br>" Is company stable (years in business, client retention, no recent layoffs/restructuring)?<br>" Are insurance requirements met (ï¿½5M professional liability, ï¿½2M cyber liability)?<br>**Aligns with MQ-6** |
 
 #### Reference Project Evaluation (Per Reference)
 
@@ -343,7 +374,7 @@ For each of 3 reference projects, evaluate:
 
 | Subcriterion | Points | Key Evaluation Questions |
 |--------------|--------|-------------------------|
-| **5.1 Problem and Business Context Understanding** | 2 | " Does vendor demonstrate understanding of HMRC's business drivers (£75M savings target, 30% helpline deflection by Year 3, citizen satisfaction >70% NPS)?<br>" Do they articulate WHY HMRC needs AI ChatBot (not just WHAT)?<br>" Do they show empathy for UK citizens' tax guidance needs (accessibility, Plain English, Welsh language)?<br>**Aligns with SOW Section 1.2 (Background), BR-1, BR-2, BR-3** |
+| **5.1 Problem and Business Context Understanding** | 2 | " Does vendor demonstrate understanding of HMRC's business drivers (ï¿½75M savings target, 30% helpline deflection by Year 3, citizen satisfaction >70% NPS)?<br>" Do they articulate WHY HMRC needs AI ChatBot (not just WHAT)?<br>" Do they show empathy for UK citizens' tax guidance needs (accessibility, Plain English, Welsh language)?<br>**Aligns with SOW Section 1.2 (Background), BR-1, BR-2, BR-3** |
 | **5.2 Requirements Comprehension** | 2 | " Are all key requirements addressed in proposal (7 BR, 11 FR, 21 NFR, 5 INT)?<br>" Are requirements interpreted correctly (no major misunderstandings)?<br>" Are gaps, ambiguities, or risks in requirements identified proactively?<br>**Aligns with SOW Section 3 (Requirements)** |
 | **5.3 UK Tax Domain Knowledge** | 1 | " Does vendor demonstrate understanding of UK tax system (Self Assessment, PAYE, VAT, National Insurance)?<br>" Do they understand HMRC's role and responsibilities?<br>" Are tax-specific risks identified (e.g., accuracy of tax advice, citizen liability if ChatBot gives wrong guidance)?<br>**Aligns with SOW Section 1.2, Tax Policy evaluation** |
 
@@ -409,16 +440,16 @@ Cost proposals are opened **only for shortlisted vendors** (technical score e70/
 **Formula**:
 - **Technical Score**: 70% weight (from Phase 4 technical evaluation)
 - **Cost Score**: 30% weight (calculated below using lowest-price scaling)
-- **Final Score** = (Technical Score × 0.7) + (Cost Score × 0.3)
+- **Final Score** = (Technical Score ï¿½ 0.7) + (Cost Score ï¿½ 0.3)
 
 **Cost Score Calculation** (30 points max):
 - Vendor with **lowest 3-year TCO** receives **30 points**
-- Other vendors scored proportionally: **Cost Score = (Lowest TCO / Vendor's TCO) × 30 points**
+- Other vendors scored proportionally: **Cost Score = (Lowest TCO / Vendor's TCO) ï¿½ 30 points**
 
 **Example**:
-- Vendor A: 3-Year TCO = £18M ’ Cost Score = (£16M / £18M) × 30 = **26.67 points**
-- Vendor B: 3-Year TCO = £16M ’ Cost Score = (£16M / £16M) × 30 = **30.00 points** (lowest)
-- Vendor C: 3-Year TCO = £20M ’ Cost Score = (£16M / £20M) × 30 = **24.00 points**
+- Vendor A: 3-Year TCO = ï¿½18M ï¿½ Cost Score = (ï¿½16M / ï¿½18M) ï¿½ 30 = **26.67 points**
+- Vendor B: 3-Year TCO = ï¿½16M ï¿½ Cost Score = (ï¿½16M / ï¿½16M) ï¿½ 30 = **30.00 points** (lowest)
+- Vendor C: 3-Year TCO = ï¿½20M ï¿½ Cost Score = (ï¿½16M / ï¿½20M) ï¿½ 30 = **24.00 points**
 
 **Rationale for 70/30 Split**:
 - **70% Technical**: Technical quality, AI accuracy, security, and compliance are critical for citizen-facing tax guidance system. Poor technical solution creates unacceptable risk (inaccurate tax advice, data breaches, accessibility failures).
@@ -430,10 +461,10 @@ Cost proposals are opened **only for shortlisted vendors** (technical score e70/
 
 | Criterion | Evaluation Questions | Red Flags |
 |-----------|---------------------|-----------|
-| **3-Year Total Cost of Ownership (TCO)** | " What is total 3-year TCO (capex + opex)?<br>" Design/development capex: £4.5M-£5.5M budget (within range?)<br>" Annual opex (AWS, LLM API, support): £4M-£5M budget (within range?)<br>" 3-Year TCO: £16.5M-£20.5M budget (within range?) | " Cost significantly above budget (>£22M) indicates vendor doesn't understand scope or padding estimates<br>" Cost significantly below budget (<£14M) indicates vendor underestimating scope or planning to cut corners |
-| **Cost Breakdown Transparency** | " Is cost breakdown detailed (labor by role, AWS infrastructure, LLM API, third-party services)?<br>" Are hourly/daily rates reasonable for UK market?<br>" Is labor allocation justified (FTE × months)?<br>" Are infrastructure costs realistic (not underestimated)? | " Vague cost categories (e.g., "Development: £3M" with no detail)<br>" Unrealistic labor rates (£50/day for Senior Architect indicates offshore with hidden risks)<br>" Infrastructure costs too low (£100K/year for AWS when realistic is £500K+) |
-| **LLM API Cost Realism** | " Are LLM API costs estimated realistically based on token usage projections?<br>" Target: <£0.50 per conversation (see ATRS record)<br>" Are caching and optimization strategies to reduce token usage described? | " No LLM API costs included (major risk - could be £1M+/year)<br>" Unrealistic token estimates (e.g., 1M tokens/year when realistic is 100M+ tokens/year) |
-| **Value for Money** | " Considering technical quality (technical score), is cost reasonable?<br>" Cost per technical point: £X TCO / Y technical score = £Z/point<br>" How does £Z/point compare across vendors?<br>" Does vendor provide value-added services (e.g., free knowledge transfer, extended warranty, performance guarantees)? | " High cost per technical point (e.g., £250K/point vs. £200K/point for others) indicates poor value<br>" Fixed-price vendor with aggressive padding (30% contingency) vs. T&M vendor with realistic buffer (10%) |
+| **3-Year Total Cost of Ownership (TCO)** | " What is total 3-year TCO (capex + opex)?<br>" Design/development capex: ï¿½4.5M-ï¿½5.5M budget (within range?)<br>" Annual opex (AWS, LLM API, support): ï¿½4M-ï¿½5M budget (within range?)<br>" 3-Year TCO: ï¿½16.5M-ï¿½20.5M budget (within range?) | " Cost significantly above budget (>ï¿½22M) indicates vendor doesn't understand scope or padding estimates<br>" Cost significantly below budget (<ï¿½14M) indicates vendor underestimating scope or planning to cut corners |
+| **Cost Breakdown Transparency** | " Is cost breakdown detailed (labor by role, AWS infrastructure, LLM API, third-party services)?<br>" Are hourly/daily rates reasonable for UK market?<br>" Is labor allocation justified (FTE ï¿½ months)?<br>" Are infrastructure costs realistic (not underestimated)? | " Vague cost categories (e.g., "Development: ï¿½3M" with no detail)<br>" Unrealistic labor rates (ï¿½50/day for Senior Architect indicates offshore with hidden risks)<br>" Infrastructure costs too low (ï¿½100K/year for AWS when realistic is ï¿½500K+) |
+| **LLM API Cost Realism** | " Are LLM API costs estimated realistically based on token usage projections?<br>" Target: <ï¿½0.50 per conversation (see ATRS record)<br>" Are caching and optimization strategies to reduce token usage described? | " No LLM API costs included (major risk - could be ï¿½1M+/year)<br>" Unrealistic token estimates (e.g., 1M tokens/year when realistic is 100M+ tokens/year) |
+| **Value for Money** | " Considering technical quality (technical score), is cost reasonable?<br>" Cost per technical point: ï¿½X TCO / Y technical score = ï¿½Z/point<br>" How does ï¿½Z/point compare across vendors?<br>" Does vendor provide value-added services (e.g., free knowledge transfer, extended warranty, performance guarantees)? | " High cost per technical point (e.g., ï¿½250K/point vs. ï¿½200K/point for others) indicates poor value<br>" Fixed-price vendor with aggressive padding (30% contingency) vs. T&M vendor with realistic buffer (10%) |
 | **Payment Terms and Milestones** | " Are payment milestones aligned with SOW Section 9.2 (10% signing, 15% design, 20% dev, 20% testing, 10% private beta, 20% production, 5% warranty)?<br>" Is 5% retainage held until warranty completion?<br>" Are payment terms Net 30 days? | " Payment terms front-loaded (e.g., 50% upfront) indicating vendor cash flow issues or lack of confidence in delivery<br>" No retainage (removes incentive for warranty support) |
 | **Assumptions and Exclusions** | " Are cost assumptions clearly stated and reasonable?<br>" Are exclusions appropriate (e.g., HMRC pays AWS bills directly, HMRC provides subject matter experts)?<br>" Are there hidden costs (e.g., travel, tools, licenses) not included? | " Unrealistic assumptions (e.g., "HMRC provides 100% of testing effort")<br>" Excessive exclusions (e.g., "Security testing not included" when SOW requires it)<br>" Hidden costs discovered in fine print |
 
@@ -444,48 +475,48 @@ Cost proposals are opened **only for shortlisted vendors** (technical score e70/
 
 #### 5.3.1 Cost Summary Comparison
 
-| Vendor | Design/Dev Capex (£M) | Annual Opex (£M) | Year 1 Total | Year 2 Opex | Year 3 Opex | **3-Year TCO (£M)** | Cost Score (30 pts max) | Rank by Cost |
+| Vendor | Design/Dev Capex (ï¿½M) | Annual Opex (ï¿½M) | Year 1 Total | Year 2 Opex | Year 3 Opex | **3-Year TCO (ï¿½M)** | Cost Score (30 pts max) | Rank by Cost |
 |--------|-----------------------|------------------|--------------|-------------|-------------|---------------------|-------------------------|--------------|
-| Vendor A | £___ | £___ | £___ | £___ | £___ | **£___** | ___ | ___ |
-| Vendor B | £___ | £___ | £___ | £___ | £___ | **£___** | ___ | ___ |
-| Vendor C | £___ | £___ | £___ | £___ | £___ | **£___** | ___ | ___ |
-| **HMRC Budget** | **£4.5-£5.5M** | **£4-£5M** | **£8.5-£10.5M** | **£4-£5M** | **£4-£5M** | **£16.5-£20.5M** | - | - |
+| Vendor A | ï¿½___ | ï¿½___ | ï¿½___ | ï¿½___ | ï¿½___ | **ï¿½___** | ___ | ___ |
+| Vendor B | ï¿½___ | ï¿½___ | ï¿½___ | ï¿½___ | ï¿½___ | **ï¿½___** | ___ | ___ |
+| Vendor C | ï¿½___ | ï¿½___ | ï¿½___ | ï¿½___ | ï¿½___ | **ï¿½___** | ___ | ___ |
+| **HMRC Budget** | **ï¿½4.5-ï¿½5.5M** | **ï¿½4-ï¿½5M** | **ï¿½8.5-ï¿½10.5M** | **ï¿½4-ï¿½5M** | **ï¿½4-ï¿½5M** | **ï¿½16.5-ï¿½20.5M** | - | - |
 
 #### 5.3.2 Cost Breakdown Comparison
 
 | Cost Category | Vendor A | Vendor B | Vendor C | HMRC Notes |
 |---------------|----------|----------|----------|------------|
 | **Capex: Design/Development (Months 1-12)** |
-| Labor (by role/phase) | £___ | £___ | £___ | |
-| AWS Infrastructure (Year 1) | £___ | £___ | £___ | |
-| LLM API Costs (AWS Bedrock, Year 1) | £___ | £___ | £___ | |
-| Third-Party Tools (Monitoring, Security, CI/CD) | £___ | £___ | £___ | |
-| **Subtotal Capex (Year 1)** | **£___** | **£___** | **£___** | |
+| Labor (by role/phase) | ï¿½___ | ï¿½___ | ï¿½___ | |
+| AWS Infrastructure (Year 1) | ï¿½___ | ï¿½___ | ï¿½___ | |
+| LLM API Costs (AWS Bedrock, Year 1) | ï¿½___ | ï¿½___ | ï¿½___ | |
+| Third-Party Tools (Monitoring, Security, CI/CD) | ï¿½___ | ï¿½___ | ï¿½___ | |
+| **Subtotal Capex (Year 1)** | **ï¿½___** | **ï¿½___** | **ï¿½___** | |
 | **Opex: Ongoing Support (Year 2)** |
-| Annual Support & Maintenance | £___ | £___ | £___ | |
-| AWS Infrastructure (Year 2) | £___ | £___ | £___ | |
-| LLM API Costs (Year 2) | £___ | £___ | £___ | |
-| Third-Party Tools (Year 2) | £___ | £___ | £___ | |
-| **Subtotal Opex (Year 2)** | **£___** | **£___** | **£___** | |
+| Annual Support & Maintenance | ï¿½___ | ï¿½___ | ï¿½___ | |
+| AWS Infrastructure (Year 2) | ï¿½___ | ï¿½___ | ï¿½___ | |
+| LLM API Costs (Year 2) | ï¿½___ | ï¿½___ | ï¿½___ | |
+| Third-Party Tools (Year 2) | ï¿½___ | ï¿½___ | ï¿½___ | |
+| **Subtotal Opex (Year 2)** | **ï¿½___** | **ï¿½___** | **ï¿½___** | |
 | **Opex: Ongoing Support (Year 3)** |
-| Annual Support & Maintenance | £___ | £___ | £___ | |
-| AWS Infrastructure (Year 3) | £___ | £___ | £___ | |
-| LLM API Costs (Year 3) | £___ | £___ | £___ | |
-| Third-Party Tools (Year 3) | £___ | £___ | £___ | |
-| **Subtotal Opex (Year 3)** | **£___** | **£___** | **£___** | |
-| **3-YEAR TCO** | **£___** | **£___** | **£___** | |
+| Annual Support & Maintenance | ï¿½___ | ï¿½___ | ï¿½___ | |
+| AWS Infrastructure (Year 3) | ï¿½___ | ï¿½___ | ï¿½___ | |
+| LLM API Costs (Year 3) | ï¿½___ | ï¿½___ | ï¿½___ | |
+| Third-Party Tools (Year 3) | ï¿½___ | ï¿½___ | ï¿½___ | |
+| **Subtotal Opex (Year 3)** | **ï¿½___** | **ï¿½___** | **ï¿½___** | |
+| **3-YEAR TCO** | **ï¿½___** | **ï¿½___** | **ï¿½___** | |
 
 #### 5.3.3 Value Analysis
 
-| Vendor | 3-Year TCO (£M) | Technical Score (100 pts) | **Cost per Technical Point** (£TCO / Tech Score) | Value Rank | Notes |
+| Vendor | 3-Year TCO (ï¿½M) | Technical Score (100 pts) | **Cost per Technical Point** (ï¿½TCO / Tech Score) | Value Rank | Notes |
 |--------|-----------------|---------------------------|--------------------------------------------------|------------|-------|
-| Vendor A | £___ | ___ | £___/point | ___ | |
-| Vendor B | £___ | ___ | £___/point | ___ | |
-| Vendor C | £___ | ___ | £___/point | ___ | |
+| Vendor A | ï¿½___ | ___ | ï¿½___/point | ___ | |
+| Vendor B | ï¿½___ | ___ | ï¿½___/point | ___ | |
+| Vendor C | ï¿½___ | ___ | ï¿½___/point | ___ | |
 
 **Best Value Analysis**:
-- Vendor with lowest £/point = best value (combines technical quality and cost)
-- Example: Vendor B (£16M TCO, 82 technical score) = £195K/point vs. Vendor A (£18M TCO, 76 technical score) = £237K/point ’ Vendor B is better value
+- Vendor with lowest ï¿½/point = best value (combines technical quality and cost)
+- Example: Vendor B (ï¿½16M TCO, 82 technical score) = ï¿½195K/point vs. Vendor A (ï¿½18M TCO, 76 technical score) = ï¿½237K/point ï¿½ Vendor B is better value
 
 #### 5.3.4 Cost Evaluation Summary
 
@@ -508,7 +539,7 @@ Cost proposals are opened **only for shortlisted vendors** (technical score e70/
 
 ### 6.1 Final Scoring Formula
 
-**Final Score = (Technical Score × 0.7) + (Cost Score × 0.3)**
+**Final Score = (Technical Score ï¿½ 0.7) + (Cost Score ï¿½ 0.3)**
 
 Where:
 - **Technical Score**: 0-100 points from Phase 4 technical evaluation (consensus score from evaluation committee)
@@ -521,19 +552,19 @@ Where:
 
 | Vendor | Technical Score (100 pts) | Technical Weighted (70%) | Cost Score (30 pts) | Cost Weighted (30%) | **Final Score (100 pts)** | Rank |
 |--------|---------------------------|--------------------------|---------------------|---------------------|---------------------------|------|
-| Vendor A | ___ | ___ × 0.7 = ___ | ___ | ___ × 1.0 = ___ | **___** | ___ |
-| Vendor B | ___ | ___ × 0.7 = ___ | ___ | ___ × 1.0 = ___ | **___** | ___ |
-| Vendor C | ___ | ___ × 0.7 = ___ | ___ | ___ × 1.0 = ___ | **___** | ___ |
+| Vendor A | ___ | ___ ï¿½ 0.7 = ___ | ___ | ___ ï¿½ 1.0 = ___ | **___** | ___ |
+| Vendor B | ___ | ___ ï¿½ 0.7 = ___ | ___ | ___ ï¿½ 1.0 = ___ | **___** | ___ |
+| Vendor C | ___ | ___ ï¿½ 0.7 = ___ | ___ | ___ ï¿½ 1.0 = ___ | **___** | ___ |
 
 **Example Calculation**:
 - **Vendor B**: Technical = 82/100, Cost = 30/30 (lowest TCO)
-  - Technical Weighted = 82 × 0.7 = 57.4
-  - Cost Weighted = 30 × 1.0 = 30.0
+  - Technical Weighted = 82 ï¿½ 0.7 = 57.4
+  - Cost Weighted = 30 ï¿½ 1.0 = 30.0
   - **Final Score = 57.4 + 30.0 = 87.4** (highest, recommended)
 
 - **Vendor A**: Technical = 76/100, Cost = 26.67/30
-  - Technical Weighted = 76 × 0.7 = 53.2
-  - Cost Weighted = 26.67 × 1.0 = 26.67
+  - Technical Weighted = 76 ï¿½ 0.7 = 53.2
+  - Cost Weighted = 26.67 ï¿½ 1.0 = 26.67
   - **Final Score = 53.2 + 26.67 = 79.87** (second)
 
 **Visual Scoring Matrix**:
@@ -619,16 +650,16 @@ Shortlisted vendors (top 3-5 from Phase 4+5) present their proposals to the HMRC
 **Scoring Impact**: Presentations do NOT add new points, but may **adjust existing technical scores** (+/- up to 10 points per category) based on:
 
 **Positive Adjustments** (increase scores):
-- **Clarifications that resolve concerns**: E.g., vendor explains RAG architecture ambiguity from proposal, demonstrates understanding ’ increase Category 1.1 score by 2 points
-- **Strong demo or proof-of-concept**: Vendor shows working RAG prototype with HMRC-like knowledge base ’ increase Category 1.1 score by 3 points
-- **Team chemistry and competence**: Key personnel demonstrate deep expertise, answer technical questions confidently ’ increase Category 3.1 score by 2 points
-- **Proactive risk identification**: Vendor identifies risks we missed and proposes mitigations ’ increase Category 2.2 score by 1 point
+- **Clarifications that resolve concerns**: E.g., vendor explains RAG architecture ambiguity from proposal, demonstrates understanding ï¿½ increase Category 1.1 score by 2 points
+- **Strong demo or proof-of-concept**: Vendor shows working RAG prototype with HMRC-like knowledge base ï¿½ increase Category 1.1 score by 3 points
+- **Team chemistry and competence**: Key personnel demonstrate deep expertise, answer technical questions confidently ï¿½ increase Category 3.1 score by 2 points
+- **Proactive risk identification**: Vendor identifies risks we missed and proposes mitigations ï¿½ increase Category 2.2 score by 1 point
 
 **Negative Adjustments** (decrease scores):
-- **Red flags or concerning answers**: E.g., vendor cannot explain how they'll meet <2s latency target ’ decrease Category 1.4 score by 3 points
-- **Weak team expertise**: Key personnel struggle to answer technical questions, lack depth ’ decrease Category 3.1 score by 5 points
-- **Overconfidence or unrealistic claims**: E.g., "We can deliver in 6 months" when SOW requires 12 months ’ decrease Category 2.1 score by 2 points
-- **Poor communication or unprofessionalism**: Vendor is defensive, dismissive of concerns, or unprepared ’ decrease Category 5 (Understanding) score by 1 point
+- **Red flags or concerning answers**: E.g., vendor cannot explain how they'll meet <2s latency target ï¿½ decrease Category 1.4 score by 3 points
+- **Weak team expertise**: Key personnel struggle to answer technical questions, lack depth ï¿½ decrease Category 3.1 score by 5 points
+- **Overconfidence or unrealistic claims**: E.g., "We can deliver in 6 months" when SOW requires 12 months ï¿½ decrease Category 2.1 score by 2 points
+- **Poor communication or unprofessionalism**: Vendor is defensive, dismissive of concerns, or unprepared ï¿½ decrease Category 5 (Understanding) score by 1 point
 
 **Post-Presentation Process**:
 1. **Immediate Debrief** (30 min after each vendor presentation): Evaluation committee discusses observations, concerns, and whether scores should be adjusted
@@ -660,8 +691,8 @@ Shortlisted vendors (top 3-5 from Phase 4+5) present their proposals to the HMRC
 3. _______________
 
 **Score Adjustments Recommended**:
-- Category ___ (___): Adjust from ___ to ___ (± ___ points) - Rationale: _______________
-- Category ___ (___): Adjust from ___ to ___ (± ___ points) - Rationale: _______________
+- Category ___ (___): Adjust from ___ to ___ (ï¿½ ___ points) - Rationale: _______________
+- Category ___ (___): Adjust from ___ to ___ (ï¿½ ___ points) - Rationale: _______________
 
 **Overall Presentation Assessment**:
 - [ ] **Excellent**: Significantly strengthened confidence in vendor, recommend selection
@@ -830,7 +861,7 @@ The vendor with the **highest combined score** (Technical 70% + Cost 30%) is typ
 
 **Quantitative (Objective) Factors**:
 - **Final Combined Score** (highest score wins, assuming e70 minimum)
-- **Cost relative to budget** (within £16.5M-£20.5M 3-year TCO)
+- **Cost relative to budget** (within ï¿½16.5M-ï¿½20.5M 3-year TCO)
 - **Technical score threshold**: Minimum 70/100 technical required (non-negotiable)
 
 **Qualitative (Subjective) Factors**:
@@ -845,11 +876,11 @@ The vendor with the **highest combined score** (Technical 70% + Cost 30%) is typ
 **Completed by**: Evaluation Lead + Evaluation Committee (consensus)
 **Date**: _______________
 
-| Vendor | Final Score (100 pts) | Technical (100 pts) | Cost (3-Yr TCO £M) | Reference Check | Cultural Fit | Confidence in Delivery | Risk Level | GDS Pass Likelihood | **Recommendation** |
+| Vendor | Final Score (100 pts) | Technical (100 pts) | Cost (3-Yr TCO ï¿½M) | Reference Check | Cultural Fit | Confidence in Delivery | Risk Level | GDS Pass Likelihood | **Recommendation** |
 |--------|----------------------|---------------------|--------------------|-----------------|--------------|-----------------------|------------|---------------------|-------------------|
-| Vendor A | ___ | ___ | £___ | Positive/Mixed/Negative | Excellent/Good/Adequate | High/Medium/Low | Low/Medium/High | High/Medium/Low | [ ] **Select**<br>[ ] Consider<br>[ ] Do Not Select |
-| Vendor B | ___ | ___ | £___ | Positive/Mixed/Negative | Excellent/Good/Adequate | High/Medium/Low | Low/Medium/High | High/Medium/Low | [ ] **Select**<br>[ ] Consider<br>[ ] Do Not Select |
-| Vendor C | ___ | ___ | £___ | Positive/Mixed/Negative | Excellent/Good/Adequate | High/Medium/Low | Low/Medium/High | High/Medium/Low | [ ] **Select**<br>[ ] Consider<br>[ ] Do Not Select |
+| Vendor A | ___ | ___ | ï¿½___ | Positive/Mixed/Negative | Excellent/Good/Adequate | High/Medium/Low | Low/Medium/High | High/Medium/Low | [ ] **Select**<br>[ ] Consider<br>[ ] Do Not Select |
+| Vendor B | ___ | ___ | ï¿½___ | Positive/Mixed/Negative | Excellent/Good/Adequate | High/Medium/Low | Low/Medium/High | High/Medium/Low | [ ] **Select**<br>[ ] Consider<br>[ ] Do Not Select |
+| Vendor C | ___ | ___ | ï¿½___ | Positive/Mixed/Negative | Excellent/Good/Adequate | High/Medium/Low | Low/Medium/High | High/Medium/Low | [ ] **Select**<br>[ ] Consider<br>[ ] Do Not Select |
 
 **Scenario Analysis**:
 
@@ -889,20 +920,20 @@ The vendor with the **highest combined score** (Technical 70% + Cost 30%) is typ
 
 **Recommended Vendor**: _______________
 
-**Final Combined Score**: ___ / 100 (Technical ___ × 0.7 + Cost ___ × 1.0)
+**Final Combined Score**: ___ / 100 (Technical ___ ï¿½ 0.7 + Cost ___ ï¿½ 1.0)
 
-**3-Year Total Cost of Ownership**: £___ M (within budget: £16.5M-£20.5M)
+**3-Year Total Cost of Ownership**: ï¿½___ M (within budget: ï¿½16.5M-ï¿½20.5M)
 
 **Selection Rationale**:
 [2-3 paragraphs summarizing why this vendor was selected over others. Include: technical strengths, cost competitiveness, reference check results, cultural fit, confidence in delivery.]
 
 **Example**:
-"Vendor B scored highest with 87.4/100 combined score (82/100 technical, 30/30 cost). Their RAG architecture design is excellent with AWS Bedrock Claude 3.5 Sonnet, comprehensive bias mitigation, and strong security design aligned with NCSC principles. The team has deep UK Gov experience (3 GDS Service Standard passes) and demonstrated AI chatbot expertise. Reference checks were highly positive with all 3 clients stating they would 'definitely hire again.' Cost is competitive at £16.2M 3-year TCO (within budget), providing best value at £197K per technical point. We have high confidence Vendor B will deliver on time, on budget, and pass GDS Live Assessment."
+"Vendor B scored highest with 87.4/100 combined score (82/100 technical, 30/30 cost). Their RAG architecture design is excellent with AWS Bedrock Claude 3.5 Sonnet, comprehensive bias mitigation, and strong security design aligned with NCSC principles. The team has deep UK Gov experience (3 GDS Service Standard passes) and demonstrated AI chatbot expertise. Reference checks were highly positive with all 3 clients stating they would 'definitely hire again.' Cost is competitive at ï¿½16.2M 3-year TCO (within budget), providing best value at ï¿½197K per technical point. We have high confidence Vendor B will deliver on time, on budget, and pass GDS Live Assessment."
 
 **Key Strengths**:
 1. [Strength 1 - e.g., "Excellent RAG architecture with 100% source citation and human escalation"]
 2. [Strength 2 - e.g., "Strong UK Gov experience with 3 GDS Service Standard passes"]
-3. [Strength 3 - e.g., "Best value at £197K per technical point, lowest 3-year TCO"]
+3. [Strength 3 - e.g., "Best value at ï¿½197K per technical point, lowest 3-year TCO"]
 
 **Risks and Mitigations**:
 1. **Risk**: [Risk 1 - e.g., "LLM API costs could exceed estimates if token usage is higher than projected"]
@@ -915,10 +946,10 @@ The vendor with the **highest combined score** (Technical 70% + Cost 30%) is typ
    - **Mitigation**: [Mitigation strategy - e.g., "DPO engaged early in design phase (Week 4); DPIA template pre-approved; contingency buffer in timeline (2 weeks)"]
 
 **Budget Confirmation**:
-- **Capex (Year 1)**: £___ M (Budget: £4.5-£5.5M) - [ ] Within Budget
-- **Opex (Year 2)**: £___ M (Budget: £4-£5M) - [ ] Within Budget
-- **Opex (Year 3)**: £___ M (Budget: £4-£5M) - [ ] Within Budget
-- **3-Year TCO**: £___ M (Budget: £16.5-£20.5M) - [ ] Within Budget
+- **Capex (Year 1)**: ï¿½___ M (Budget: ï¿½4.5-ï¿½5.5M) - [ ] Within Budget
+- **Opex (Year 2)**: ï¿½___ M (Budget: ï¿½4-ï¿½5M) - [ ] Within Budget
+- **Opex (Year 3)**: ï¿½___ M (Budget: ï¿½4-ï¿½5M) - [ ] Within Budget
+- **3-Year TCO**: ï¿½___ M (Budget: ï¿½16.5-ï¿½20.5M) - [ ] Within Budget
 - **Budget Authority Confirmed**: [ ] Yes (Finance approval attached)
 
 **Approvals**:
@@ -1271,6 +1302,25 @@ I commit to recuse myself from evaluation of any vendor where I have disclosed a
 
 ---
 
+**Document Version History**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | 2025-10-14 | ArcKit AI | Initial evaluation criteria |
+| 1.1 | 2026-01-25 | ArcKit AI | Template alignment |
+| 1.2 | 2026-01-26 | ArcKit AI | Updated to v0.11.2 |
+
+---
+
+**Generated by**: ArcKit `/arckit.evaluate` command
+**Generated on**: 2026-01-26
+**ArcKit Version**: 0.11.2
+**Project**: HMRC ChatBot (001-hmrc-chatbot)
+**Model**: Claude Opus 4.5
+**Generation Context**: Updated to align with ArcKit template v0.11.2 structure
+
+---
+
 **IMPORTANT NOTES FOR EVALUATION COMMITTEE**:
 
 1. **Read SOW First**: This evaluation criteria is based on SOW Section 8. Evaluators must read full SOW and requirements before scoring.
@@ -1293,4 +1343,4 @@ I commit to recuse myself from evaluation of any vendor where I have disclosed a
 
 10. **Conflicts of Interest**: Disclose conflicts on Appendix D form; recuse if conflict exists.
 
-Good luck with the evaluation! <¯
+Good luck with the evaluation! <ï¿½

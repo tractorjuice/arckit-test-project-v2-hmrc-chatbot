@@ -1,19 +1,48 @@
 # Requirements Traceability Matrix: HMRC Tax Guidance ChatBot
 
-**Document Type**: Pre-Design Requirements Traceability & Verification Matrix
-**Project ID**: 001-hmrc-chatbot
+> **Template Status**: Live | **Version**: 0.11.2 | **Command**: `/arckit.traceability`
+
+## Document Control
+
+| Field | Value |
+|-------|-------|
+| **Document ID** | ARC-001-TRAC-v1.2 |
+| **Document Type** | Pre-Design Requirements Traceability & Verification Matrix |
+| **Project** | HMRC ChatBot (Project 001-hmrc-chatbot) |
+| **Classification** | OFFICIAL |
+| **Status** | BASELINE (Pre-Vendor Selection) |
+| **Version** | 1.2 |
+| **Created Date** | 2025-10-14 |
+| **Last Modified** | 2026-01-26 |
+| **Review Cycle** | Monthly |
+| **Next Review Date** | 2026-02-26 |
+| **Owner** | HMRC Enterprise Architecture Team |
+| **Reviewed By** | [PENDING] |
+| **Approved By** | [PENDING] |
+| **Distribution** | HMRC Architecture Team, Project Team, Selected Vendor, QA Team |
+
+## Revision History
+
+| Version | Date | Author | Changes | Approved By | Approval Date |
+|---------|------|--------|---------|-------------|---------------|
+| 1.0 | 2025-10-14 | ArcKit AI | Initial creation from `/arckit.traceability` command | [PENDING] | [PENDING] |
+| 1.1 | 2026-01-25 | ArcKit AI | Updated to align with ArcKit template structure | [PENDING] | [PENDING] |
+| 1.2 | 2026-01-26 | ArcKit AI | Updated to align with ArcKit template v0.11.2 | [PENDING] | [PENDING] |
+
+## Document Purpose
+
+This Requirements Traceability Matrix (RTM) establishes the baseline traceability framework for the HMRC ChatBot project during the pre-procurement phase. It catalogs all 44 requirements and defines traceability expectations for vendors to complete during HLD/DLD phases.
+
+---
+
 **RFP ID**: HMRC-CHATBOT-2025-001
-**Version**: 1.0 (Baseline - Pre-Procurement)
-**Date**: 2025-10-14
-**Status**: BASELINE (Pre-Vendor Selection)
-**Owner**: HMRC Enterprise Architecture Team
 **Phase**: Pre-Procurement (Requirements Baseline Established)
 
 ---
 
 ## EXECUTIVE SUMMARY
 
-### Document Purpose
+### Overview
 
 This Requirements Traceability Matrix (RTM) establishes the **baseline traceability framework** for the HMRC ChatBot project during the pre-procurement phase. Since no vendor has been selected and no design artifacts exist yet, this document:
 
@@ -27,9 +56,9 @@ This Requirements Traceability Matrix (RTM) establishes the **baseline traceabil
 
 **Current Phase**: Pre-Procurement
 -  **Requirements Defined**: 44 requirements documented and approved (Gate 1 complete)
-- ó **Design Phase**: Awaiting vendor selection (Gate 2 - target M1 Week 8)
-- ó **Implementation Phase**: Awaiting development (Gate 3 - target M2 Week 20)
-- ó **Testing Phase**: Awaiting test execution (Gate 4 - target M3 Week 40)
+- ï¿½ **Design Phase**: Awaiting vendor selection (Gate 2 - target M1 Week 8)
+- ï¿½ **Implementation Phase**: Awaiting development (Gate 3 - target M2 Week 20)
+- ï¿½ **Testing Phase**: Awaiting test execution (Gate 4 - target M3 Week 40)
 
 **Vendor Responsibility**: Selected vendor must complete this matrix by:
 - **HLD Submission (Week 4)**: Map requirements to HLD components
@@ -41,7 +70,7 @@ This Requirements Traceability Matrix (RTM) establishes the **baseline traceabil
 
 | Requirement Type | Total | Coverage Target | Rationale |
 |------------------|-------|-----------------|-----------|
-| **Business Requirements (BR)** | 7 | **100%** (all MUST) | Mission-critical business outcomes (£75M savings, 30% helpline deflection, GDS compliance) |
+| **Business Requirements (BR)** | 7 | **100%** (all MUST) | Mission-critical business outcomes (ï¿½75M savings, 30% helpline deflection, GDS compliance) |
 | **Functional Requirements (FR)** | 11 | **100%** (all MUST) | Core ChatBot capabilities required for launch |
 | **Non-Functional Requirements (NFR)** | 21 | **100%** (all MUST) | UK Gov compliance mandates (security, accessibility, performance, UK GDPR) |
 | **Integration Requirements (INT)** | 5 | **100%** (all MUST) | Critical integrations (Government Gateway, HMRC APIs, AWS Bedrock) |
@@ -59,23 +88,23 @@ This matrix traces requirements through the full lifecycle:
 
 ```
 Business Requirements (BR-1 to BR-7)
-  “ drives
+  ï¿½ drives
 Functional Requirements (FR-1 to FR-11)
-  “ satisfied by
+  ï¿½ satisfied by
 High-Level Design (HLD) Components [VENDOR TO COMPLETE]
-  “ detailed in
+  ï¿½ detailed in
 Detailed Design (DLD) Modules/APIs [VENDOR TO COMPLETE]
-  “ implemented in
+  ï¿½ implemented in
 Source Code / Infrastructure [VENDOR TO COMPLETE]
-  “ verified by
+  ï¿½ verified by
 Test Cases (Unit, Integration, E2E, Performance, Security, Accessibility) [VENDOR TO COMPLETE]
-  “ accepted via
+  ï¿½ accepted via
 Acceptance Criteria (SOW Section 4 Deliverables)
 ```
 
 **Traceability Direction**:
-- **Forward Traceability**: Requirements ’ Design ’ Implementation ’ Tests (ensures all requirements are addressed)
-- **Backward Traceability**: Tests ’ Implementation ’ Design ’ Requirements (ensures no scope creep or orphan work)
+- **Forward Traceability**: Requirements ï¿½ Design ï¿½ Implementation ï¿½ Tests (ensures all requirements are addressed)
+- **Backward Traceability**: Tests ï¿½ Implementation ï¿½ Design ï¿½ Requirements (ensures no scope creep or orphan work)
 
 ### 1.2 Document References
 
@@ -123,7 +152,7 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 ---
 
-## 2. FORWARD TRACEABILITY MATRIX: REQUIREMENTS ’ DESIGN ’ IMPLEMENTATION ’ TESTS
+## 2. FORWARD TRACEABILITY MATRIX: REQUIREMENTS ï¿½ DESIGN ï¿½ IMPLEMENTATION ï¿½ TESTS
 
 ### 2.1 Business Requirements (BR) Traceability
 
@@ -144,11 +173,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Analytics & Reporting Service"] | Component responsible for tracking call deflection metrics | ó AWAITING VENDOR | [HLD Section X.Y] |
-| **DLD Module** | [VENDOR: e.g., "CallDeflectionTracker, BIDashboard"] | Modules implementing call deflection tracking and BI dashboards | ó AWAITING VENDOR | [DLD Section X.Y] |
-| **Implementation** | [VENDOR: e.g., "src/analytics/call-deflection.py", Grafana dashboard config] | Source code and infrastructure-as-code | ó AWAITING VENDOR | [GitHub commit SHA, file paths] |
-| **Test Cases** | [VENDOR: e.g., "TC-BR1-001: Verify call deflection KPI calculation", "TC-BR1-002: Test BI dashboard data accuracy"] | Test cases verifying call deflection tracking and reporting | ó AWAITING VENDOR | [Test case IDs, execution results] |
-| **Acceptance Evidence** | [VENDOR: e.g., "BI dashboard screenshot showing 10% deflection in Month 12", HMRC call center analytics integration proof] | Evidence that BR-1 is met | ó AWAITING VENDOR | [Deliverable milestone M5] |
+| **HLD Component** | [VENDOR: e.g., "Analytics & Reporting Service"] | Component responsible for tracking call deflection metrics | ï¿½ AWAITING VENDOR | [HLD Section X.Y] |
+| **DLD Module** | [VENDOR: e.g., "CallDeflectionTracker, BIDashboard"] | Modules implementing call deflection tracking and BI dashboards | ï¿½ AWAITING VENDOR | [DLD Section X.Y] |
+| **Implementation** | [VENDOR: e.g., "src/analytics/call-deflection.py", Grafana dashboard config] | Source code and infrastructure-as-code | ï¿½ AWAITING VENDOR | [GitHub commit SHA, file paths] |
+| **Test Cases** | [VENDOR: e.g., "TC-BR1-001: Verify call deflection KPI calculation", "TC-BR1-002: Test BI dashboard data accuracy"] | Test cases verifying call deflection tracking and reporting | ï¿½ AWAITING VENDOR | [Test case IDs, execution results] |
+| **Acceptance Evidence** | [VENDOR: e.g., "BI dashboard screenshot showing 10% deflection in Month 12", HMRC call center analytics integration proof] | Evidence that BR-1 is met | ï¿½ AWAITING VENDOR | [Deliverable milestone M5] |
 
 **Verification Method**: HMRC Product Owner will verify BI dashboard shows call deflection metrics aligned with HMRC call center analytics baseline (50M calls/year).
 
@@ -171,11 +200,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Multi-AZ ECS Fargate cluster, CloudWatch monitoring, Health check API"] | Architecture ensuring 99.9% uptime | ó AWAITING VENDOR | [HLD Section X.Y] |
-| **DLD Module** | [VENDOR: e.g., "HealthCheckEndpoint, UptimeMonitor, AlertManager"] | Modules implementing uptime monitoring and alerting | ó AWAITING VENDOR | [DLD Section X.Y] |
-| **Implementation** | [VENDOR: e.g., "terraform/ecs-fargate.tf (multi-AZ), cloudwatch-alarms.tf, health-check endpoint /health"] | Infrastructure-as-code for HA and monitoring | ó AWAITING VENDOR | [Terraform modules, CloudWatch dashboard] |
-| **Test Cases** | [VENDOR: e.g., "NFR-A-1: Verify 99.9% uptime SLO", "NFR-P-1: Load test with 10K concurrent users, verify p95 latency <2s"] | Availability and performance tests | ó AWAITING VENDOR | [Performance test results, uptime monitoring baseline] |
-| **Acceptance Evidence** | [VENDOR: e.g., "30-day uptime report showing 99.95% uptime during business hours", "Load test report showing p95 latency 1.8s"] | Evidence that BR-2 is met | ó AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
+| **HLD Component** | [VENDOR: e.g., "Multi-AZ ECS Fargate cluster, CloudWatch monitoring, Health check API"] | Architecture ensuring 99.9% uptime | ï¿½ AWAITING VENDOR | [HLD Section X.Y] |
+| **DLD Module** | [VENDOR: e.g., "HealthCheckEndpoint, UptimeMonitor, AlertManager"] | Modules implementing uptime monitoring and alerting | ï¿½ AWAITING VENDOR | [DLD Section X.Y] |
+| **Implementation** | [VENDOR: e.g., "terraform/ecs-fargate.tf (multi-AZ), cloudwatch-alarms.tf, health-check endpoint /health"] | Infrastructure-as-code for HA and monitoring | ï¿½ AWAITING VENDOR | [Terraform modules, CloudWatch dashboard] |
+| **Test Cases** | [VENDOR: e.g., "NFR-A-1: Verify 99.9% uptime SLO", "NFR-P-1: Load test with 10K concurrent users, verify p95 latency <2s"] | Availability and performance tests | ï¿½ AWAITING VENDOR | [Performance test results, uptime monitoring baseline] |
+| **Acceptance Evidence** | [VENDOR: e.g., "30-day uptime report showing 99.95% uptime during business hours", "Load test report showing p95 latency 1.8s"] | Evidence that BR-2 is met | ï¿½ AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
 
 **Verification Method**: HMRC SRE team will verify CloudWatch dashboards show e99.9% uptime during business hours over 30-day Private Beta period.
 
@@ -198,11 +227,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Feedback Collection Service, Sentiment Analysis Pipeline"] | Components for collecting and analyzing citizen feedback | ó AWAITING VENDOR | [HLD Section X.Y] |
-| **DLD Module** | [VENDOR: e.g., "FeedbackWidget, NPSSurvey, SentimentAnalyzer"] | Modules implementing feedback collection and NPS calculation | ó AWAITING VENDOR | [DLD Section X.Y] |
-| **Implementation** | [VENDOR: e.g., "src/frontend/components/FeedbackWidget.tsx", "src/analytics/nps-calculator.py"] | Source code for feedback UI and NPS analytics | ó AWAITING VENDOR | [GitHub commit SHA, file paths] |
-| **Test Cases** | [VENDOR: e.g., "TC-BR3-001: Verify thumbs up/down feedback captured", "TC-BR3-002: Test NPS calculation accuracy", "UAT: Citizen feedback during Private Beta"] | Tests verifying feedback collection and NPS tracking | ó AWAITING VENDOR | [Test case IDs, UAT results from Private Beta] |
-| **Acceptance Evidence** | [VENDOR: e.g., "Private Beta report showing 72% NPS from 100 citizens", ">95% helpfulness rating in first month"] | Evidence that BR-3 is met | ó AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
+| **HLD Component** | [VENDOR: e.g., "Feedback Collection Service, Sentiment Analysis Pipeline"] | Components for collecting and analyzing citizen feedback | ï¿½ AWAITING VENDOR | [HLD Section X.Y] |
+| **DLD Module** | [VENDOR: e.g., "FeedbackWidget, NPSSurvey, SentimentAnalyzer"] | Modules implementing feedback collection and NPS calculation | ï¿½ AWAITING VENDOR | [DLD Section X.Y] |
+| **Implementation** | [VENDOR: e.g., "src/frontend/components/FeedbackWidget.tsx", "src/analytics/nps-calculator.py"] | Source code for feedback UI and NPS analytics | ï¿½ AWAITING VENDOR | [GitHub commit SHA, file paths] |
+| **Test Cases** | [VENDOR: e.g., "TC-BR3-001: Verify thumbs up/down feedback captured", "TC-BR3-002: Test NPS calculation accuracy", "UAT: Citizen feedback during Private Beta"] | Tests verifying feedback collection and NPS tracking | ï¿½ AWAITING VENDOR | [Test case IDs, UAT results from Private Beta] |
+| **Acceptance Evidence** | [VENDOR: e.g., "Private Beta report showing 72% NPS from 100 citizens", ">95% helpfulness rating in first month"] | Evidence that BR-3 is met | ï¿½ AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
 
 **Verification Method**: HMRC Product Owner will verify NPS >70% from Private Beta (100 citizens) and Public Beta (10,000 citizens) feedback surveys.
 
@@ -224,11 +253,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: All components must align with GDS Service Standard - document how each criterion is met] | Cross-cutting concern: GDS compliance documented in HLD | ó AWAITING VENDOR | [HLD Appendix: GDS Service Standard Compliance Matrix] |
-| **DLD Module** | [VENDOR: e.g., "User research documentation, accessibility testing reports, open source code publication plan"] | Evidence for GDS criteria (user needs, accessibility, open standards) | ó AWAITING VENDOR | [DLD Appendix: GDS Evidence Pack] |
-| **Implementation** | [VENDOR: e.g., "GOV.UK Design System integration (criterion 11), open source code on GitHub (criterion 12)"] | Implementation demonstrating GDS compliance | ó AWAITING VENDOR | [GitHub repository, accessibility audit report] |
-| **Test Cases** | [VENDOR: e.g., "Accessibility tests (WCAG 2.2 AA), user testing with disabled citizens, performance testing"] | Tests verifying GDS criteria (accessibility, performance, reliability) | ó AWAITING VENDOR | [GDS assessment preparation pack] |
-| **Acceptance Evidence** | [VENDOR: "GDS Service Standard Live Assessment PASS report"] | GDS assessor report confirming service passes all 18 criteria | ó AWAITING VENDOR | [Deliverable milestone M5 (Production Launch)] |
+| **HLD Component** | [VENDOR: All components must align with GDS Service Standard - document how each criterion is met] | Cross-cutting concern: GDS compliance documented in HLD | ï¿½ AWAITING VENDOR | [HLD Appendix: GDS Service Standard Compliance Matrix] |
+| **DLD Module** | [VENDOR: e.g., "User research documentation, accessibility testing reports, open source code publication plan"] | Evidence for GDS criteria (user needs, accessibility, open standards) | ï¿½ AWAITING VENDOR | [DLD Appendix: GDS Evidence Pack] |
+| **Implementation** | [VENDOR: e.g., "GOV.UK Design System integration (criterion 11), open source code on GitHub (criterion 12)"] | Implementation demonstrating GDS compliance | ï¿½ AWAITING VENDOR | [GitHub repository, accessibility audit report] |
+| **Test Cases** | [VENDOR: e.g., "Accessibility tests (WCAG 2.2 AA), user testing with disabled citizens, performance testing"] | Tests verifying GDS criteria (accessibility, performance, reliability) | ï¿½ AWAITING VENDOR | [GDS assessment preparation pack] |
+| **Acceptance Evidence** | [VENDOR: "GDS Service Standard Live Assessment PASS report"] | GDS assessor report confirming service passes all 18 criteria | ï¿½ AWAITING VENDOR | [Deliverable milestone M5 (Production Launch)] |
 
 **Verification Method**: HMRC SRO will coordinate GDS Service Standard Live Assessment before production launch. Vendor must support assessment by providing evidence and attending assessment day.
 
@@ -253,11 +282,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "GOV.UK Design System integration, accessibility strategy"] | Architecture ensuring WCAG 2.2 AA compliance from design phase | ó AWAITING VENDOR | [HLD Section X.Y: Accessibility Architecture] |
-| **DLD Module** | [VENDOR: e.g., "All frontend components using gov.uk-frontend library, ARIA labels, semantic HTML"] | DLD specifying WCAG 2.2 AA compliance for all UI components | ó AWAITING VENDOR | [DLD Section X.Y: UI Components Accessibility Spec] |
-| **Implementation** | [VENDOR: e.g., "src/frontend/ (all components), automated accessibility tests in CI/CD pipeline"] | Source code with WCAG 2.2 AA compliant frontend + automated tests | ó AWAITING VENDOR | [GitHub CI/CD config, axe-core test results] |
-| **Test Cases** | [VENDOR: e.g., "Automated: axe-core tests (zero violations), Manual: JAWS/NVDA/VoiceOver testing, User testing with disabled citizens"] | Comprehensive accessibility testing (automated + manual + user testing) | ó AWAITING VENDOR | [Accessibility audit report, user testing results] |
-| **Acceptance Evidence** | [VENDOR: "Third-party accessibility audit report: WCAG 2.2 AA PASS, zero critical/high issues"] | Independent audit confirming full compliance | ó AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
+| **HLD Component** | [VENDOR: e.g., "GOV.UK Design System integration, accessibility strategy"] | Architecture ensuring WCAG 2.2 AA compliance from design phase | ï¿½ AWAITING VENDOR | [HLD Section X.Y: Accessibility Architecture] |
+| **DLD Module** | [VENDOR: e.g., "All frontend components using gov.uk-frontend library, ARIA labels, semantic HTML"] | DLD specifying WCAG 2.2 AA compliance for all UI components | ï¿½ AWAITING VENDOR | [DLD Section X.Y: UI Components Accessibility Spec] |
+| **Implementation** | [VENDOR: e.g., "src/frontend/ (all components), automated accessibility tests in CI/CD pipeline"] | Source code with WCAG 2.2 AA compliant frontend + automated tests | ï¿½ AWAITING VENDOR | [GitHub CI/CD config, axe-core test results] |
+| **Test Cases** | [VENDOR: e.g., "Automated: axe-core tests (zero violations), Manual: JAWS/NVDA/VoiceOver testing, User testing with disabled citizens"] | Comprehensive accessibility testing (automated + manual + user testing) | ï¿½ AWAITING VENDOR | [Accessibility audit report, user testing results] |
+| **Acceptance Evidence** | [VENDOR: "Third-party accessibility audit report: WCAG 2.2 AA PASS, zero critical/high issues"] | Independent audit confirming full compliance | ï¿½ AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
 
 **Verification Method**: HMRC Accessibility Specialist will review third-party accessibility audit report and conduct spot-check manual testing with assistive technologies.
 
@@ -282,11 +311,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "RAG architecture (embedding, vector search, LLM), bias mitigation strategy, explainability design"] | HLD documenting AI model architecture and responsible AI controls | ó AWAITING VENDOR | [HLD Section: AI Architecture & Responsible AI] |
-| **DLD Module** | [VENDOR: e.g., "BiasDetector, ExplainabilityEngine, ConfidenceScorer, Guardrails"] | DLD modules implementing AI safety, bias mitigation, explainability | ó AWAITING VENDOR | [DLD Section: AI Safety & Explainability] |
-| **Implementation** | [VENDOR: e.g., "src/ai/bias-mitigation.py, src/ai/explainability.py, AWS Bedrock Guardrails config"] | Source code implementing bias mitigation, explainability, guardrails | ó AWAITING VENDOR | [GitHub commit SHA, AWS Bedrock Guardrails config] |
-| **Test Cases** | [VENDOR: e.g., "Bias testing across 9 protected characteristics (<5% disparity), adversarial testing (prompt injection), accuracy testing (>95% on ground truth)"] | AI safety and bias testing | ó AWAITING VENDOR | [Bias testing report, accuracy testing results] |
-| **Acceptance Evidence** | [VENDOR: "ATRS record v1.1 published on GOV.UK (updated from DRAFT v1.0 with DPIA, EqIA, Security Assessment results)"] | ATRS record published with full transparency | ó AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
+| **HLD Component** | [VENDOR: e.g., "RAG architecture (embedding, vector search, LLM), bias mitigation strategy, explainability design"] | HLD documenting AI model architecture and responsible AI controls | ï¿½ AWAITING VENDOR | [HLD Section: AI Architecture & Responsible AI] |
+| **DLD Module** | [VENDOR: e.g., "BiasDetector, ExplainabilityEngine, ConfidenceScorer, Guardrails"] | DLD modules implementing AI safety, bias mitigation, explainability | ï¿½ AWAITING VENDOR | [DLD Section: AI Safety & Explainability] |
+| **Implementation** | [VENDOR: e.g., "src/ai/bias-mitigation.py, src/ai/explainability.py, AWS Bedrock Guardrails config"] | Source code implementing bias mitigation, explainability, guardrails | ï¿½ AWAITING VENDOR | [GitHub commit SHA, AWS Bedrock Guardrails config] |
+| **Test Cases** | [VENDOR: e.g., "Bias testing across 9 protected characteristics (<5% disparity), adversarial testing (prompt injection), accuracy testing (>95% on ground truth)"] | AI safety and bias testing | ï¿½ AWAITING VENDOR | [Bias testing report, accuracy testing results] |
+| **Acceptance Evidence** | [VENDOR: "ATRS record v1.1 published on GOV.UK (updated from DRAFT v1.0 with DPIA, EqIA, Security Assessment results)"] | ATRS record published with full transparency | ï¿½ AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
 
 **Verification Method**: HMRC Data Ethics Committee will review and approve ATRS record before Private Beta launch. ATRS must include results from DPIA, EqIA, and Security Assessment (blockers identified in ATRS v1.0 DRAFT).
 
@@ -311,11 +340,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "UK data residency architecture (AWS eu-west-2 only), data minimization, citizen consent management"] | Architecture ensuring UK GDPR compliance | ó AWAITING VENDOR | [HLD Section: Data Architecture & UK GDPR Compliance] |
-| **DLD Module** | [VENDOR: e.g., "ConsentManager, DataSubjectRightsAPI (access/erasure/portability), AuditLogger (7-year retention)"] | DLD modules implementing UK GDPR requirements | ó AWAITING VENDOR | [DLD Section: Data Protection & Citizen Rights] |
-| **Implementation** | [VENDOR: e.g., "AWS eu-west-2 region config, RDS encryption, S3 Object Lock (audit logs), consent UI, data export API"] | Infrastructure and code implementing UK GDPR controls | ó AWAITING VENDOR | [Terraform config, source code, privacy notice] |
-| **Test Cases** | [VENDOR: e.g., "Data residency verification (all data in UK), data subject rights API tests, consent flow tests, audit log retention tests"] | Tests verifying UK GDPR compliance | ó AWAITING VENDOR | [DPIA testing evidence, data subject rights API test results] |
-| **Acceptance Evidence** | [VENDOR: "DPIA approval from HMRC DPO", "Privacy notice published on GOV.UK", "Data subject rights procedures tested and documented"] | Evidence of full UK GDPR compliance | ó AWAITING VENDOR | [Deliverable milestone M1 (Design Approval)] |
+| **HLD Component** | [VENDOR: e.g., "UK data residency architecture (AWS eu-west-2 only), data minimization, citizen consent management"] | Architecture ensuring UK GDPR compliance | ï¿½ AWAITING VENDOR | [HLD Section: Data Architecture & UK GDPR Compliance] |
+| **DLD Module** | [VENDOR: e.g., "ConsentManager, DataSubjectRightsAPI (access/erasure/portability), AuditLogger (7-year retention)"] | DLD modules implementing UK GDPR requirements | ï¿½ AWAITING VENDOR | [DLD Section: Data Protection & Citizen Rights] |
+| **Implementation** | [VENDOR: e.g., "AWS eu-west-2 region config, RDS encryption, S3 Object Lock (audit logs), consent UI, data export API"] | Infrastructure and code implementing UK GDPR controls | ï¿½ AWAITING VENDOR | [Terraform config, source code, privacy notice] |
+| **Test Cases** | [VENDOR: e.g., "Data residency verification (all data in UK), data subject rights API tests, consent flow tests, audit log retention tests"] | Tests verifying UK GDPR compliance | ï¿½ AWAITING VENDOR | [DPIA testing evidence, data subject rights API test results] |
+| **Acceptance Evidence** | [VENDOR: "DPIA approval from HMRC DPO", "Privacy notice published on GOV.UK", "Data subject rights procedures tested and documented"] | Evidence of full UK GDPR compliance | ï¿½ AWAITING VENDOR | [Deliverable milestone M1 (Design Approval)] |
 
 **Verification Method**: HMRC Data Protection Officer will review DPIA and approve data processing activities. HMRC Legal will review privacy notice before publication.
 
@@ -342,11 +371,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Conversational AI Service (NLU, Dialogue Manager, Context Store)"] | HLD component handling conversational interface | ó AWAITING VENDOR | [HLD Section: Conversational AI Architecture] |
-| **DLD Module** | [VENDOR: e.g., "NLUEngine (intent classification, entity extraction), DialogueManager (state machine), ContextStore (Redis session management)"] | DLD modules implementing NLU and dialogue management | ó AWAITING VENDOR | [DLD Section: Conversational AI Detailed Design] |
-| **Implementation** | [VENDOR: e.g., "src/ai/nlu.py (LLM-based intent classifier), src/ai/dialogue.py, Redis session config"] | Source code implementing conversational AI | ó AWAITING VENDOR | [GitHub commit SHA, NLU model training logs] |
-| **Test Cases** | [VENDOR: e.g., "TC-FR1-001: Test intent recognition accuracy (>95% on 1000 test queries)", "TC-FR1-002: Multi-turn conversation test (5+ turns maintain context)", "TC-FR1-003: Welsh language NLU test"] | Tests verifying conversational interface quality | ó AWAITING VENDOR | [NLU accuracy report, dialogue test results] |
-| **Acceptance Evidence** | [VENDOR: "NLU accuracy report: 96.5% intent recognition on 1000-query test set", "Multi-turn dialogue test: 100% context retention over 5 turns"] | Evidence that conversational interface meets quality targets | ó AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
+| **HLD Component** | [VENDOR: e.g., "Conversational AI Service (NLU, Dialogue Manager, Context Store)"] | HLD component handling conversational interface | ï¿½ AWAITING VENDOR | [HLD Section: Conversational AI Architecture] |
+| **DLD Module** | [VENDOR: e.g., "NLUEngine (intent classification, entity extraction), DialogueManager (state machine), ContextStore (Redis session management)"] | DLD modules implementing NLU and dialogue management | ï¿½ AWAITING VENDOR | [DLD Section: Conversational AI Detailed Design] |
+| **Implementation** | [VENDOR: e.g., "src/ai/nlu.py (LLM-based intent classifier), src/ai/dialogue.py, Redis session config"] | Source code implementing conversational AI | ï¿½ AWAITING VENDOR | [GitHub commit SHA, NLU model training logs] |
+| **Test Cases** | [VENDOR: e.g., "TC-FR1-001: Test intent recognition accuracy (>95% on 1000 test queries)", "TC-FR1-002: Multi-turn conversation test (5+ turns maintain context)", "TC-FR1-003: Welsh language NLU test"] | Tests verifying conversational interface quality | ï¿½ AWAITING VENDOR | [NLU accuracy report, dialogue test results] |
+| **Acceptance Evidence** | [VENDOR: "NLU accuracy report: 96.5% intent recognition on 1000-query test set", "Multi-turn dialogue test: 100% context retention over 5 turns"] | Evidence that conversational interface meets quality targets | ï¿½ AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
 
 **Verification Method**: HMRC Product Owner will review NLU accuracy reports and conduct UAT with diverse tax queries during Private Beta.
 
@@ -356,7 +385,7 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 **Requirement Statement**: Semantic search over 100,000+ HMRC guidance documents, 100% source citation.
 
-**RAG Architecture**: Embedding model ’ vector database ’ top-k retrieval ’ LLM generation ’ source citation.
+**RAG Architecture**: Embedding model ï¿½ vector database ï¿½ top-k retrieval ï¿½ LLM generation ï¿½ source citation.
 
 **Acceptance Criteria** (SOW Section 4.2):
 - [ ] Knowledge base ingested with 100,000+ HMRC documents
@@ -369,11 +398,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Knowledge Management Service (Ingestion Pipeline, Vector Store, Retrieval API)"] | HLD component for RAG architecture | ó AWAITING VENDOR | [HLD Section: RAG Architecture] |
-| **DLD Module** | [VENDOR: e.g., "ContentIngester (HMRC CMS ’ S3), EmbeddingGenerator (AWS Titan Embeddings), VectorStore (OpenSearch k-NN), RetrieverAPI (semantic search), SourceCitationEngine"] | DLD modules implementing RAG pipeline | ó AWAITING VENDOR | [DLD Section: Knowledge Management & RAG] |
-| **Implementation** | [VENDOR: e.g., "src/knowledge/ingestion.py, OpenSearch index config, src/ai/retrieval.py, src/ai/citation.py"] | Source code implementing RAG pipeline end-to-end | ó AWAITING VENDOR | [GitHub commit SHA, OpenSearch index schema, ingestion logs] |
-| **Test Cases** | [VENDOR: e.g., "TC-FR2-001: Verify 100K+ documents ingested", "TC-FR2-002: Test retrieval quality (precision@5, recall@5)", "TC-FR2-003: Verify 100% source citation with GOV.UK links"] | Tests verifying RAG pipeline quality and source citation | ó AWAITING VENDOR | [Ingestion logs, retrieval quality metrics, citation coverage report] |
-| **Acceptance Evidence** | [VENDOR: "Knowledge base: 102,345 documents ingested", "Retrieval quality: precision@5=82%, recall@5=74%", "Source citation: 100% of 1000 test responses cite sources"] | Evidence that RAG meets quality and citation targets | ó AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
+| **HLD Component** | [VENDOR: e.g., "Knowledge Management Service (Ingestion Pipeline, Vector Store, Retrieval API)"] | HLD component for RAG architecture | ï¿½ AWAITING VENDOR | [HLD Section: RAG Architecture] |
+| **DLD Module** | [VENDOR: e.g., "ContentIngester (HMRC CMS ï¿½ S3), EmbeddingGenerator (AWS Titan Embeddings), VectorStore (OpenSearch k-NN), RetrieverAPI (semantic search), SourceCitationEngine"] | DLD modules implementing RAG pipeline | ï¿½ AWAITING VENDOR | [DLD Section: Knowledge Management & RAG] |
+| **Implementation** | [VENDOR: e.g., "src/knowledge/ingestion.py, OpenSearch index config, src/ai/retrieval.py, src/ai/citation.py"] | Source code implementing RAG pipeline end-to-end | ï¿½ AWAITING VENDOR | [GitHub commit SHA, OpenSearch index schema, ingestion logs] |
+| **Test Cases** | [VENDOR: e.g., "TC-FR2-001: Verify 100K+ documents ingested", "TC-FR2-002: Test retrieval quality (precision@5, recall@5)", "TC-FR2-003: Verify 100% source citation with GOV.UK links"] | Tests verifying RAG pipeline quality and source citation | ï¿½ AWAITING VENDOR | [Ingestion logs, retrieval quality metrics, citation coverage report] |
+| **Acceptance Evidence** | [VENDOR: "Knowledge base: 102,345 documents ingested", "Retrieval quality: precision@5=82%, recall@5=74%", "Source citation: 100% of 1000 test responses cite sources"] | Evidence that RAG meets quality and citation targets | ï¿½ AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
 
 **Verification Method**: HMRC Tax Policy team will review knowledge base content accuracy and source citation quality during UAT.
 
@@ -396,11 +425,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "LLM Service (AWS Bedrock Claude 3.5 Sonnet, Prompt Templates, Guardrails)"] | HLD component for LLM integration and AI safety | ó AWAITING VENDOR | [HLD Section: LLM Architecture & AI Safety] |
-| **DLD Module** | [VENDOR: e.g., "PromptTemplateManager, LLMClient (AWS Bedrock SDK), GuardrailsEngine (AWS Bedrock Guardrails + custom filters)"] | DLD modules implementing LLM integration and guardrails | ó AWAITING VENDOR | [DLD Section: LLM Integration & Guardrails] |
-| **Implementation** | [VENDOR: e.g., "src/ai/llm.py (Bedrock API calls), src/ai/prompts/ (templates), AWS Bedrock Guardrails config, src/ai/guardrails.py (custom filters)"] | Source code and config for LLM integration | ó AWAITING VENDOR | [GitHub commit SHA, AWS Bedrock config, prompt templates] |
-| **Test Cases** | [VENDOR: e.g., "TC-FR3-001: Verify AWS Bedrock Claude 3.5 Sonnet in eu-west-2", "TC-FR3-002: Test accuracy on 1000-query ground truth (>95%)", "TC-FR3-003: Adversarial testing (prompt injection, jailbreak)", "TC-FR3-004: Toxic content filtering (zero toxic outputs in 10K messages)"] | Tests verifying LLM quality, safety, and UK data residency | ó AWAITING VENDOR | [LLM accuracy report, adversarial testing report, guardrails test results] |
-| **Acceptance Evidence** | [VENDOR: "AWS Bedrock Claude 3.5 Sonnet deployment in eu-west-2 verified", "Accuracy: 96.2% on 1000-query ground truth", "Guardrails: zero toxic outputs in 10K-message test"] | Evidence that LLM meets accuracy and safety targets | ó AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
+| **HLD Component** | [VENDOR: e.g., "LLM Service (AWS Bedrock Claude 3.5 Sonnet, Prompt Templates, Guardrails)"] | HLD component for LLM integration and AI safety | ï¿½ AWAITING VENDOR | [HLD Section: LLM Architecture & AI Safety] |
+| **DLD Module** | [VENDOR: e.g., "PromptTemplateManager, LLMClient (AWS Bedrock SDK), GuardrailsEngine (AWS Bedrock Guardrails + custom filters)"] | DLD modules implementing LLM integration and guardrails | ï¿½ AWAITING VENDOR | [DLD Section: LLM Integration & Guardrails] |
+| **Implementation** | [VENDOR: e.g., "src/ai/llm.py (Bedrock API calls), src/ai/prompts/ (templates), AWS Bedrock Guardrails config, src/ai/guardrails.py (custom filters)"] | Source code and config for LLM integration | ï¿½ AWAITING VENDOR | [GitHub commit SHA, AWS Bedrock config, prompt templates] |
+| **Test Cases** | [VENDOR: e.g., "TC-FR3-001: Verify AWS Bedrock Claude 3.5 Sonnet in eu-west-2", "TC-FR3-002: Test accuracy on 1000-query ground truth (>95%)", "TC-FR3-003: Adversarial testing (prompt injection, jailbreak)", "TC-FR3-004: Toxic content filtering (zero toxic outputs in 10K messages)"] | Tests verifying LLM quality, safety, and UK data residency | ï¿½ AWAITING VENDOR | [LLM accuracy report, adversarial testing report, guardrails test results] |
+| **Acceptance Evidence** | [VENDOR: "AWS Bedrock Claude 3.5 Sonnet deployment in eu-west-2 verified", "Accuracy: 96.2% on 1000-query ground truth", "Guardrails: zero toxic outputs in 10K-message test"] | Evidence that LLM meets accuracy and safety targets | ï¿½ AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
 
 **Verification Method**: HMRC AI/ML Lead will review LLM configuration, prompt templates, and accuracy testing results.
 
@@ -410,12 +439,12 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 **Requirement Statement**: Every AI response cites source documents (HMRC guidance, legislation section) with clickable links to GOV.UK.
 
-**Explainability Feature**: "Why did the ChatBot say this?" button providing lineage from query ’ retrieved documents ’ LLM reasoning ’ response.
+**Explainability Feature**: "Why did the ChatBot say this?" button providing lineage from query ï¿½ retrieved documents ï¿½ LLM reasoning ï¿½ response.
 
 **Acceptance Criteria** (SOW Section 4.2):
 - [ ] 100% of AI responses include source citations with GOV.UK links
 - [ ] Explainability feature tested and documented
-- [ ] Lineage tracking from legislation ’ policy ’ guidance ’ AI response
+- [ ] Lineage tracking from legislation ï¿½ policy ï¿½ guidance ï¿½ AI response
 
 **Aligns with Architecture Principles**: #5 (Responsible AI - Explainability), #8 (Data Quality and Accuracy)
 
@@ -423,11 +452,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Explainability Service (Source Citation, Lineage Tracker, Explainability API)"] | HLD component for explainability and source citation | ó AWAITING VENDOR | [HLD Section: Explainability Architecture] |
-| **DLD Module** | [VENDOR: e.g., "SourceCitationFormatter, LineageTracker (query ’ docs ’ LLM ’ response), ExplainabilityWidget (frontend UI)"] | DLD modules implementing source citation and explainability | ó AWAITING VENDOR | [DLD Section: Explainability & Source Citation] |
-| **Implementation** | [VENDOR: e.g., "src/ai/citation.py, src/ai/lineage.py, src/frontend/components/ExplainabilityWidget.tsx"] | Source code implementing explainability features | ó AWAITING VENDOR | [GitHub commit SHA, explainability UI screenshots] |
-| **Test Cases** | [VENDOR: e.g., "TC-FR4-001: Verify 100% source citation coverage on 1000 test responses", "TC-FR4-002: Test explainability feature (lineage tracking accurate)", "TC-FR4-003: Verify GOV.UK links are valid and accessible"] | Tests verifying source citation and explainability | ó AWAITING VENDOR | [Citation coverage report, explainability feature demo, link validation results] |
-| **Acceptance Evidence** | [VENDOR: "Source citation: 100% of 1000 test responses cite sources", "Explainability feature: lineage tracking validated on 100 sample queries", "GOV.UK links: 100% valid and accessible"] | Evidence that explainability meets requirements | ó AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
+| **HLD Component** | [VENDOR: e.g., "Explainability Service (Source Citation, Lineage Tracker, Explainability API)"] | HLD component for explainability and source citation | ï¿½ AWAITING VENDOR | [HLD Section: Explainability Architecture] |
+| **DLD Module** | [VENDOR: e.g., "SourceCitationFormatter, LineageTracker (query ï¿½ docs ï¿½ LLM ï¿½ response), ExplainabilityWidget (frontend UI)"] | DLD modules implementing source citation and explainability | ï¿½ AWAITING VENDOR | [DLD Section: Explainability & Source Citation] |
+| **Implementation** | [VENDOR: e.g., "src/ai/citation.py, src/ai/lineage.py, src/frontend/components/ExplainabilityWidget.tsx"] | Source code implementing explainability features | ï¿½ AWAITING VENDOR | [GitHub commit SHA, explainability UI screenshots] |
+| **Test Cases** | [VENDOR: e.g., "TC-FR4-001: Verify 100% source citation coverage on 1000 test responses", "TC-FR4-002: Test explainability feature (lineage tracking accurate)", "TC-FR4-003: Verify GOV.UK links are valid and accessible"] | Tests verifying source citation and explainability | ï¿½ AWAITING VENDOR | [Citation coverage report, explainability feature demo, link validation results] |
+| **Acceptance Evidence** | [VENDOR: "Source citation: 100% of 1000 test responses cite sources", "Explainability feature: lineage tracking validated on 100 sample queries", "GOV.UK links: 100% valid and accessible"] | Evidence that explainability meets requirements | ï¿½ AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
 
 **Verification Method**: HMRC Product Owner will conduct UAT testing explainability feature and verifying source citations link to correct GOV.UK pages.
 
@@ -450,11 +479,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Citizen Identity Service (Government Gateway OAuth 2.0, MFA, Session Management)"] | HLD component for authentication and authorization | ó AWAITING VENDOR | [HLD Section: Authentication & Authorization Architecture] |
-| **DLD Module** | [VENDOR: e.g., "OAuthClient (Government Gateway), MFAHandler, SessionManager (Redis), ConsentManager (ABAC)"] | DLD modules implementing Government Gateway integration | ó AWAITING VENDOR | [DLD Section: Citizen Identity & Authentication] |
-| **Implementation** | [VENDOR: e.g., "src/auth/government-gateway.py (OAuth client), src/auth/mfa.py, src/auth/session.py, guest-mode config"] | Source code implementing Government Gateway OAuth 2.0 | ó AWAITING VENDOR | [GitHub commit SHA, OAuth config, MFA config] |
-| **Test Cases** | [VENDOR: e.g., "TC-FR5-001: Test Government Gateway OAuth flow (Authorization Code)", "TC-FR5-002: Test MFA with Government Gateway", "TC-FR5-003: Test personalized guidance with HMRC tax records API", "TC-FR5-004: Test guest mode (unauthenticated queries)"] | Tests verifying authentication and personalized guidance | ó AWAITING VENDOR | [OAuth integration test results, MFA test results, personalized guidance demo] |
-| **Acceptance Evidence** | [VENDOR: "Government Gateway OAuth 2.0 integration tested with sandbox environment", "MFA supported and tested", "Personalized guidance demo with sample tax records"] | Evidence that Government Gateway integration works | ó AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
+| **HLD Component** | [VENDOR: e.g., "Citizen Identity Service (Government Gateway OAuth 2.0, MFA, Session Management)"] | HLD component for authentication and authorization | ï¿½ AWAITING VENDOR | [HLD Section: Authentication & Authorization Architecture] |
+| **DLD Module** | [VENDOR: e.g., "OAuthClient (Government Gateway), MFAHandler, SessionManager (Redis), ConsentManager (ABAC)"] | DLD modules implementing Government Gateway integration | ï¿½ AWAITING VENDOR | [DLD Section: Citizen Identity & Authentication] |
+| **Implementation** | [VENDOR: e.g., "src/auth/government-gateway.py (OAuth client), src/auth/mfa.py, src/auth/session.py, guest-mode config"] | Source code implementing Government Gateway OAuth 2.0 | ï¿½ AWAITING VENDOR | [GitHub commit SHA, OAuth config, MFA config] |
+| **Test Cases** | [VENDOR: e.g., "TC-FR5-001: Test Government Gateway OAuth flow (Authorization Code)", "TC-FR5-002: Test MFA with Government Gateway", "TC-FR5-003: Test personalized guidance with HMRC tax records API", "TC-FR5-004: Test guest mode (unauthenticated queries)"] | Tests verifying authentication and personalized guidance | ï¿½ AWAITING VENDOR | [OAuth integration test results, MFA test results, personalized guidance demo] |
+| **Acceptance Evidence** | [VENDOR: "Government Gateway OAuth 2.0 integration tested with sandbox environment", "MFA supported and tested", "Personalized guidance demo with sample tax records"] | Evidence that Government Gateway integration works | ï¿½ AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
 
 **Verification Method**: HMRC Security team will review OAuth 2.0 integration and conduct penetration testing. HMRC Product Owner will test personalized guidance with sample citizen profiles.
 
@@ -479,11 +508,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Human Escalation Service (Escalation Logic, ServiceNow Integration, Handoff Manager)"] | HLD component for human escalation | ó AWAITING VENDOR | [HLD Section: Human Escalation Architecture] |
-| **DLD Module** | [VENDOR: e.g., "EscalationEngine (confidence threshold, trigger rules), ServiceNowClient (ticket API), HandoffManager (chat transcript export)"] | DLD modules implementing escalation logic and ServiceNow integration | ó AWAITING VENDOR | [DLD Section: Human Escalation & ServiceNow Integration] |
-| **Implementation** | [VENDOR: e.g., "src/escalation/engine.py, src/escalation/servicenow.py, escalation-rules.yaml"] | Source code implementing escalation logic and ServiceNow API | ó AWAITING VENDOR | [GitHub commit SHA, ServiceNow API config, escalation rules] |
-| **Test Cases** | [VENDOR: e.g., "TC-FR6-001: Test escalation triggers (confidence <70%)", "TC-FR6-002: Test ServiceNow ticket creation with chat transcript", "TC-FR6-003: Verify escalation rate <10% on 1000-conversation test set"] | Tests verifying escalation logic and ServiceNow integration | ó AWAITING VENDOR | [Escalation test results, ServiceNow integration demo, escalation rate analysis] |
-| **Acceptance Evidence** | [VENDOR: "Escalation logic tested: confidence threshold <70% triggers escalation", "ServiceNow integration tested: tickets created with chat transcripts", "Escalation rate: 8.5% on 1000-conversation test set"] | Evidence that escalation meets requirements | ó AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
+| **HLD Component** | [VENDOR: e.g., "Human Escalation Service (Escalation Logic, ServiceNow Integration, Handoff Manager)"] | HLD component for human escalation | ï¿½ AWAITING VENDOR | [HLD Section: Human Escalation Architecture] |
+| **DLD Module** | [VENDOR: e.g., "EscalationEngine (confidence threshold, trigger rules), ServiceNowClient (ticket API), HandoffManager (chat transcript export)"] | DLD modules implementing escalation logic and ServiceNow integration | ï¿½ AWAITING VENDOR | [DLD Section: Human Escalation & ServiceNow Integration] |
+| **Implementation** | [VENDOR: e.g., "src/escalation/engine.py, src/escalation/servicenow.py, escalation-rules.yaml"] | Source code implementing escalation logic and ServiceNow API | ï¿½ AWAITING VENDOR | [GitHub commit SHA, ServiceNow API config, escalation rules] |
+| **Test Cases** | [VENDOR: e.g., "TC-FR6-001: Test escalation triggers (confidence <70%)", "TC-FR6-002: Test ServiceNow ticket creation with chat transcript", "TC-FR6-003: Verify escalation rate <10% on 1000-conversation test set"] | Tests verifying escalation logic and ServiceNow integration | ï¿½ AWAITING VENDOR | [Escalation test results, ServiceNow integration demo, escalation rate analysis] |
+| **Acceptance Evidence** | [VENDOR: "Escalation logic tested: confidence threshold <70% triggers escalation", "ServiceNow integration tested: tickets created with chat transcripts", "Escalation rate: 8.5% on 1000-conversation test set"] | Evidence that escalation meets requirements | ï¿½ AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
 
 **Verification Method**: HMRC Product Owner will review escalation rate during Private Beta and verify ServiceNow tickets are created correctly with chat transcripts.
 
@@ -508,11 +537,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Feedback Collection Service (Feedback Widget, NPS Survey, Analytics Pipeline)"] | HLD component for feedback collection | ó AWAITING VENDOR | [HLD Section: Feedback Collection Architecture] |
-| **DLD Module** | [VENDOR: e.g., "FeedbackWidget (React component), NPSSurvey (modal), FeedbackAPI (store feedback), AnalyticsPipeline (aggregate feedback)"] | DLD modules implementing feedback collection | ó AWAITING VENDOR | [DLD Section: Feedback Collection & Analytics] |
-| **Implementation** | [VENDOR: e.g., "src/frontend/components/FeedbackWidget.tsx, src/api/feedback.py, PostgreSQL feedback table, analytics dashboard"] | Source code implementing feedback UI and API | ó AWAITING VENDOR | [GitHub commit SHA, database schema, analytics dashboard] |
-| **Test Cases** | [VENDOR: e.g., "TC-FR7-001: Test feedback widget (thumbs up/down captured)", "TC-FR7-002: Test NPS survey (triggered after conversation)", "TC-FR7-003: Verify feedback data stored in database"] | Tests verifying feedback collection | ó AWAITING VENDOR | [Feedback collection demo, NPS survey demo, database validation] |
-| **Acceptance Evidence** | [VENDOR: "Feedback widget tested: thumbs up/down captured for 100 test responses", "NPS survey tested: triggered and submitted by 50 test users", "Feedback data validated in PostgreSQL database"] | Evidence that feedback collection works | ó AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
+| **HLD Component** | [VENDOR: e.g., "Feedback Collection Service (Feedback Widget, NPS Survey, Analytics Pipeline)"] | HLD component for feedback collection | ï¿½ AWAITING VENDOR | [HLD Section: Feedback Collection Architecture] |
+| **DLD Module** | [VENDOR: e.g., "FeedbackWidget (React component), NPSSurvey (modal), FeedbackAPI (store feedback), AnalyticsPipeline (aggregate feedback)"] | DLD modules implementing feedback collection | ï¿½ AWAITING VENDOR | [DLD Section: Feedback Collection & Analytics] |
+| **Implementation** | [VENDOR: e.g., "src/frontend/components/FeedbackWidget.tsx, src/api/feedback.py, PostgreSQL feedback table, analytics dashboard"] | Source code implementing feedback UI and API | ï¿½ AWAITING VENDOR | [GitHub commit SHA, database schema, analytics dashboard] |
+| **Test Cases** | [VENDOR: e.g., "TC-FR7-001: Test feedback widget (thumbs up/down captured)", "TC-FR7-002: Test NPS survey (triggered after conversation)", "TC-FR7-003: Verify feedback data stored in database"] | Tests verifying feedback collection | ï¿½ AWAITING VENDOR | [Feedback collection demo, NPS survey demo, database validation] |
+| **Acceptance Evidence** | [VENDOR: "Feedback widget tested: thumbs up/down captured for 100 test responses", "NPS survey tested: triggered and submitted by 50 test users", "Feedback data validated in PostgreSQL database"] | Evidence that feedback collection works | ï¿½ AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
 
 **Verification Method**: HMRC Product Owner will test feedback widget and NPS survey during Private Beta and review feedback data in analytics dashboard.
 
@@ -536,11 +565,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Conversation Management Service (ConversationStore, History API, Export API, Deletion API)"] | HLD component for conversation management | ó AWAITING VENDOR | [HLD Section: Conversation Management Architecture] |
-| **DLD Module** | [VENDOR: e.g., "ConversationStore (PostgreSQL), HistoryAPI, ExportPDF (PDF generator), DeletionManager (retention policy check)"] | DLD modules implementing conversation management | ó AWAITING VENDOR | [DLD Section: Conversation Management] |
-| **Implementation** | [VENDOR: e.g., "src/conversations/store.py, PostgreSQL schema, src/api/history.py, src/export/pdf-generator.py, src/api/delete.py"] | Source code implementing conversation CRUD operations | ó AWAITING VENDOR | [GitHub commit SHA, database schema, PDF export sample] |
-| **Test Cases** | [VENDOR: e.g., "TC-FR8-001: Test conversation save/resume", "TC-FR8-002: Test conversation history (30 days)", "TC-FR8-003: Test PDF export (valid format)", "TC-FR8-004: Test delete with 7-year retention check"] | Tests verifying conversation management | ó AWAITING VENDOR | [Conversation management demo, PDF export sample, deletion test results] |
-| **Acceptance Evidence** | [VENDOR: "Conversation save/resume tested: authenticated citizen can resume previous conversation", "History tested: last 30 days visible", "PDF export tested: valid PDF generated", "Deletion tested: 7-year retention enforced"] | Evidence that conversation management works | ó AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
+| **HLD Component** | [VENDOR: e.g., "Conversation Management Service (ConversationStore, History API, Export API, Deletion API)"] | HLD component for conversation management | ï¿½ AWAITING VENDOR | [HLD Section: Conversation Management Architecture] |
+| **DLD Module** | [VENDOR: e.g., "ConversationStore (PostgreSQL), HistoryAPI, ExportPDF (PDF generator), DeletionManager (retention policy check)"] | DLD modules implementing conversation management | ï¿½ AWAITING VENDOR | [DLD Section: Conversation Management] |
+| **Implementation** | [VENDOR: e.g., "src/conversations/store.py, PostgreSQL schema, src/api/history.py, src/export/pdf-generator.py, src/api/delete.py"] | Source code implementing conversation CRUD operations | ï¿½ AWAITING VENDOR | [GitHub commit SHA, database schema, PDF export sample] |
+| **Test Cases** | [VENDOR: e.g., "TC-FR8-001: Test conversation save/resume", "TC-FR8-002: Test conversation history (30 days)", "TC-FR8-003: Test PDF export (valid format)", "TC-FR8-004: Test delete with 7-year retention check"] | Tests verifying conversation management | ï¿½ AWAITING VENDOR | [Conversation management demo, PDF export sample, deletion test results] |
+| **Acceptance Evidence** | [VENDOR: "Conversation save/resume tested: authenticated citizen can resume previous conversation", "History tested: last 30 days visible", "PDF export tested: valid PDF generated", "Deletion tested: 7-year retention enforced"] | Evidence that conversation management works | ï¿½ AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
 
 **Verification Method**: HMRC Product Owner will test conversation management during Private Beta with authenticated test users.
 
@@ -563,11 +592,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Content Design Strategy (Plain English prompt engineering, readability validation)"] | HLD strategy for Plain English content | ó AWAITING VENDOR | [HLD Section: Content Design & Plain English] |
-| **DLD Module** | [VENDOR: e.g., "PromptTemplates (Plain English optimized), ReadabilityChecker (Flesch-Kincaid), ContentReviewTool"] | DLD modules ensuring Plain English content | ó AWAITING VENDOR | [DLD Section: Content Design & Readability] |
-| **Implementation** | [VENDOR: e.g., "src/ai/prompts/ (Plain English templates), src/content/readability.py (Flesch-Kincaid scoring), content review log"] | Prompt templates and readability validation code | ó AWAITING VENDOR | [GitHub commit SHA, prompt templates, readability scores] |
-| **Test Cases** | [VENDOR: e.g., "TC-FR9-001: Test readability of 100 sample responses (Flesch-Kincaid d9)", "TC-FR9-002: Content designer review of 50 responses (GOV.UK style guide compliance)", "UAT: Plain English feedback from Private Beta citizens"] | Tests verifying Plain English content | ó AWAITING VENDOR | [Readability report, content designer review feedback, UAT results] |
-| **Acceptance Evidence** | [VENDOR: "Readability: 95% of 100 sample responses have Flesch-Kincaid d9", "Content designer review: 50 responses approved (GOV.UK style guide compliant)", "Private Beta feedback: 85% citizens found responses easy to understand"] | Evidence that Plain English requirement met | ó AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
+| **HLD Component** | [VENDOR: e.g., "Content Design Strategy (Plain English prompt engineering, readability validation)"] | HLD strategy for Plain English content | ï¿½ AWAITING VENDOR | [HLD Section: Content Design & Plain English] |
+| **DLD Module** | [VENDOR: e.g., "PromptTemplates (Plain English optimized), ReadabilityChecker (Flesch-Kincaid), ContentReviewTool"] | DLD modules ensuring Plain English content | ï¿½ AWAITING VENDOR | [DLD Section: Content Design & Readability] |
+| **Implementation** | [VENDOR: e.g., "src/ai/prompts/ (Plain English templates), src/content/readability.py (Flesch-Kincaid scoring), content review log"] | Prompt templates and readability validation code | ï¿½ AWAITING VENDOR | [GitHub commit SHA, prompt templates, readability scores] |
+| **Test Cases** | [VENDOR: e.g., "TC-FR9-001: Test readability of 100 sample responses (Flesch-Kincaid d9)", "TC-FR9-002: Content designer review of 50 responses (GOV.UK style guide compliance)", "UAT: Plain English feedback from Private Beta citizens"] | Tests verifying Plain English content | ï¿½ AWAITING VENDOR | [Readability report, content designer review feedback, UAT results] |
+| **Acceptance Evidence** | [VENDOR: "Readability: 95% of 100 sample responses have Flesch-Kincaid d9", "Content designer review: 50 responses approved (GOV.UK style guide compliant)", "Private Beta feedback: 85% citizens found responses easy to understand"] | Evidence that Plain English requirement met | ï¿½ AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
 
 **Verification Method**: HMRC Content Designer will review prompt templates and sample responses for GOV.UK style guide compliance and Plain English clarity.
 
@@ -592,11 +621,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Multilingual Support (Welsh/English UI, Welsh NLU, Welsh Knowledge Base)"] | HLD component for Welsh language support | ó AWAITING VENDOR | [HLD Section: Welsh Language Architecture] |
-| **DLD Module** | [VENDOR: e.g., "LanguageToggle (frontend), WelshNLU (intent classification), WelshKnowledgeBase (separate OpenSearch index), WelshLLM (prompt templates in Welsh)"] | DLD modules implementing Welsh language support | ó AWAITING VENDOR | [DLD Section: Welsh Language Support] |
-| **Implementation** | [VENDOR: e.g., "src/frontend/components/LanguageToggle.tsx, src/ai/welsh-nlu.py, OpenSearch Welsh index config, src/ai/prompts-welsh/"] | Source code for Welsh UI and AI responses | ó AWAITING VENDOR | [GitHub commit SHA, Welsh UI screenshots, Welsh knowledge base ingestion logs] |
-| **Test Cases** | [VENDOR: e.g., "TC-FR10-001: Test Welsh/English toggle", "TC-FR10-002: Test Welsh NLU (intent recognition on 100 Welsh queries)", "TC-FR10-003: Test Welsh AI responses (accuracy on 100 Welsh tax queries)", "TC-FR10-004: Verify Welsh knowledge base ingested (HMRC Welsh guidance)"] | Tests verifying Welsh language support | ó AWAITING VENDOR | [Welsh UI demo, Welsh NLU accuracy report, Welsh AI response samples] |
-| **Acceptance Evidence** | [VENDOR: "Welsh/English toggle tested and working", "Welsh NLU: 92% intent recognition on 100 Welsh queries", "Welsh AI responses: 50 sample responses reviewed by Welsh speaker", "Welsh knowledge base: all HMRC Welsh guidance ingested"] | Evidence that Welsh language support works | ó AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
+| **HLD Component** | [VENDOR: e.g., "Multilingual Support (Welsh/English UI, Welsh NLU, Welsh Knowledge Base)"] | HLD component for Welsh language support | ï¿½ AWAITING VENDOR | [HLD Section: Welsh Language Architecture] |
+| **DLD Module** | [VENDOR: e.g., "LanguageToggle (frontend), WelshNLU (intent classification), WelshKnowledgeBase (separate OpenSearch index), WelshLLM (prompt templates in Welsh)"] | DLD modules implementing Welsh language support | ï¿½ AWAITING VENDOR | [DLD Section: Welsh Language Support] |
+| **Implementation** | [VENDOR: e.g., "src/frontend/components/LanguageToggle.tsx, src/ai/welsh-nlu.py, OpenSearch Welsh index config, src/ai/prompts-welsh/"] | Source code for Welsh UI and AI responses | ï¿½ AWAITING VENDOR | [GitHub commit SHA, Welsh UI screenshots, Welsh knowledge base ingestion logs] |
+| **Test Cases** | [VENDOR: e.g., "TC-FR10-001: Test Welsh/English toggle", "TC-FR10-002: Test Welsh NLU (intent recognition on 100 Welsh queries)", "TC-FR10-003: Test Welsh AI responses (accuracy on 100 Welsh tax queries)", "TC-FR10-004: Verify Welsh knowledge base ingested (HMRC Welsh guidance)"] | Tests verifying Welsh language support | ï¿½ AWAITING VENDOR | [Welsh UI demo, Welsh NLU accuracy report, Welsh AI response samples] |
+| **Acceptance Evidence** | [VENDOR: "Welsh/English toggle tested and working", "Welsh NLU: 92% intent recognition on 100 Welsh queries", "Welsh AI responses: 50 sample responses reviewed by Welsh speaker", "Welsh knowledge base: all HMRC Welsh guidance ingested"] | Evidence that Welsh language support works | ï¿½ AWAITING VENDOR | [Deliverable milestone M4 (Private Beta)] |
 
 **Verification Method**: HMRC Content Designer (Welsh speaker) will review Welsh UI translations and Welsh AI response quality during Private Beta.
 
@@ -621,11 +650,11 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "Frontend Architecture (React + gov.uk-frontend, GOV.UK Design System components)"] | HLD specifying GOV.UK Design System integration | ó AWAITING VENDOR | [HLD Section: Frontend Architecture & GOV.UK Design System] |
-| **DLD Module** | [VENDOR: e.g., "All React components using gov.uk-frontend library (Button, Input, Textarea, Accordion, etc.)"] | DLD specifying GOV.UK Design System usage for each UI component | ó AWAITING VENDOR | [DLD Section: UI Components & GOV.UK Design System] |
-| **Implementation** | [VENDOR: e.g., "src/frontend/ (all components import gov.uk-frontend), package.json (gov.uk-frontend dependency), responsive CSS"] | Source code using gov.uk-frontend components | ó AWAITING VENDOR | [GitHub commit SHA, frontend screenshots, responsive design demo] |
-| **Test Cases** | [VENDOR: e.g., "TC-FR11-001: Visual regression testing (GOV.UK styling consistency)", "TC-FR11-002: Responsive design testing (desktop, tablet, mobile)", "TC-FR11-003: Accessibility testing (gov.uk-frontend components WCAG 2.2 AA compliant)"] | Tests verifying GOV.UK Design System integration | ó AWAITING VENDOR | [Visual regression test results, responsive design screenshots, accessibility audit] |
-| **Acceptance Evidence** | [VENDOR: "All components use gov.uk-frontend library (verified via code review)", "GOV.UK styling consistent (visual regression tests pass)", "Responsive design tested on 5 devices (desktop, tablet, mobile)"] | Evidence that GOV.UK Design System integration meets requirements | ó AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
+| **HLD Component** | [VENDOR: e.g., "Frontend Architecture (React + gov.uk-frontend, GOV.UK Design System components)"] | HLD specifying GOV.UK Design System integration | ï¿½ AWAITING VENDOR | [HLD Section: Frontend Architecture & GOV.UK Design System] |
+| **DLD Module** | [VENDOR: e.g., "All React components using gov.uk-frontend library (Button, Input, Textarea, Accordion, etc.)"] | DLD specifying GOV.UK Design System usage for each UI component | ï¿½ AWAITING VENDOR | [DLD Section: UI Components & GOV.UK Design System] |
+| **Implementation** | [VENDOR: e.g., "src/frontend/ (all components import gov.uk-frontend), package.json (gov.uk-frontend dependency), responsive CSS"] | Source code using gov.uk-frontend components | ï¿½ AWAITING VENDOR | [GitHub commit SHA, frontend screenshots, responsive design demo] |
+| **Test Cases** | [VENDOR: e.g., "TC-FR11-001: Visual regression testing (GOV.UK styling consistency)", "TC-FR11-002: Responsive design testing (desktop, tablet, mobile)", "TC-FR11-003: Accessibility testing (gov.uk-frontend components WCAG 2.2 AA compliant)"] | Tests verifying GOV.UK Design System integration | ï¿½ AWAITING VENDOR | [Visual regression test results, responsive design screenshots, accessibility audit] |
+| **Acceptance Evidence** | [VENDOR: "All components use gov.uk-frontend library (verified via code review)", "GOV.UK styling consistent (visual regression tests pass)", "Responsive design tested on 5 devices (desktop, tablet, mobile)"] | Evidence that GOV.UK Design System integration meets requirements | ï¿½ AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
 
 **Verification Method**: HMRC Accessibility Specialist and UX Designer will review frontend implementation for GOV.UK Design System compliance and visual consistency with GOV.UK.
 
@@ -633,37 +662,37 @@ The selected vendor MUST complete this traceability matrix progressively:
 
 ### 2.3 Non-Functional Requirements (NFR) Traceability
 
-Due to document length constraints, I'll provide a summary table for all 21 NFRs with key traceability points. Vendor must expand each NFR with full traceability mapping (HLD ’ DLD ’ Implementation ’ Tests) similar to BR/FR sections above.
+Due to document length constraints, I'll provide a summary table for all 21 NFRs with key traceability points. Vendor must expand each NFR with full traceability mapping (HLD ï¿½ DLD ï¿½ Implementation ï¿½ Tests) similar to BR/FR sections above.
 
 #### NFR Summary Traceability Matrix (VENDOR TO EXPAND)
 
 | NFR ID | Requirement | Category | Target | HLD Component (Vendor) | DLD Module (Vendor) | Test Cases (Vendor) | Status |
 |--------|-------------|----------|--------|------------------------|---------------------|---------------------|--------|
-| **NFR-P-1** | Response Time | Performance | <2s p95 | [VENDOR: e.g., "Caching layer, async processing"] | [VENDOR: Caching modules, async workers] | [VENDOR: Load testing, latency monitoring] | ó AWAITING VENDOR |
-| **NFR-P-2** | Throughput | Performance | 500 req/s | [VENDOR: e.g., "Auto-scaling ECS, load balancer"] | [VENDOR: ECS config, ALB config] | [VENDOR: Stress testing 500 req/s] | ó AWAITING VENDOR |
-| **NFR-A-1** | Uptime SLA | Availability | 99.9% business hours | [VENDOR: e.g., "Multi-AZ ECS, health checks"] | [VENDOR: Multi-AZ config, health check endpoint] | [VENDOR: Uptime monitoring, 30-day baseline] | ó AWAITING VENDOR |
-| **NFR-A-2** | Disaster Recovery RPO | Availability | <1 hour | [VENDOR: e.g., "Automated backups, cross-region replication"] | [VENDOR: RDS backup config, S3 replication] | [VENDOR: DR drill, RPO verification] | ó AWAITING VENDOR |
-| **NFR-A-3** | Disaster Recovery RTO | Availability | <15 minutes | [VENDOR: e.g., "Automated failover, runbooks"] | [VENDOR: Failover automation, runbooks] | [VENDOR: Failover testing, RTO measurement] | ó AWAITING VENDOR |
-| **NFR-S-1** | Horizontal Scaling | Scalability | Auto-scale to 10K concurrent users | [VENDOR: e.g., "ECS auto-scaling, RDS read replicas"] | [VENDOR: ECS scaling policy, RDS replicas] | [VENDOR: Load testing 10K users, verify auto-scale] | ó AWAITING VENDOR |
-| **NFR-S-2** | Data Volume Growth | Scalability | Support 10M conversations/year by Year 3 | [VENDOR: e.g., "Scalable storage (S3, RDS)"] | [VENDOR: Storage architecture, data lifecycle] | [VENDOR: Storage capacity planning, data volume projections] | ó AWAITING VENDOR |
-| **NFR-SEC-1** | Authentication & Authorization | Security | Government Gateway OAuth 2.0, MFA, ABAC | [VENDOR: See FR-5 traceability] | [VENDOR: OAuth, MFA, ABAC modules] | [VENDOR: Auth penetration testing, OAuth security audit] | ó AWAITING VENDOR |
-| **NFR-SEC-2** | Encryption | Security | TLS 1.3 in transit, AES-256 at rest | [VENDOR: e.g., "ALB TLS config, RDS encryption, S3 encryption"] | [VENDOR: TLS certificates, KMS keys, encryption config] | [VENDOR: Encryption verification, TLS configuration audit] | ó AWAITING VENDOR |
-| **NFR-SEC-3** | Secrets Management | Security | AWS Secrets Manager (no hardcoded credentials) | [VENDOR: e.g., "All credentials in Secrets Manager"] | [VENDOR: Secrets Manager config, app code secrets retrieval] | [VENDOR: Secret scanning (git-secrets), config audit] | ó AWAITING VENDOR |
-| **NFR-SEC-4** | Vulnerability Management | Security | Weekly scans, critical patches <7 days, high <30 days | [VENDOR: e.g., "AWS Inspector, Snyk, penetration testing"] | [VENDOR: Scanning config, patch process] | [VENDOR: Vulnerability scan reports, patching SLA verification] | ó AWAITING VENDOR |
-| **NFR-SEC-5** | Compliance (Cyber Essentials Plus) | Security | Cyber Essentials Plus certification | [VENDOR: e.g., "All Cyber Essentials Plus controls implemented"] | [VENDOR: Security controls documentation] | [VENDOR: Cyber Essentials Plus audit, certification] | ó AWAITING VENDOR |
-| **NFR-SEC-6** | AI Safety & Security | Security | Prompt injection defense, adversarial testing | [VENDOR: See FR-3 guardrails traceability] | [VENDOR: Input sanitization, guardrails modules] | [VENDOR: Adversarial testing, prompt injection tests] | ó AWAITING VENDOR |
-| **NFR-C-1** | UK GDPR Compliance | Compliance | UK data residency, DPIA, data subject rights | [VENDOR: See BR-7 traceability] | [VENDOR: UK region config, data subject rights APIs] | [VENDOR: DPIA testing, data subject rights API tests] | ó AWAITING VENDOR |
-| **NFR-C-2** | Audit Logging | Compliance | 7-year retention, W5H1 format, immutable | [VENDOR: e.g., "CloudTrail, S3 Object Lock, Splunk integration"] | [VENDOR: Audit log format, S3 Object Lock config, Splunk forwarder] | [VENDOR: Audit log validation, retention policy verification] | ó AWAITING VENDOR |
-| **NFR-C-3** | ATRS Reporting | Compliance | ATRS published on GOV.UK before Private Beta | [VENDOR: See BR-6 traceability] | [VENDOR: ATRS generation tooling, bias testing reports] | [VENDOR: ATRS review by Data Ethics Committee] | ó AWAITING VENDOR |
-| **NFR-U-1** | GOV.UK UX Standards | Usability | GOV.UK Design System, Plain English, user research | [VENDOR: See FR-9, FR-11 traceability] | [VENDOR: GOV.UK components, user research documentation] | [VENDOR: User testing with 100+ Private Beta citizens] | ó AWAITING VENDOR |
-| **NFR-U-2** | Accessibility (WCAG 2.2 AA) | Usability | 100% WCAG 2.2 AA compliance | [VENDOR: See BR-5 traceability] | [VENDOR: Accessible UI components, ARIA labels] | [VENDOR: Accessibility audit (zero critical/high issues)] | ó AWAITING VENDOR |
-| **NFR-U-3** | Welsh Language | Usability | Bilingual UI, Welsh AI responses | [VENDOR: See FR-10 traceability] | [VENDOR: Welsh UI, Welsh NLU, Welsh knowledge base] | [VENDOR: Welsh language testing with Welsh speakers] | ó AWAITING VENDOR |
-| **NFR-M-1** | Observability | Maintainability | Structured logs, metrics, traces, dashboards | [VENDOR: e.g., "CloudWatch, Prometheus, OpenTelemetry, Splunk"] | [VENDOR: Logging config, metrics exporters, tracing instrumentation] | [VENDOR: Observability validation, SLO alerting tests] | ó AWAITING VENDOR |
-| **NFR-M-2** | Documentation | Maintainability | HLD, DLD, API docs, runbooks | [VENDOR: See SOW Section 4.5 deliverables] | [VENDOR: Documentation tooling, OpenAPI specs] | [VENDOR: Documentation review, completeness check] | ó AWAITING VENDOR |
-| **NFR-M-3** | Knowledge Transfer | Maintainability | Training for HMRC dev, SRE, content teams | [VENDOR: See SOW Section 4.6 knowledge transfer] | [VENDOR: Training materials, workshops, documentation] | [VENDOR: Knowledge transfer sessions, HMRC team sign-off] | ó AWAITING VENDOR |
-| **NFR-I-1** | API Standards | Interoperability | OpenAPI 3.0+, REST, JSON, semantic HTTP codes | [VENDOR: e.g., "All APIs documented with OpenAPI"] | [VENDOR: OpenAPI specs for all endpoints] | [VENDOR: API contract testing, OpenAPI validation] | ó AWAITING VENDOR |
-| **NFR-I-2** | Integration Capabilities | Interoperability | Government Gateway, HMRC APIs, AWS Bedrock, ServiceNow | [VENDOR: See INT-1 to INT-5 traceability] | [VENDOR: Integration modules for each system] | [VENDOR: Integration testing for all 5 integrations] | ó AWAITING VENDOR |
-| **NFR-I-3** | Data Portability | Interoperability | Citizen can export transcripts (PDF), portable data formats | [VENDOR: See FR-8 traceability] | [VENDOR: PDF export API, backup formats] | [VENDOR: PDF export testing, data portability verification] | ó AWAITING VENDOR |
+| **NFR-P-1** | Response Time | Performance | <2s p95 | [VENDOR: e.g., "Caching layer, async processing"] | [VENDOR: Caching modules, async workers] | [VENDOR: Load testing, latency monitoring] | ï¿½ AWAITING VENDOR |
+| **NFR-P-2** | Throughput | Performance | 500 req/s | [VENDOR: e.g., "Auto-scaling ECS, load balancer"] | [VENDOR: ECS config, ALB config] | [VENDOR: Stress testing 500 req/s] | ï¿½ AWAITING VENDOR |
+| **NFR-A-1** | Uptime SLA | Availability | 99.9% business hours | [VENDOR: e.g., "Multi-AZ ECS, health checks"] | [VENDOR: Multi-AZ config, health check endpoint] | [VENDOR: Uptime monitoring, 30-day baseline] | ï¿½ AWAITING VENDOR |
+| **NFR-A-2** | Disaster Recovery RPO | Availability | <1 hour | [VENDOR: e.g., "Automated backups, cross-region replication"] | [VENDOR: RDS backup config, S3 replication] | [VENDOR: DR drill, RPO verification] | ï¿½ AWAITING VENDOR |
+| **NFR-A-3** | Disaster Recovery RTO | Availability | <15 minutes | [VENDOR: e.g., "Automated failover, runbooks"] | [VENDOR: Failover automation, runbooks] | [VENDOR: Failover testing, RTO measurement] | ï¿½ AWAITING VENDOR |
+| **NFR-S-1** | Horizontal Scaling | Scalability | Auto-scale to 10K concurrent users | [VENDOR: e.g., "ECS auto-scaling, RDS read replicas"] | [VENDOR: ECS scaling policy, RDS replicas] | [VENDOR: Load testing 10K users, verify auto-scale] | ï¿½ AWAITING VENDOR |
+| **NFR-S-2** | Data Volume Growth | Scalability | Support 10M conversations/year by Year 3 | [VENDOR: e.g., "Scalable storage (S3, RDS)"] | [VENDOR: Storage architecture, data lifecycle] | [VENDOR: Storage capacity planning, data volume projections] | ï¿½ AWAITING VENDOR |
+| **NFR-SEC-1** | Authentication & Authorization | Security | Government Gateway OAuth 2.0, MFA, ABAC | [VENDOR: See FR-5 traceability] | [VENDOR: OAuth, MFA, ABAC modules] | [VENDOR: Auth penetration testing, OAuth security audit] | ï¿½ AWAITING VENDOR |
+| **NFR-SEC-2** | Encryption | Security | TLS 1.3 in transit, AES-256 at rest | [VENDOR: e.g., "ALB TLS config, RDS encryption, S3 encryption"] | [VENDOR: TLS certificates, KMS keys, encryption config] | [VENDOR: Encryption verification, TLS configuration audit] | ï¿½ AWAITING VENDOR |
+| **NFR-SEC-3** | Secrets Management | Security | AWS Secrets Manager (no hardcoded credentials) | [VENDOR: e.g., "All credentials in Secrets Manager"] | [VENDOR: Secrets Manager config, app code secrets retrieval] | [VENDOR: Secret scanning (git-secrets), config audit] | ï¿½ AWAITING VENDOR |
+| **NFR-SEC-4** | Vulnerability Management | Security | Weekly scans, critical patches <7 days, high <30 days | [VENDOR: e.g., "AWS Inspector, Snyk, penetration testing"] | [VENDOR: Scanning config, patch process] | [VENDOR: Vulnerability scan reports, patching SLA verification] | ï¿½ AWAITING VENDOR |
+| **NFR-SEC-5** | Compliance (Cyber Essentials Plus) | Security | Cyber Essentials Plus certification | [VENDOR: e.g., "All Cyber Essentials Plus controls implemented"] | [VENDOR: Security controls documentation] | [VENDOR: Cyber Essentials Plus audit, certification] | ï¿½ AWAITING VENDOR |
+| **NFR-SEC-6** | AI Safety & Security | Security | Prompt injection defense, adversarial testing | [VENDOR: See FR-3 guardrails traceability] | [VENDOR: Input sanitization, guardrails modules] | [VENDOR: Adversarial testing, prompt injection tests] | ï¿½ AWAITING VENDOR |
+| **NFR-C-1** | UK GDPR Compliance | Compliance | UK data residency, DPIA, data subject rights | [VENDOR: See BR-7 traceability] | [VENDOR: UK region config, data subject rights APIs] | [VENDOR: DPIA testing, data subject rights API tests] | ï¿½ AWAITING VENDOR |
+| **NFR-C-2** | Audit Logging | Compliance | 7-year retention, W5H1 format, immutable | [VENDOR: e.g., "CloudTrail, S3 Object Lock, Splunk integration"] | [VENDOR: Audit log format, S3 Object Lock config, Splunk forwarder] | [VENDOR: Audit log validation, retention policy verification] | ï¿½ AWAITING VENDOR |
+| **NFR-C-3** | ATRS Reporting | Compliance | ATRS published on GOV.UK before Private Beta | [VENDOR: See BR-6 traceability] | [VENDOR: ATRS generation tooling, bias testing reports] | [VENDOR: ATRS review by Data Ethics Committee] | ï¿½ AWAITING VENDOR |
+| **NFR-U-1** | GOV.UK UX Standards | Usability | GOV.UK Design System, Plain English, user research | [VENDOR: See FR-9, FR-11 traceability] | [VENDOR: GOV.UK components, user research documentation] | [VENDOR: User testing with 100+ Private Beta citizens] | ï¿½ AWAITING VENDOR |
+| **NFR-U-2** | Accessibility (WCAG 2.2 AA) | Usability | 100% WCAG 2.2 AA compliance | [VENDOR: See BR-5 traceability] | [VENDOR: Accessible UI components, ARIA labels] | [VENDOR: Accessibility audit (zero critical/high issues)] | ï¿½ AWAITING VENDOR |
+| **NFR-U-3** | Welsh Language | Usability | Bilingual UI, Welsh AI responses | [VENDOR: See FR-10 traceability] | [VENDOR: Welsh UI, Welsh NLU, Welsh knowledge base] | [VENDOR: Welsh language testing with Welsh speakers] | ï¿½ AWAITING VENDOR |
+| **NFR-M-1** | Observability | Maintainability | Structured logs, metrics, traces, dashboards | [VENDOR: e.g., "CloudWatch, Prometheus, OpenTelemetry, Splunk"] | [VENDOR: Logging config, metrics exporters, tracing instrumentation] | [VENDOR: Observability validation, SLO alerting tests] | ï¿½ AWAITING VENDOR |
+| **NFR-M-2** | Documentation | Maintainability | HLD, DLD, API docs, runbooks | [VENDOR: See SOW Section 4.5 deliverables] | [VENDOR: Documentation tooling, OpenAPI specs] | [VENDOR: Documentation review, completeness check] | ï¿½ AWAITING VENDOR |
+| **NFR-M-3** | Knowledge Transfer | Maintainability | Training for HMRC dev, SRE, content teams | [VENDOR: See SOW Section 4.6 knowledge transfer] | [VENDOR: Training materials, workshops, documentation] | [VENDOR: Knowledge transfer sessions, HMRC team sign-off] | ï¿½ AWAITING VENDOR |
+| **NFR-I-1** | API Standards | Interoperability | OpenAPI 3.0+, REST, JSON, semantic HTTP codes | [VENDOR: e.g., "All APIs documented with OpenAPI"] | [VENDOR: OpenAPI specs for all endpoints] | [VENDOR: API contract testing, OpenAPI validation] | ï¿½ AWAITING VENDOR |
+| **NFR-I-2** | Integration Capabilities | Interoperability | Government Gateway, HMRC APIs, AWS Bedrock, ServiceNow | [VENDOR: See INT-1 to INT-5 traceability] | [VENDOR: Integration modules for each system] | [VENDOR: Integration testing for all 5 integrations] | ï¿½ AWAITING VENDOR |
+| **NFR-I-3** | Data Portability | Interoperability | Citizen can export transcripts (PDF), portable data formats | [VENDOR: See FR-8 traceability] | [VENDOR: PDF export API, backup formats] | [VENDOR: PDF export testing, data portability verification] | ï¿½ AWAITING VENDOR |
 
 **Vendor Action Required**: Expand each NFR row above into full traceability section (similar to BR/FR sections) with HLD component, DLD module, implementation details, test cases, acceptance evidence, and verification method.
 
@@ -681,7 +710,7 @@ Due to document length constraints, I'll provide a summary table for all 21 NFRs
 
 **Traceability**: See FR-5 (Government Gateway Authentication) and NFR-SEC-1 (Authentication & Authorization) for full traceability mapping.
 
-**Status**: ó AWAITING VENDOR
+**Status**: ï¿½ AWAITING VENDOR
 
 ---
 
@@ -693,7 +722,7 @@ Due to document length constraints, I'll provide a summary table for all 21 NFRs
 
 **Traceability**: See FR-2 (RAG with HMRC Knowledge Base) for full traceability mapping.
 
-**Status**: ó AWAITING VENDOR
+**Status**: ï¿½ AWAITING VENDOR
 
 **DEPENDENCY**: HMRC will provide CMS API credentials and documentation (Week 1).
 
@@ -709,11 +738,11 @@ Due to document length constraints, I'll provide a summary table for all 21 NFRs
 
 | Lifecycle Stage | Artifact | Description | Status | Vendor Evidence |
 |-----------------|----------|-------------|--------|-----------------|
-| **HLD Component** | [VENDOR: e.g., "HMRC Integration Service (Tax Records Client, NI Client, Circuit Breaker)"] | HLD component for HMRC backend API integration | ó AWAITING VENDOR | [HLD Section: HMRC Backend Integration] |
-| **DLD Module** | [VENDOR: e.g., "TaxRecordsClient, NIClient, CircuitBreaker (Hystrix or similar)"] | DLD modules for HMRC API clients with resilience patterns | ó AWAITING VENDOR | [DLD Section: HMRC Backend Integration] |
-| **Implementation** | [VENDOR: e.g., "src/integration/hmrc-tax-records.py, src/integration/hmrc-ni.py, circuit-breaker config"] | Source code for HMRC API integration | ó AWAITING VENDOR | [GitHub commit SHA, circuit breaker config] |
-| **Test Cases** | [VENDOR: e.g., "TC-INT3-001: Test Tax Records API (sandbox)", "TC-INT3-002: Test NI API (sandbox)", "TC-INT3-003: Test circuit breaker (HMRC API failure simulation)"] | Integration tests with HMRC sandbox APIs | ó AWAITING VENDOR | [Integration test results, circuit breaker validation] |
-| **Acceptance Evidence** | [VENDOR: "HMRC Tax Records API integration tested with sandbox", "NI API integration tested", "Circuit breaker tested (fails open after 3 retries)"] | Evidence that HMRC backend integration works | ó AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
+| **HLD Component** | [VENDOR: e.g., "HMRC Integration Service (Tax Records Client, NI Client, Circuit Breaker)"] | HLD component for HMRC backend API integration | ï¿½ AWAITING VENDOR | [HLD Section: HMRC Backend Integration] |
+| **DLD Module** | [VENDOR: e.g., "TaxRecordsClient, NIClient, CircuitBreaker (Hystrix or similar)"] | DLD modules for HMRC API clients with resilience patterns | ï¿½ AWAITING VENDOR | [DLD Section: HMRC Backend Integration] |
+| **Implementation** | [VENDOR: e.g., "src/integration/hmrc-tax-records.py, src/integration/hmrc-ni.py, circuit-breaker config"] | Source code for HMRC API integration | ï¿½ AWAITING VENDOR | [GitHub commit SHA, circuit breaker config] |
+| **Test Cases** | [VENDOR: e.g., "TC-INT3-001: Test Tax Records API (sandbox)", "TC-INT3-002: Test NI API (sandbox)", "TC-INT3-003: Test circuit breaker (HMRC API failure simulation)"] | Integration tests with HMRC sandbox APIs | ï¿½ AWAITING VENDOR | [Integration test results, circuit breaker validation] |
+| **Acceptance Evidence** | [VENDOR: "HMRC Tax Records API integration tested with sandbox", "NI API integration tested", "Circuit breaker tested (fails open after 3 retries)"] | Evidence that HMRC backend integration works | ï¿½ AWAITING VENDOR | [Deliverable milestone M3 (Testing Complete)] |
 
 **Verification Method**: HMRC Technical Lead will review integration code and conduct integration testing with HMRC sandbox APIs.
 
@@ -729,7 +758,7 @@ Due to document length constraints, I'll provide a summary table for all 21 NFRs
 
 **Traceability**: See FR-6 (Human Escalation) for full traceability mapping.
 
-**Status**: ó AWAITING VENDOR
+**Status**: ï¿½ AWAITING VENDOR
 
 **DEPENDENCY**: HMRC will provide ServiceNow API credentials and ticket schema (Week 1).
 
@@ -743,11 +772,11 @@ Due to document length constraints, I'll provide a summary table for all 21 NFRs
 
 **Traceability**: See FR-3 (LLM Response Generation) for full traceability mapping.
 
-**Status**: ó AWAITING VENDOR
+**Status**: ï¿½ AWAITING VENDOR
 
 ---
 
-## 3. BACKWARD TRACEABILITY: TESTS ’ IMPLEMENTATION ’ DESIGN ’ REQUIREMENTS
+## 3. BACKWARD TRACEABILITY: TESTS ï¿½ IMPLEMENTATION ï¿½ DESIGN ï¿½ REQUIREMENTS
 
 **Purpose**: Ensure no "orphan" design elements, implementation code, or tests that don't trace back to requirements (potential scope creep or unnecessary work).
 
@@ -764,13 +793,13 @@ Due to document length constraints, I'll provide a summary table for all 21 NFRs
 
 | Artifact Type | Artifact Name | Traces To Requirement(s) | Justification (if not directly to requirement) | Status |
 |---------------|---------------|--------------------------|-----------------------------------------------|--------|
-| **HLD Component** | [VENDOR: e.g., "Analytics & Reporting Service"] | BR-1 (Call Deflection), BR-3 (Citizen Satisfaction) | Directly implements call deflection and NPS tracking | ó AWAITING VENDOR |
-| **HLD Component** | [VENDOR: e.g., "Logging & Monitoring Infrastructure"] | NFR-M-1 (Observability), NFR-C-2 (Audit Logging), NFR-A-1 (Uptime SLA) | Cross-cutting concern supporting multiple NFRs | ó AWAITING VENDOR |
-| **DLD Module** | [VENDOR: e.g., "HealthCheckEndpoint"] | NFR-A-1 (Uptime SLA) | Technical necessity for uptime monitoring | ó AWAITING VENDOR |
-| **DLD Module** | [VENDOR: e.g., "RateLimiter"] | NFR-SEC-6 (AI Safety - rate limiting to prevent abuse) | Technical necessity for security | ó AWAITING VENDOR |
-| **Source Code** | [VENDOR: e.g., "src/utils/logging.py"] | NFR-M-1 (Observability) | Utility module for structured logging | ó AWAITING VENDOR |
-| **Test Case** | [VENDOR: e.g., "TC-PERF-001: Load testing 10K concurrent users"] | NFR-P-2 (Throughput), NFR-S-1 (Horizontal Scaling) | Tests multiple NFRs simultaneously | ó AWAITING VENDOR |
-| **Test Case** | [VENDOR: e.g., "TC-SEC-999: Penetration testing"] | NFR-SEC-1 to NFR-SEC-6 (All security requirements) | Cross-cutting security validation | ó AWAITING VENDOR |
+| **HLD Component** | [VENDOR: e.g., "Analytics & Reporting Service"] | BR-1 (Call Deflection), BR-3 (Citizen Satisfaction) | Directly implements call deflection and NPS tracking | ï¿½ AWAITING VENDOR |
+| **HLD Component** | [VENDOR: e.g., "Logging & Monitoring Infrastructure"] | NFR-M-1 (Observability), NFR-C-2 (Audit Logging), NFR-A-1 (Uptime SLA) | Cross-cutting concern supporting multiple NFRs | ï¿½ AWAITING VENDOR |
+| **DLD Module** | [VENDOR: e.g., "HealthCheckEndpoint"] | NFR-A-1 (Uptime SLA) | Technical necessity for uptime monitoring | ï¿½ AWAITING VENDOR |
+| **DLD Module** | [VENDOR: e.g., "RateLimiter"] | NFR-SEC-6 (AI Safety - rate limiting to prevent abuse) | Technical necessity for security | ï¿½ AWAITING VENDOR |
+| **Source Code** | [VENDOR: e.g., "src/utils/logging.py"] | NFR-M-1 (Observability) | Utility module for structured logging | ï¿½ AWAITING VENDOR |
+| **Test Case** | [VENDOR: e.g., "TC-PERF-001: Load testing 10K concurrent users"] | NFR-P-2 (Throughput), NFR-S-1 (Horizontal Scaling) | Tests multiple NFRs simultaneously | ï¿½ AWAITING VENDOR |
+| **Test Case** | [VENDOR: e.g., "TC-SEC-999: Penetration testing"] | NFR-SEC-1 to NFR-SEC-6 (All security requirements) | Cross-cutting security validation | ï¿½ AWAITING VENDOR |
 
 **Vendor Action Required**: Populate backward traceability matrix with all HLD components, DLD modules, source code files, and test cases, ensuring each artifact traces to at least one requirement.
 
@@ -911,11 +940,11 @@ Zero implementation gaps tolerated at M5 (Production Launch).
 
 | Gap Type | Risk Level | Impact if Not Resolved | Mitigation |
 |----------|-----------|------------------------|------------|
-| **Design gaps at M1** | **CRITICAL** | Design approval blocked ’ project delay | Vendor must complete HLD/DLD for all 44 requirements by Week 8. HMRC Architecture Review Board will review and approve/reject. |
+| **Design gaps at M1** | **CRITICAL** | Design approval blocked ï¿½ project delay | Vendor must complete HLD/DLD for all 44 requirements by Week 8. HMRC Architecture Review Board will review and approve/reject. |
 | **Implementation gaps at M2** | **MEDIUM** | 50% coverage acceptable at M2; full coverage required by M5 | Vendor must prioritize implementation. HMRC will monitor progress weekly. |
-| **Implementation gaps at M5** | **CRITICAL** | Production launch blocked ’ contract penalty | Vendor must achieve 100% implementation by M5. No exceptions. |
-| **Test gaps at M3** | **CRITICAL** | Testing approval blocked ’ UAT cannot proceed | Vendor must complete all tests by Week 40. HMRC QA Lead will review test results. |
-| **Test gaps at M5** | **CRITICAL** | Production launch blocked ’ GDS assessment failure | Vendor must achieve 100% test coverage by M5. No exceptions. |
+| **Implementation gaps at M5** | **CRITICAL** | Production launch blocked ï¿½ contract penalty | Vendor must achieve 100% implementation by M5. No exceptions. |
+| **Test gaps at M3** | **CRITICAL** | Testing approval blocked ï¿½ UAT cannot proceed | Vendor must complete all tests by Week 40. HMRC QA Lead will review test results. |
+| **Test gaps at M5** | **CRITICAL** | Production launch blocked ï¿½ GDS assessment failure | Vendor must achieve 100% test coverage by M5. No exceptions. |
 | **Orphan design components** | **LOW** | Potential scope creep or wasted effort | HMRC Architecture Review Board will review and approve/reject orphans at M1. |
 
 **Critical Path**: Zero tolerance for design gaps at M1, implementation gaps at M5, or test gaps at M3/M5. Any critical gaps = milestone rejection and payment withholding.
@@ -990,13 +1019,13 @@ Zero implementation gaps tolerated at M5 (Production Launch).
 
 | Metric | Baseline (2025-10-14) | Target M1 (Week 8) | Target M2 (Week 20) | Target M3 (Week 40) | Target M5 (Week 52) | Status |
 |--------|----------------------|-------------------|---------------------|---------------------|---------------------|--------|
-| **Requirements with Design Coverage** | 0/44 (0%) | 44/44 (100%) | 44/44 (100%) | 44/44 (100%) | 44/44 (100%) | ó AWAITING VENDOR |
-| **Requirements with Implementation Coverage** | 0/44 (0%) | 0/44 (0%) | 22/44 (50%) | 44/44 (100%) | 44/44 (100%) | ó AWAITING VENDOR |
-| **Requirements with Test Coverage** | 0/44 (0%) | 0/44 (0%) | 0/44 (0%) | 44/44 (100%) | 44/44 (100%) | ó AWAITING VENDOR |
-| **Overall Coverage (Design + Impl + Test)** | 0% | 33% | 50% | 100% | 100% | ó AWAITING VENDOR |
-| **Orphan Design Components** | 0 (no design yet) | 0 (target) | 0 (target) | 0 (target) | 0 (target) | ó AWAITING VENDOR |
-| **Orphan Test Cases** | 0 (no tests yet) | 0 (target) | 0 (target) | 0 (target) | 0 (target) | ó AWAITING VENDOR |
-| **Critical Gaps** | 44 (all requirements) | 0 (target) | 0 (target) | 0 (target) | 0 (target) | ó AWAITING VENDOR |
+| **Requirements with Design Coverage** | 0/44 (0%) | 44/44 (100%) | 44/44 (100%) | 44/44 (100%) | 44/44 (100%) | ï¿½ AWAITING VENDOR |
+| **Requirements with Implementation Coverage** | 0/44 (0%) | 0/44 (0%) | 22/44 (50%) | 44/44 (100%) | 44/44 (100%) | ï¿½ AWAITING VENDOR |
+| **Requirements with Test Coverage** | 0/44 (0%) | 0/44 (0%) | 0/44 (0%) | 44/44 (100%) | 44/44 (100%) | ï¿½ AWAITING VENDOR |
+| **Overall Coverage (Design + Impl + Test)** | 0% | 33% | 50% | 100% | 100% | ï¿½ AWAITING VENDOR |
+| **Orphan Design Components** | 0 (no design yet) | 0 (target) | 0 (target) | 0 (target) | 0 (target) | ï¿½ AWAITING VENDOR |
+| **Orphan Test Cases** | 0 (no tests yet) | 0 (target) | 0 (target) | 0 (target) | 0 (target) | ï¿½ AWAITING VENDOR |
+| **Critical Gaps** | 44 (all requirements) | 0 (target) | 0 (target) | 0 (target) | 0 (target) | ï¿½ AWAITING VENDOR |
 
 **Vendor Action Required**: Update metrics table at each milestone with actual values. Any metric below target requires gap analysis and remediation plan.
 
@@ -1004,11 +1033,11 @@ Zero implementation gaps tolerated at M5 (Production Launch).
 
 | Requirement Type | Total | Target Coverage (M5) | Current Coverage (Baseline) | Status |
 |------------------|-------|----------------------|----------------------------|--------|
-| **Business Requirements (BR)** | 7 | 7/7 (100%) | 0/7 (0%) | ó AWAITING VENDOR |
-| **Functional Requirements (FR)** | 11 | 11/11 (100%) | 0/11 (0%) | ó AWAITING VENDOR |
-| **Non-Functional Requirements (NFR)** | 21 | 21/21 (100%) | 0/21 (0%) | ó AWAITING VENDOR |
-| **Integration Requirements (INT)** | 5 | 5/5 (100%) | 0/5 (0%) | ó AWAITING VENDOR |
-| **TOTAL** | **44** | **44/44 (100%)** | **0/44 (0%)** | ó AWAITING VENDOR |
+| **Business Requirements (BR)** | 7 | 7/7 (100%) | 0/7 (0%) | ï¿½ AWAITING VENDOR |
+| **Functional Requirements (FR)** | 11 | 11/11 (100%) | 0/11 (0%) | ï¿½ AWAITING VENDOR |
+| **Non-Functional Requirements (NFR)** | 21 | 21/21 (100%) | 0/21 (0%) | ï¿½ AWAITING VENDOR |
+| **Integration Requirements (INT)** | 5 | 5/5 (100%) | 0/5 (0%) | ï¿½ AWAITING VENDOR |
+| **TOTAL** | **44** | **44/44 (100%)** | **0/44 (0%)** | ï¿½ AWAITING VENDOR |
 
 **Acceptance Criteria**: No partial coverage accepted. All requirement types must achieve 100% coverage by M5 (Production Launch).
 
@@ -1026,7 +1055,7 @@ Zero implementation gaps tolerated at M5 (Production Launch).
 - [ ] All 44 requirements traced to DLD modules, APIs, database schemas
 - [ ] All HLD components traced back to requirements (no orphans or justified)
 - [ ] All DLD modules traced back to requirements (no orphans or justified)
-- [ ] Backward traceability matrix populated (HLD/DLD artifacts ’ requirements)
+- [ ] Backward traceability matrix populated (HLD/DLD artifacts ï¿½ requirements)
 - [ ] Zero design gaps (or all gaps justified and approved by HMRC)
 
 **M2 (Development Milestone, Week 20) Checklist**:
@@ -1123,15 +1152,17 @@ Zero implementation gaps tolerated at M5 (Production Launch).
 | Version | Date | Author | Changes | Milestone |
 |---------|------|--------|---------|-----------|
 | **1.0** | **2025-10-14** | **HMRC Enterprise Architecture Team** | **Initial baseline: 44 requirements, 0% coverage** | **Pre-Procurement (Gate 1 Requirements Approval)** |
-| 1.1 | [Week 4, 2026-03-09] | [VENDOR: Solution Architect] | [VENDOR: Mapped all 44 requirements to HLD components] | HLD Submission |
-| 1.2 | [Week 8, 2026-04-06] | [VENDOR: Technical Lead] | [VENDOR: Mapped all 44 requirements to DLD modules] | M1 Design Approval |
-| 1.3 | [Week 20, 2026-06-08] | [VENDOR: Technical Lead] | [VENDOR: Added source code references (50% implementation)] | M2 Development Milestone |
-| 1.4 | [Week 40, 2026-09-14] | [VENDOR: QA Lead] | [VENDOR: Added test cases and execution results (100% coverage)] | M3 Testing Complete |
+| **1.1** | **2026-01-25** | **ArcKit AI** | **Updated to align with ArcKit template structure** | **Template Alignment** |
+| **1.2** | **2026-01-26** | **ArcKit AI** | **Updated to align with ArcKit template v0.11.2** | **Template v0.11.2** |
+| 1.3 | [Week 4, 2026-03-09] | [VENDOR: Solution Architect] | [VENDOR: Mapped all 44 requirements to HLD components] | HLD Submission |
+| 1.4 | [Week 8, 2026-04-06] | [VENDOR: Technical Lead] | [VENDOR: Mapped all 44 requirements to DLD modules] | M1 Design Approval |
+| 1.5 | [Week 20, 2026-06-08] | [VENDOR: Technical Lead] | [VENDOR: Added source code references (50% implementation)] | M2 Development Milestone |
+| 1.6 | [Week 40, 2026-09-14] | [VENDOR: QA Lead] | [VENDOR: Added test cases and execution results (100% coverage)] | M3 Testing Complete |
 | 2.0 | [Week 52, 2026-11-23] | [VENDOR: Project Manager] | Final traceability matrix approved by HMRC Architecture Review Board | M5 Production Launch |
 
 ---
 
-**END OF REQUIREMENTS TRACEABILITY MATRIX (BASELINE v1.0)**
+**END OF REQUIREMENTS TRACEABILITY MATRIX (BASELINE v1.2)**
 
 ---
 
@@ -1145,3 +1176,22 @@ Zero implementation gaps tolerated at M5 (Production Launch).
 6. **Week 52 (M5, 2026-11-23)**: Final traceability matrix (version 2.0) approved by Architecture Review Board, published as part of project handover
 
 **CRITICAL**: Traceability matrix completion is a **contract obligation**. Final payment (20% at M5) contingent on achieving **100% requirements coverage** (all 44 requirements designed, implemented, AND tested with evidence).
+
+---
+
+**Document Version History**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | 2025-10-14 | HMRC EA Team | Initial baseline (44 requirements) |
+| 1.1 | 2026-01-25 | ArcKit AI | Template alignment |
+| 1.2 | 2026-01-26 | ArcKit AI | Updated to v0.11.2 |
+
+---
+
+**Generated by**: ArcKit `/arckit.traceability` command
+**Generated on**: 2026-01-26
+**ArcKit Version**: 0.11.2
+**Project**: HMRC ChatBot (001-hmrc-chatbot)
+**Model**: Claude Opus 4.5
+**Generation Context**: Updated to align with ArcKit template v0.11.2 structure
