@@ -1,5 +1,6 @@
 {
-  "generated": "2026-01-25T10:00:00Z",
+  "generated": "2026-01-26T00:00:00Z",
+  "version": "0.11.2",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v2-hmrc-chatbot",
@@ -15,8 +16,13 @@
   "projects": [
     {
       "id": "001-hmrc-chatbot",
-      "name": "HMRC Chatbot",
+      "name": "HMRC Tax Assistant Chatbot",
       "documents": [
+        {
+          "path": "projects/001-hmrc-chatbot/README.md",
+          "title": "Project Overview",
+          "category": "Overview"
+        },
         {
           "path": "projects/001-hmrc-chatbot/requirements.md",
           "title": "Requirements",
@@ -41,11 +47,6 @@
           "path": "projects/001-hmrc-chatbot/traceability-matrix.md",
           "title": "Traceability Matrix",
           "category": "Governance"
-        },
-        {
-          "path": "projects/001-hmrc-chatbot/README.md",
-          "title": "Project README",
-          "category": "Overview"
         }
       ],
       "diagrams": [],
