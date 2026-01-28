@@ -1,16 +1,19 @@
 {
-  "generated": "2026-01-26T00:00:00Z",
-  "version": "0.11.2",
+  "generated": "2026-01-28T17:25:00Z",
+  "version": "0.12.0",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v2-hmrc-chatbot",
     "branch": "main"
   },
+  "defaultDocument": "projects/000-global/ARC-000-PRIN-v1.0.md",
   "global": [
     {
-      "path": ".arckit/memory/architecture-principles.md",
+      "path": "projects/000-global/ARC-000-PRIN-v1.0.md",
       "title": "Architecture Principles",
-      "category": "Architecture"
+      "category": "Architecture",
+      "documentId": "ARC-000-PRIN-v1.0",
+      "isDefault": true
     }
   ],
   "projects": [
@@ -21,36 +24,44 @@
         {
           "path": "projects/001-hmrc-chatbot/README.md",
           "title": "Project Overview",
-          "category": "Overview"
+          "category": "Overview",
+          "documentId": "README"
         },
         {
-          "path": "projects/001-hmrc-chatbot/requirements.md",
+          "path": "projects/001-hmrc-chatbot/ARC-001-REQ-v1.0.md",
           "title": "Requirements",
-          "category": "Discovery"
+          "category": "Discovery",
+          "documentId": "ARC-001-REQ-v1.0"
         },
         {
-          "path": "projects/001-hmrc-chatbot/sow.md",
-          "title": "Statement of Work",
-          "category": "Procurement"
-        },
-        {
-          "path": "projects/001-hmrc-chatbot/evaluation-criteria.md",
-          "title": "Evaluation Criteria",
-          "category": "Procurement"
-        },
-        {
-          "path": "projects/001-hmrc-chatbot/atrs-record.md",
-          "title": "ATRS Record",
-          "category": "Compliance"
-        },
-        {
-          "path": "projects/001-hmrc-chatbot/traceability-matrix.md",
+          "path": "projects/001-hmrc-chatbot/ARC-001-TRAC-v1.0.md",
           "title": "Traceability Matrix",
-          "category": "Governance"
+          "category": "Governance",
+          "documentId": "ARC-001-TRAC-v1.0"
+        },
+        {
+          "path": "projects/001-hmrc-chatbot/ARC-001-ATRS-v1.0.md",
+          "title": "ATRS Record",
+          "category": "Compliance",
+          "documentId": "ARC-001-ATRS-v1.0"
+        },
+        {
+          "path": "projects/001-hmrc-chatbot/ARC-001-SOW-v1.0.md",
+          "title": "Statement of Work",
+          "category": "Procurement",
+          "documentId": "ARC-001-SOW-v1.0"
+        },
+        {
+          "path": "projects/001-hmrc-chatbot/ARC-001-EVAL-v1.0.md",
+          "title": "Evaluation Criteria",
+          "category": "Procurement",
+          "documentId": "ARC-001-EVAL-v1.0"
         }
       ],
       "diagrams": [],
       "decisions": [],
+      "wardleyMaps": [],
+      "dataContracts": [],
       "vendors": []
     }
   ]
