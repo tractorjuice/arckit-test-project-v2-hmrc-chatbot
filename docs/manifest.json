@@ -1,6 +1,6 @@
 {
-  "generated": "2026-01-28T17:25:00Z",
-  "version": "0.12.0",
+  "generated": "2026-02-03T12:00:00Z",
+  "version": "1.1.0",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v2-hmrc-chatbot",
@@ -26,6 +26,12 @@
           "title": "Project Overview",
           "category": "Overview",
           "documentId": "README"
+        },
+        {
+          "path": "projects/001-hmrc-chatbot/ARC-001-STKE-v1.0.md",
+          "title": "Stakeholder Drivers",
+          "category": "Discovery",
+          "documentId": "ARC-001-STKE-v1.0"
         },
         {
           "path": "projects/001-hmrc-chatbot/ARC-001-REQ-v1.0.md",
@@ -62,6 +68,7 @@
       "decisions": [],
       "wardleyMaps": [],
       "dataContracts": [],
+      "reviews": [],
       "vendors": []
     }
   ]
