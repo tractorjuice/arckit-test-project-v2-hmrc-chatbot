@@ -1,6 +1,6 @@
 {
-  "generated": "2026-02-05T12:00:00Z",
-  "version": "1.4.0",
+  "generated": "2026-02-06T12:00:00Z",
+  "version": "1.5.0",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v2-hmrc-chatbot",
@@ -17,6 +17,12 @@
     {
       "path": "docs/guides/stakeholders.md",
       "title": "Stakeholder Analysis Playbook",
+      "category": "Discovery",
+      "status": "live"
+    },
+    {
+      "path": "docs/guides/stakeholder-analysis.md",
+      "title": "Stakeholder Analysis Guide",
       "category": "Discovery",
       "status": "live"
     },
@@ -313,6 +319,12 @@
       "title": "File Migration Playbook",
       "category": "Other",
       "status": "beta"
+    },
+    {
+      "path": "docs/guides/upgrading.md",
+      "title": "Upgrading ArcKit",
+      "category": "Other",
+      "status": "beta"
     }
   ],
   "global": [
@@ -329,12 +341,6 @@
       "id": "001-hmrc-chatbot",
       "name": "HMRC Tax Assistant Chatbot",
       "documents": [
-        {
-          "path": "projects/001-hmrc-chatbot/README.md",
-          "title": "Project Overview",
-          "category": "Overview",
-          "documentId": "README"
-        },
         {
           "path": "projects/001-hmrc-chatbot/ARC-001-STKE-v1.0.md",
           "title": "Stakeholder Drivers",
