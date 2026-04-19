@@ -26,6 +26,7 @@ Output:
 
 - `docs/index.html` - Main documentation site
 - `docs/manifest.json` - Document index
+- `docs/llms.txt` - LLM/agent-friendly markdown index ([llmstxt.org](https://llmstxt.org/) format) linking to every artifact, guide, and project. Hand-curated `docs/llms.txt` files (without the ArcKit generation marker) are preserved.
 
 ---
 
@@ -168,7 +169,6 @@ The dashboard (`#dashboard`) is the default landing page, providing an instant p
 | Documents by Category | SVG donut chart showing document distribution across Discovery, Planning, Architecture, etc. |
 | Project Artifact Coverage | Horizontal bar chart per project with color coding (green >=80%, amber >=50%, red <50%) |
 | Projects Table | Name, Docs, Diagrams, ADRs, Vendors, Coverage mini-bar |
-| Guide Maturity | SVG donut chart showing live/beta/alpha/experimental guide counts |
 | Governance Coverage | Checklist of key artifact types present/absent across portfolio |
 
 ### Coverage Calculation

@@ -1,0 +1,29 @@
+{
+  "generated": "2026-04-19T10:22:56.767Z",
+  "scanned": {
+    "projects": 1,
+    "artifacts": 6
+  },
+  "summary": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "total": 0
+  },
+  "byType": {
+    "STALE-RSCH": 0,
+    "FORGOTTEN-ADR": 0,
+    "UNRESOLVED-COND": 0,
+    "STALE-EXT": 0,
+    "ORPHAN-REQ": 0,
+    "MISSING-TRACE": 0,
+    "VERSION-DRIFT": 0
+  },
+  "projects": [
+    {
+      "id": "001-hmrc-chatbot",
+      "artifacts": 6,
+      "findings": []
+    }
+  ]
+}

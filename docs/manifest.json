@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-13T09:43:40.420Z",
+  "generated": "2026-04-19T10:23:13.236Z",
   "repository": {
     "name": "arckit-test-project-v2-hmrc-chatbot"
   },
@@ -34,6 +34,12 @@
       "title": "Algorithmic Transparency Recording Standard Playbook",
       "category": "Compliance",
       "status": "alpha"
+    },
+    {
+      "path": "docs/guides/autoresearch.md",
+      "title": "Autoresearch Guide: Self-Improving Command Prompts",
+      "category": "Other",
+      "status": "beta"
     },
     {
       "path": "docs/guides/aws-research.md",
@@ -192,6 +198,24 @@
       "status": "experimental"
     },
     {
+      "path": "docs/guides/gov-code-search.md",
+      "title": "Government Code Search Guide",
+      "category": "Other",
+      "status": "beta"
+    },
+    {
+      "path": "docs/guides/gov-landscape.md",
+      "title": "Government Code Landscape Analysis Guide",
+      "category": "Other",
+      "status": "beta"
+    },
+    {
+      "path": "docs/guides/gov-reuse.md",
+      "title": "Government Code Reuse Assessment Guide",
+      "category": "Other",
+      "status": "beta"
+    },
+    {
       "path": "docs/guides/govs-007-security.md",
       "title": "GovS 007: Security — ArcKit Reference Guide",
       "category": "Compliance",
@@ -207,6 +231,12 @@
       "path": "docs/guides/hld-review.md",
       "title": "High-Level Design Review Playbook",
       "category": "Architecture",
+      "status": "beta"
+    },
+    {
+      "path": "docs/guides/hooks.md",
+      "title": "Hooks Guide",
+      "category": "Other",
       "status": "beta"
     },
     {
@@ -402,6 +432,12 @@
       "status": "beta"
     },
     {
+      "path": "docs/guides/session-memory.md",
+      "title": "Session Memory",
+      "category": "Other",
+      "status": "beta"
+    },
+    {
       "path": "docs/guides/sobc.md",
       "title": "Strategic Outline Business Case Playbook",
       "category": "Planning",
@@ -471,6 +507,30 @@
       "path": "docs/guides/upgrading.md",
       "title": "Upgrading ArcKit",
       "category": "Getting Started",
+      "status": "beta"
+    },
+    {
+      "path": "docs/guides/wardley-climate.md",
+      "title": "Climate Assessment Playbook",
+      "category": "Other",
+      "status": "beta"
+    },
+    {
+      "path": "docs/guides/wardley-doctrine.md",
+      "title": "Doctrine Assessment Playbook",
+      "category": "Other",
+      "status": "beta"
+    },
+    {
+      "path": "docs/guides/wardley-gameplay.md",
+      "title": "Gameplay Analysis Playbook",
+      "category": "Other",
+      "status": "beta"
+    },
+    {
+      "path": "docs/guides/wardley-value-chain.md",
+      "title": "Value Chain Decomposition Playbook",
+      "category": "Other",
       "status": "beta"
     },
     {
@@ -614,6 +674,10 @@
     "DLDR": "Architecture",
     "DATA": "Architecture",
     "WARD": "Architecture",
+    "WDOC": "Architecture",
+    "WGAM": "Architecture",
+    "WCLM": "Architecture",
+    "WVCH": "Architecture",
     "DIAG": "Architecture",
     "DFD": "Architecture",
     "ADR": "Architecture",
@@ -648,6 +712,10 @@
     "AWRS": "Research",
     "AZRS": "Research",
     "GCRS": "Research",
+    "GOVR": "Research",
+    "GCSR": "Research",
+    "GLND": "Research",
+    "GRNT": "Research",
     "STORY": "Reporting"
   },
   "projects": [
